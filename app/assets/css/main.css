@@ -1,1 +1,23 @@
 @import "tailwindcss";
+
+:root {
+    /* Fonts */
+    --titulos: 'Montserrat', sans-serif;
+    --paragrafos: 'Inter', sans-serif;
+    --corpo: 'Work Sans', sans-serif;
+
+    /* Colors */
+    --blue: #206FBD;
+    --green: #87BF34;
+    --pink: #F266C1;
+    --clear-pink: #FF89D6;
+    --baby-blue: #0087ED;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--titulos);
+}
+
+p:not(.exception), span:not(.exception), li:not(.exception) {
+    font-family: var(--paragrafos);
+}
