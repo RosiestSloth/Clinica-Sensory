@@ -2,22 +2,22 @@
   <div class="max-w-screen max-h-screen">
     <header />
     <main class="">
-      <section class="bg-yellow-500 bg-[url('/img/background-1.png')] bg-cover bg-center h-150 px-5 py-10 md:px-10 md:py-14 relative mb-20 md:mb-30">
+      <section class="bg-yellow-500 bg-[url('/img/background-1.png')] bg-cover bg-center h-150 px-5 py-10 md:px-10 md:py-14 xl:px-30 xl:py-20 relative mb-20 md:mb-30">
 
         <div class="absolute w-full h-full bg-black/30 z-10 inset-0"></div>
 
         <div class="relative z-20">
           <h1 class="md:text-xl text-[0.8rem] text-white">CENTRO DE TERAPIAS INFANTIL MULTIDISCIPLINAR</h1>
-          <p class="exception text-3xl md:text-4xl xl:text-5xl text-white z-20 font-[var(--titulos)] font-bold">Acolhimento, respeito e resultados reais para o desenvolvimento do seu filho</p>
+          <p class="exception text-3xl md:text-4xl xl:text-6xl text-white z-20 font-[var(--titulos)] font-bold">Acolhimento, respeito e resultados reais para o desenvolvimento do seu filho</p>
           <NuxtLink
-          class="bg-[#47C557] text-white flex w-45 justify-center items-center flex-row gap-4 px-6 py-2 font-bold rounded-md border-white border-1 hover:bg-[#2A7633] transition"
+          class="bg-[#47C557] text-white flex w-34 md:w-40 text-[0.8em] md:text-[1em] justify-center items-center flex-row gap-4 md:px-6 md:py-2 px-2 py-2 mt-4 font-bold rounded-md border-white border-1 hover:bg-[#2A7633] transition"
           to="https://wa.me/62992846807"
           >
-            <WhatsappIcon class="size-8" :fontControlled="false" />
+            <WhatsappIcon class="size-6 md:size-8" :fontControlled="false" />
             WhatsApp
           </NuxtLink> 
         </div>
-        <div class="flex flex-col gap-2 relative mt-14 md:mt-20 z-20 text-white">
+        <div class="flex flex-col xl:flex-row gap-2 relative mt-14 md:mt-20 z-20 text-white">
           <div id="Primeiro" class=" bg-[var(--clear-pink)] flex-1 p-4 flex gap-4">
             <img src="/img/tl (1) 1.png" class="h-26" alt="Foto coração com o símbolo TEA">
             <div>
@@ -30,7 +30,7 @@
             
           </div>
 
-          <div id="Segundo" class="bg-[var(--blue)] flex p-4 gap-4">
+          <div id="Segundo" class="bg-[var(--blue)] flex-1 flex p-4 gap-4">
             <img src="/img/tl (2) 1.png" alt="Foto quebra cabeça TEA" class="h-20">
             <div>
               <h3 class="text-[1.1em] md:text-2xl font-bold">Apoio à Família</h3>
@@ -40,7 +40,7 @@
               </ul>
             </div>
           </div>
-          <div id="Terceiro" class="bg-[var(--pink)] p-4 gap-4 flex">
+          <div id="Terceiro" class="bg-[var(--pink)] p-4 gap-4 flex flex-1">
             <img src="/img/tl (3) 1.png" class="h-23" alt="">
             <div>
               <h3 class="text-[1.1em] md:text-2xl font-bold">Desenvolvimento Integral</h3>
