@@ -12,11 +12,19 @@ export default defineNuxtConfig({
       tailwindcss(),
     ],
   },
+
+  components: [
+    {
+      path: '/app/components',
+      pathPrefix: false,
+    },
+  ],
   
   modules: [
     '@nuxt/content',
     '@nuxt/eslint',
     '@nuxt/image',
-    '@nuxt/ui'
+    '@nuxt/ui',
+    'nuxt-svgo'
   ]
 })

@@ -1,10 +1,11 @@
 <template>
     <div>
-        <header>
+        <header class="flex">
+            LOGO DO SITE
             <nav>
-                <ul>
+                <ul class="list-none">
                     <li>
-                        
+                        Home
                     </li>
                 </ul>
             </nav>
