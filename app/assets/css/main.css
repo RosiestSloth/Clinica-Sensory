@@ -14,10 +14,16 @@
     --baby-blue: #0087ED;
 }
 
+body, html {
+    max-width: 100vw;
+    overflow-x: hidden;
+
+}
+
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--titulos);
 }
 
 p:not(.exception), span:not(.exception), li:not(.exception) {
-    font-family: var(--paragrafos);
+    font-family: var(--corpo);
 }
