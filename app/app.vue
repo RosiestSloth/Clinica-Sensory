@@ -11,7 +11,7 @@
           <p class="exception text-3xl md:text-4xl xl:text-6xl text-white z-20 font-[var(--titulos)] font-bold">Acolhimento, respeito e resultados reais para o desenvolvimento do seu filho</p>
           <NuxtLink
           class="bg-[#47C557] text-white flex w-34 md:w-40 text-[0.8em] md:text-[1em] justify-center items-center flex-row gap-4 md:px-6 md:py-2 px-2 py-2 mt-4 font-bold rounded-md border-white border-1 hover:bg-[#2A7633] transition"
-          to="https://wa.me/62992846807"
+          to="https://wa.me/6185401978"
           >
             <WhatsappIcon class="size-6 md:size-8" :fontControlled="false" />
             WhatsApp
