@@ -10,10 +10,10 @@
           <h1 class="md:text-xl text-[0.8rem] text-white">CENTRO DE TERAPIAS INFANTIL MULTIDISCIPLINAR</h1>
           <p class="exception text-3xl md:text-4xl xl:text-5xl text-white z-20 font-[var(--titulos)] font-bold">Acolhimento, respeito e resultados reais para o desenvolvimento do seu filho</p>
           <NuxtLink
-          class="bg-[#47C557] text-white inline-block px-6 py-2 font-bold rounded-md border-white border-1 hover:bg-[#47C557]/60 transition"
+          class="bg-[#47C557] text-white flex w-45 justify-center items-center flex-row gap-4 px-6 py-2 font-bold rounded-md border-white border-1 hover:bg-[#2A7633] transition"
           to="https://wa.me/62992846807"
           >
-            <WhatsappIcon class="size-5" />
+            <WhatsappIcon class="size-8" :fontControlled="false" />
             WhatsApp
           </NuxtLink> 
         </div>
@@ -60,6 +60,7 @@
   </div>
 </template>
 
-<script>
-  import WhatsappIcon from '/svg/Whatsapp.svg';
+<script setup lang="ts">
+  import WhatsappIcon from '../public/svg/WhatsApp.svg';
+
 </script>

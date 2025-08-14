@@ -15,7 +15,7 @@ export default defineNuxtConfig({
 
   components: [
     {
-      path: '/app/components',
+      path: './app/components',
       pathPrefix: false,
     },
   ],
@@ -26,5 +26,9 @@ export default defineNuxtConfig({
     '@nuxt/image',
     '@nuxt/ui',
     'nuxt-svgo'
-  ]
+  ],
+
+  svgo: {
+    defaultImport: 'component',
+  }
 })
