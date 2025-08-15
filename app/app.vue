@@ -58,16 +58,16 @@
         <h2 class="">
           Clínica Sensory Multidisciplinar
         </h2>
-        <h3 class="text-2xl font-semibold">
+        <h3 class="text-[1.4em] font-semibold">
           Atendimentos Terapêuticos Multidisciplinares e Humanizados
         </h3>
 
         <!-- Separador -->
 
         <div id="images" 
-          class="flex items-center relative before:h-0.5 before:w-70 before:content-[''] before:absolute before:inset-0 before:[background:linear-gradient(to_right,_#206FBD_0%_16.666%,_#05528D_16.666%_33.333%,_#597E22_33.333%_50%,_#87BF34_50%_66.666%,_#FF89DD_66.666%_83.333%,_#F266C1_83.333%_100%)] pt-5 mt-1">
-          <img src="./assets/public/img/img_crianças.png" class="w-full h-full" alt="Ilustrativa de crianças felizes">
-          <img src="./assets/public/img/crianças_brincando.png" class="rounded-[20px_0px_20px_0px] w-full h-full" alt="Crianças brincando na Clinica Sensory">
+          class="flex items-center relative before:h-0.5 before:w-50 before:content-[''] before:absolute before:inset-0 before:[background:linear-gradient(to_right,_#206FBD_0%_16.666%,_#05528D_16.666%_33.333%,_#597E22_33.333%_50%,_#87BF34_50%_66.666%,_#FF89DD_66.666%_83.333%,_#F266C1_83.333%_100%)] pt-5 mt-1">
+          <img src="@/assets/public/img/img_crianças.png" class="w-1/2 h-full object-cover" alt="Ilustrativa de crianças felizes">
+          <img src="@/assets/public/img/crianças_brincando.png" class="rounded-[20px_0px_20px_0px] w-1/2 h-full object-cover" alt="Crianças brincando na Clinica Sensory">
         </div>
 
         <div class="flex flex-col gap-3 text-black/90 mt-5 text-justify text-[0.8em]">
