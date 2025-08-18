@@ -27,3 +27,7 @@ h1, h2, h3, h4, h5, h6 {
 p:not(.exception), span:not(.exception), li:not(.exception) {
     font-family: var(--corpo);
 }
+
+#lista-servicos {
+    list-style-image: url('../public/svg/dot-circle.svg');
+}

@@ -20,7 +20,7 @@
         </div>
         <div class="flex flex-col xl:flex-row gap-2 relative mt-14 z-20 text-white">
           <div id="Primeiro" class="bg-[var(--clear-pink)] flex-1 md:p-4 p-2 flex gap-4">
-            <img src="./assets/public/img/tl (1) 1.png" class="h-20" alt="Foto coração com o símbolo TEA">
+            <NuxtImg src="/tl (1) 1.png" class="h-20" alt="Foto coração com o símbolo TEA" />
             <div>
               <h3 class="text-[1.1em] md:text-2xl font-bold">Atendimento Personalizado</h3>
               <ul class="list-disc list-inside text-[0.7em] sm:text-[0.9em] xl:text-xl">
@@ -32,7 +32,7 @@
           </div>
 
           <div id="Segundo" class="bg-[var(--blue)] flex-1 flex md:p-4 p-2 gap-4">
-            <img src="./assets/public/img/tl (2) 1.png" alt="Foto quebra cabeça TEA" class="h-20">
+            <NuxtImg src="/tl (2) 1.png" alt="Foto quebra cabeça TEA" class="h-20" />
             <div>
               <h3 class="text-[1.1em] md:text-2xl font-bold">Apoio à Família</h3>
               <ul class="list-disc list-inside text-[0.7em] sm:text-[0.9em] xl:text-xl">
@@ -42,7 +42,7 @@
             </div>
           </div>
           <div id="Terceiro" class="bg-[var(--pink)] md:p-4 p-2 gap-4 flex flex-1">
-            <img src="./assets/public/img/tl (3) 1.png" class="h-20" alt="">
+            <NuxtImg src="/tl (3) 1.png" class="h-20" alt="" />
             <div>
               <h3 class="text-[1.1em] md:text-2xl font-bold">Desenvolvimento Integral</h3>
               <ul class="list-disc list-inside text-[0.7em] sm:text-[0.9em] xl:text-xl">
@@ -65,9 +65,9 @@
         <!-- Separador -->
 
         <div id="images" 
-          class="flex items-center relative before:h-0.5 before:w-50 before:content-[''] before:absolute before:inset-0 before:[background:linear-gradient(to_right,_#206FBD_0%_16.666%,_#05528D_16.666%_33.333%,_#597E22_33.333%_50%,_#87BF34_50%_66.666%,_#FF89DD_66.666%_83.333%,_#F266C1_83.333%_100%)] pt-5 mt-1">
-          <img src="@/assets/public/img/img_crianças.png" class="w-1/2 h-full object-cover" alt="Ilustrativa de crianças felizes">
-          <img src="@/assets/public/img/crianças_brincando.png" class="rounded-[20px_0px_20px_0px] w-1/2 h-full object-cover" alt="Crianças brincando na Clinica Sensory">
+          class="flex items-center relative before:h-0.5 before:w-50 before:content-[''] before:absolute before:left-0 before:top-0 before:[background:linear-gradient(to_right,_#206FBD_0%_16.666%,_#05528D_16.666%_33.333%,_#597E22_33.333%_50%,_#87BF34_50%_66.666%,_#FF89DD_66.666%_83.333%,_#F266C1_83.333%_100%)] pt-5 mt-1 gap-2">
+          <NuxtImg src="/img_crianças.png" class="w-1/2 h-full object-cover" alt="Crianças sorrindo e brincando juntas em um ambiente colorido e acolhedor, transmitindo alegria e inclusão. O fundo mostra brinquedos e decoração lúdica, reforçando o clima de diversão e segurança." />
+          <NuxtImg src="/crianças_brincando.png" class="rounded-[20px_0px_20px_0px] w-1/2 h-full object-cover" alt="Crianças brincando na Clinica Sensory" />
         </div>
 
         <div class="flex flex-col gap-3 text-black/90 mt-5 text-justify text-[0.8em]">
@@ -85,12 +85,13 @@
           </p>
         </div>
 
-        <div id="images">
-          
+        <div id="images" class="flex items-center relative justify-between">
+          <NuxtImg src="/Paciente_em_Atendimento.png" class="rounded-[20px_0px_20px_0px] w-1/2 h-fullobject-cover"/>
+          <NuxtImg src="/tl (3) 1.png" class="w-1/4 h-full object-cover"/>
         </div>
 
-        <div class="flex">
-          <ul>
+        <div class="flex relative before:h-0.5 before:w-50 before:right-0 before:content-[''] before:absolute before:[background:linear-gradient(to_right,_#206FBD_0%_16.666%,_#05528D_16.666%_33.333%,_#597E22_33.333%_50%,_#87BF34_50%_66.666%,_#FF89DD_66.666%_83.333%,_#F266C1_83.333%_100%)] pt-5 mt-1 font-semibold text-[0.8em] justify-between">
+          <ul class="mt-5 text-black/90 list-inside" id="lista-servicos">
             <li>
               Terapia ABA
             </li>
@@ -104,7 +105,7 @@
               Terapia Ocupacional
             </li>
           </ul>
-          <ul>
+          <ul class="mt-5 text-black/90 list-inside" id="lista-servicos">
             <li>
               Psicopedagogia
             </li>
