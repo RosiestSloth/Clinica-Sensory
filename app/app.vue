@@ -2,7 +2,7 @@
   <div class="max-w-screen max-h-screen">
     <header />
     <main class="">
-      <section class="bg-yellow-500 bg-[url('assets/public/img/background-1.png')] bg-cover bg-center h-120 px-5 py-10 md:px-10 md:pt-14 xl:px-20 xl:pt-20 relative mb-30 md:mb-40">
+      <section class="bg-yellow-500 bg-[url('~/assets/public/img/background-1.png')] bg-cover bg-center h-120 px-5 py-10 md:px-10 md:pt-14 xl:px-20 xl:pt-20 relative mb-30 md:mb-40">
 
         <div class="absolute w-full h-full bg-black/30 z-10 inset-0"></div>
 
