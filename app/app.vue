@@ -2,7 +2,7 @@
   <div class="max-w-screen max-h-screen">
     <header />
     <main class="">
-      <section class="bg-yellow-500 bg-[url('~/assets/public/img/background-1.png')] bg-cover bg-center h-120 px-5 py-10 md:px-10 md:pt-14 xl:px-20 xl:pt-20 relative mb-30 md:mb-40">
+      <section class="bg-yellow-500 bg-[url('~/public/img/background-1.png')] bg-cover bg-center h-120 px-5 py-10 md:px-10 md:pt-14 xl:px-20 xl:pt-20 relative mb-30 md:mb-40">
 
         <div class="absolute w-full h-full bg-black/30 z-10 inset-0"></div>
 
@@ -20,7 +20,7 @@
         </div>
         <div class="flex flex-col xl:flex-row gap-2 relative mt-14 z-20 text-white">
           <div id="Primeiro" class="bg-[var(--clear-pink)] flex-1 md:p-4 p-2 flex gap-4">
-            <NuxtImg src="/tl (1) 1.png" class="h-20" alt="Foto coração com o símbolo TEA" />
+            <NuxtImg src="/Coração-TEA.png" class="h-20" alt="Foto coração com o símbolo TEA" />
             <div>
               <h3 class="text-[1.1em] md:text-2xl font-bold">Atendimento Personalizado</h3>
               <ul class="list-disc list-inside text-[0.7em] sm:text-[0.9em] xl:text-xl">
@@ -32,7 +32,7 @@
           </div>
 
           <div id="Segundo" class="bg-[var(--blue)] flex-1 flex md:p-4 p-2 gap-4">
-            <NuxtImg src="/tl (2) 1.png" alt="Foto quebra cabeça TEA" class="h-20" />
+            <NuxtImg src="/Quebracabeças-TEA.png" alt="Foto quebra cabeça TEA" class="h-20" />
             <div>
               <h3 class="text-[1.1em] md:text-2xl font-bold">Apoio à Família</h3>
               <ul class="list-disc list-inside text-[0.7em] sm:text-[0.9em] xl:text-xl">
@@ -42,7 +42,7 @@
             </div>
           </div>
           <div id="Terceiro" class="bg-[var(--pink)] md:p-4 p-2 gap-4 flex flex-1">
-            <NuxtImg src="/tl (3) 1.png" class="h-20" alt="" />
+            <NuxtImg src="/Laço-TEA.png" class="h-20" alt="" />
             <div>
               <h3 class="text-[1.1em] md:text-2xl font-bold">Desenvolvimento Integral</h3>
               <ul class="list-disc list-inside text-[0.7em] sm:text-[0.9em] xl:text-xl">
@@ -87,7 +87,7 @@
 
         <div id="images" class="flex items-center relative justify-between">
           <NuxtImg src="/Paciente_em_Atendimento.png" class="rounded-[20px_0px_20px_0px] w-1/2 h-fullobject-cover"/>
-          <NuxtImg src="/tl (3) 1.png" class="w-1/4 h-full object-cover"/>
+          <NuxtImg src="/Laço-TEA.png" class="w-1/4 h-full object-cover"/>
         </div>
 
         <div class="flex relative before:h-0.5 before:w-50 before:right-0 before:content-[''] before:absolute before:[background:linear-gradient(to_right,_#206FBD_0%_16.666%,_#05528D_16.666%_33.333%,_#597E22_33.333%_50%,_#87BF34_50%_66.666%,_#FF89DD_66.666%_83.333%,_#F266C1_83.333%_100%)] pt-5 mt-1 font-semibold text-[0.8em] justify-between">
@@ -126,6 +126,6 @@
 </template>
 
 <script setup lang="ts">
-  import WhatsappIcon from './assets/public/svg/WhatsApp.svg';
+  import WhatsappIcon from './public/svg/WhatsApp.svg';
 
 </script>

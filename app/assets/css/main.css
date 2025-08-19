@@ -29,5 +29,5 @@ p:not(.exception), span:not(.exception), li:not(.exception) {
 }
 
 #lista-servicos {
-    list-style-image: url('../public/svg/dot-circle.svg');
+    list-style-image: url('/public/svg/dot-circle.svg');
 }
