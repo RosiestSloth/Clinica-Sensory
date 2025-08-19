@@ -11,7 +11,7 @@ export default defineNuxtConfig({
         lang: 'pt-br',
       },
       link: [
-        { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico'}
+        { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
       ]
     }
   },
@@ -31,7 +31,7 @@ export default defineNuxtConfig({
       pathPrefix: false,
     },
   ],
-  
+
   modules: [
     '@nuxt/content',
     '@nuxt/eslint',
@@ -44,6 +44,7 @@ export default defineNuxtConfig({
     defaultImport: 'component',
   },
   image: {
+    inject: true,
     format: ['webp'],
     screens: {
       xs: 320,
@@ -54,6 +55,5 @@ export default defineNuxtConfig({
       xxl: 1536,
       '2xl': 1536
     },
-    dir: 'public/img',
   }
 })
