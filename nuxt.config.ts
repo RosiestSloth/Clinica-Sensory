@@ -1,4 +1,6 @@
 import tailwindcss from "@tailwindcss/vite";
+import { addComponentsDir } from "nuxt/kit";
+import { resolveComponent } from "vue";
 
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
@@ -25,13 +27,15 @@ export default defineNuxtConfig({
     ],
   },
 
-  components: [
-    {
-      path: './app/components',
-      pathPrefix: false,
-    },
-  ],
-
+  /*
+  setup() {
+    addComponentsDir({
+      path: resolve('./runtime/components'),
+      prefix: 'U',
+      pathPrefix: false
+    })
+  }
+  */
   modules: [
     '@nuxt/content',
     '@nuxt/eslint',

@@ -91,7 +91,7 @@
         </div>
 
         <div class="flex relative before:h-0.5 before:w-50 before:right-0 before:content-[''] before:absolute before:[background:linear-gradient(to_right,_#206FBD_0%_16.666%,_#05528D_16.666%_33.333%,_#597E22_33.333%_50%,_#87BF34_50%_66.666%,_#FF89DD_66.666%_83.333%,_#F266C1_83.333%_100%)] pt-5 mt-1 font-semibold text-[0.8em] justify-between">
-          <ul class="mt-5 text-black/90 list-inside" id="lista-servicos">
+          <ul class="mt-5 text-black/90 list-inside flex-1" id="lista-servicos">
             <li>
               Terapia ABA
             </li>
@@ -105,7 +105,7 @@
               Terapia Ocupacional
             </li>
           </ul>
-          <ul class="mt-5 text-black/90 list-inside" id="lista-servicos">
+          <ul class="mt-5 text-black/90 list-inside flex-1" id="lista-servicos">
             <li>
               Psicopedagogia
             </li>
@@ -119,6 +119,50 @@
               Integração Sensorial, PECS, TPAC, CCAA
             </li>
           </ul>
+        </div>
+      </section>
+
+      <section class="bg-linear-to-b from-[#36A8FF] via-[#206599] to-[#36A8FE] text-white pt-10 sm:pt-16 p-5 md:p-10">
+        <h2 class="text-[1.6em] font-semibold">
+          Avaliações de alguns de nossos clientes
+        </h2>
+        <div id="separador" class="h-0.5 w-50 left-0 content-[''] relative [background:linear-gradient(to_right,_#206FBD_0%_16.666%,_#05528D_16.666%_33.333%,_#597E22_33.333%_50%,_#87BF34_50%_66.666%,_#FF89DD_66.666%_83.333%,_#F266C1_83.333%_100%)] mt-2"></div>
+        <p class="mt-4">
+          Acreditamos que cada conquista deve ser celebrada
+        </p>
+        <p>
+          Veja alguns depoimentos de pais e responsáveis que acompanham de perto o desenvolvimento de suas crianças conosco.
+        </p>
+
+        <div id="depoimentos" class="overflow-x-hidden text-black text-sm flex flex-col gap-4 mt-8">
+          <div id="primeiro" class="flex flex-row gap-4">
+            <div class="bg-white flex-1 rounded-xl p-4">
+              <h3 class="text-xl font-semibold">Comentário 01</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente asperiores, cupiditate unde possimus odit magni a est sed quisquam iure et, doloribus nemo, labore nesciunt odio. Error esse nulla excepturi!
+              </p>
+            </div>
+            <div class="bg-white flex-1 rounded-xl p-4">
+              <h3 class="text-xl font-semibold">Comentário 02</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum laboriosam, unde accusamus tempore nostrum modi veniam temporibus quae in, explicabo nam consectetur consequuntur. Assumenda tenetur, autem incidunt pariatur repellat quas.
+              </p>
+            </div>
+          </div>
+          <div id="segundo" class="flex flex-row gap-4">
+            <div class="bg-white flex-1 rounded-xl p-4">
+              <h3 class="text-xl font-semibold">COmentário 03</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente asperiores, cupiditate unde possimus odit magni a est sed quisquam iure et, doloribus nemo, labore nesciunt odio. Error esse nulla excepturi!
+              </p>
+            </div>
+            <div class="bg-white flex-1 rounded-xl p-4">
+              <h3 class="text-xl font-semibold">Comentário 04</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum laboriosam, unde accusamus tempore nostrum modi veniam temporibus quae in, explicabo nam consectetur consequuntur. Assumenda tenetur, autem incidunt pariatur repellat quas.
+              </p>
+              </div>
+          </div>
         </div>
       </section>
     </main>

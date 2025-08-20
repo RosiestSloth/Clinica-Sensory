@@ -1,6 +1,6 @@
 <template>
     <div>
-        <header class="flex">
+        <header class="flex flex-row">
             LOGO DO SITE
             <nav>
                 <ul class="list-none">
