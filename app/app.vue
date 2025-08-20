@@ -1,6 +1,6 @@
 <template>
   <div class="max-w-screen max-h-screen">
-    <header />
+    <AppHeader />
     <main class="">
       <section class="bg-yellow-500 bg-[url('/img/background-1.png')] bg-cover bg-center h-120 px-5 py-10 md:px-10 md:pt-14 xl:px-20 xl:pt-20 relative mb-30 md:mb-40">
 
@@ -22,8 +22,8 @@
           <div id="Primeiro" class="bg-[var(--clear-pink)] flex-1 md:p-4 p-2 flex gap-4">
             <NuxtImg src="/img/coracao-TEA.png" class="h-20" alt="Foto coração com o símbolo TEA" />
             <div>
-              <h3 class="text-[1.1em] md:text-2xl font-bold">Atendimento Personalizado</h3>
-              <ul class="list-disc list-inside text-[0.7em] sm:text-[0.9em] xl:text-xl">
+              <h3 class="text-[1.1em] md:text-xl font-bold">Atendimento Personalizado</h3>
+              <ul class="list-disc list-inside text-[0.7em] sm:text-sm xl:text-xl">
                 <li>Abordagem individualizada para cada criança.</li>
                 <li>Planos terapêuticos adaptados às necessidades específicas.</li>
               </ul>
@@ -58,19 +58,19 @@
         <h2 class="">
           Clínica Sensory Multidisciplinar
         </h2>
-        <h3 class="text-[1.4em] font-semibold">
+        <h3 class="text-xl md:text-2xl xl:text-3xl font-semibold">
           Atendimentos Terapêuticos Multidisciplinares e Humanizados
         </h3>
 
         <!-- Separador -->
 
         <div id="images" 
-          class="flex items-center relative before:h-0.5 before:w-50 before:content-[''] before:absolute before:left-0 before:top-0 before:[background:linear-gradient(to_right,_#206FBD_0%_16.666%,_#05528D_16.666%_33.333%,_#597E22_33.333%_50%,_#87BF34_50%_66.666%,_#FF89DD_66.666%_83.333%,_#F266C1_83.333%_100%)] pt-5 mt-1 gap-2">
+          class="flex items-center relative before:h-0.5 before:md:h-1 before:w-50 before:md:w-100 before:content-[''] before:absolute before:left-0 before:top-0 before:[background:linear-gradient(to_right,_#206FBD_0%_16.666%,_#05528D_16.666%_33.333%,_#597E22_33.333%_50%,_#87BF34_50%_66.666%,_#FF89DD_66.666%_83.333%,_#F266C1_83.333%_100%)] pt-5 mt-1 gap-2">
           <NuxtImg src="/img/img_criancas.png" class="w-1/2 h-full object-cover" alt="Crianças sorrindo e brincando juntas em um ambiente colorido e acolhedor, transmitindo alegria e inclusão. O fundo mostra brinquedos e decoração lúdica, reforçando o clima de diversão e segurança." />
           <NuxtImg src="/img/criancas_brincando.png" class="rounded-[20px_0px_20px_0px] w-1/2 h-full object-cover" alt="Crianças brincando na Clinica Sensory" />
         </div>
 
-        <div class="flex flex-col gap-3 text-black/90 mt-5 text-justify text-[0.8em]">
+        <div class="flex flex-col gap-3 text-black/90 mt-5 text-justify text-sm sm:text-md md:text-lg xl:text-xl">
           <p>
             A Clínica Sensory nasceu do desejo de oferecer mais que terapia: um acolhimento verdadeiro. Percebemos que muitas famílias buscavam apoio, mas encontravam atendimentos impessoais e pouco sensíveis às suas realidades.
           </p>
@@ -90,8 +90,8 @@
           <NuxtImg src="/img/laco-TEA.png" class="w-1/4 h-full object-cover"/>
         </div>
 
-        <div class="flex relative before:h-0.5 before:w-50 before:right-0 before:content-[''] before:absolute before:[background:linear-gradient(to_right,_#206FBD_0%_16.666%,_#05528D_16.666%_33.333%,_#597E22_33.333%_50%,_#87BF34_50%_66.666%,_#FF89DD_66.666%_83.333%,_#F266C1_83.333%_100%)] pt-5 mt-1 font-semibold text-[0.8em] justify-between">
-          <ul class="mt-5 text-black/90 list-inside flex-1" id="lista-servicos">
+        <div class="flex relative before:h-0.5 before:md:h-1 before:w-50 before:md:w-100 before:right-0 before:content-[''] before:absolute before:[background:linear-gradient(to_right,_#206FBD_0%_16.666%,_#05528D_16.666%_33.333%,_#597E22_33.333%_50%,_#87BF34_50%_66.666%,_#FF89DD_66.666%_83.333%,_#F266C1_83.333%_100%)] pt-5 mt-1 font-semibold text-sm sm:text-md md:text-lg xl:text-xl justify-between">
+          <ul class="mt-5 text-black/90 list-inside flex-1 " id="lista-servicos">
             <li>
               Terapia ABA
             </li>
@@ -126,7 +126,9 @@
         <h2 class="text-[1.6em] font-semibold">
           Avaliações de alguns de nossos clientes
         </h2>
-        <div id="separador" class="h-0.5 w-50 left-0 content-[''] relative [background:linear-gradient(to_right,_#206FBD_0%_16.666%,_#05528D_16.666%_33.333%,_#597E22_33.333%_50%,_#87BF34_50%_66.666%,_#FF89DD_66.666%_83.333%,_#F266C1_83.333%_100%)] mt-2"></div>
+        <div id="separador" class="h-0.5 
+        md:h-1 
+        w-50 md:w-100 left-0 content-[''] relative [background:linear-gradient(to_right,_#206FBD_0%_16.666%,_#05528D_16.666%_33.333%,_#597E22_33.333%_50%,_#87BF34_50%_66.666%,_#FF89DD_66.666%_83.333%,_#F266C1_83.333%_100%)] mt-2"></div>
         <p class="mt-4">
           Acreditamos que cada conquista deve ser celebrada
         </p>
@@ -137,28 +139,28 @@
         <div id="depoimentos" class="overflow-x-hidden text-black text-sm flex flex-col gap-4 mt-8">
           <div id="primeiro" class="flex flex-row gap-4">
             <div class="bg-white flex-1 rounded-xl p-4">
-              <h3 class="text-xl font-semibold">Comentário 01</h3>
-              <p>
+              <h3 class="text-sm md:text-md xl:text-lg font-semibold">Comentário 01</h3>
+              <p id="Comentario" class="text-[0.8em] sm:text-sm md:text-md">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente asperiores, cupiditate unde possimus odit magni a est sed quisquam iure et, doloribus nemo, labore nesciunt odio. Error esse nulla excepturi!
               </p>
             </div>
             <div class="bg-white flex-1 rounded-xl p-4">
-              <h3 class="text-xl font-semibold">Comentário 02</h3>
-              <p>
+              <h3 class="text-sm md:text-md xl:text-lg font-semibold">Comentário 02</h3>
+              <p id="Comentario" class="text-[0.8em] sm:text-sm md:text-md">
                 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum laboriosam, unde accusamus tempore nostrum modi veniam temporibus quae in, explicabo nam consectetur consequuntur. Assumenda tenetur, autem incidunt pariatur repellat quas.
               </p>
             </div>
           </div>
           <div id="segundo" class="flex flex-row gap-4">
             <div class="bg-white flex-1 rounded-xl p-4">
-              <h3 class="text-xl font-semibold">COmentário 03</h3>
-              <p>
+              <h3 class="text-sm md:text-md xl:text-lg font-semibold">Comentário 03</h3>
+              <p id="Comentario" class="text-[0.8em] sm:text-sm md:text-md">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente asperiores, cupiditate unde possimus odit magni a est sed quisquam iure et, doloribus nemo, labore nesciunt odio. Error esse nulla excepturi!
               </p>
             </div>
             <div class="bg-white flex-1 rounded-xl p-4">
-              <h3 class="text-xl font-semibold">Comentário 04</h3>
-              <p>
+              <h3 class="text-sm md:text-md xl:text-lg font-semibold">Comentário 04</h3>
+              <p id="Comentario" class="text-[0.8em] sm:text-sm md:text-md">
                 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum laboriosam, unde accusamus tempore nostrum modi veniam temporibus quae in, explicabo nam consectetur consequuntur. Assumenda tenetur, autem incidunt pariatur repellat quas.
               </p>
               </div>

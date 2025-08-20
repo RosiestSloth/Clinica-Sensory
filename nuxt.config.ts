@@ -21,21 +21,17 @@ export default defineNuxtConfig({
   css: [
     "~/assets/css/main.css",
   ],
+
   vite: {
     plugins: [
       tailwindcss(),
     ],
   },
 
-  /*
-  setup() {
-    addComponentsDir({
-      path: resolve('./runtime/components'),
-      prefix: 'U',
-      pathPrefix: false
-    })
-  }
-  */
+  components: [
+    { path: './components', pathPrefix: false },
+  ],
+
   modules: [
     '@nuxt/content',
     '@nuxt/eslint',
