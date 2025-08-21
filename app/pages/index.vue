@@ -20,7 +20,7 @@
         </div>
         <div class="flex flex-col xl:flex-row gap-2 relative mt-14 z-20 text-white">
           <div id="Primeiro" class="bg-[var(--clear-pink)] flex-1 md:p-4 p-2 flex gap-4">
-            <NuxtImg src="/img/coracao-TEA.png" class="h-20" alt="Foto coração com o símbolo TEA" />
+            <NuxtImg src="/img/coracao-TEA.png" class="h-20 mx-3 xl:m-0" alt="Foto coração com o símbolo TEA" />
             <div>
               <h3 class="text-[1.1em] md:text-xl font-bold">Atendimento Personalizado</h3>
               <ul class="list-disc list-inside text-[0.7em] sm:text-sm xl:text-xl">
@@ -42,7 +42,7 @@
             </div>
           </div>
           <div id="Terceiro" class="bg-[var(--pink)] md:p-4 p-2 gap-4 flex flex-1">
-            <NuxtImg src="/img/laco-TEA.png" class="h-20" alt="" />
+            <NuxtImg src="/img/laco-TEA.png" class="h-20 mx-3 xl:m-0" alt="" />
             <div>
               <h3 class="text-[1.1em] md:text-2xl font-bold">Desenvolvimento Integral</h3>
               <ul class="list-disc list-inside text-[0.7em] sm:text-[0.9em] xl:text-xl">
@@ -135,42 +135,12 @@
         <p>
           Veja alguns depoimentos de pais e responsáveis que acompanham de perto o desenvolvimento de suas crianças conosco.
         </p>
-
-        <div id="depoimentos" class="overflow-x-hidden text-black text-sm flex flex-col gap-4 mt-8">
-          <div id="primeiro" class="flex flex-row gap-4">
-            <div class="bg-white flex-1 rounded-xl p-4">
-              <h3 class="text-sm md:text-md xl:text-lg font-semibold">Comentário 01</h3>
-              <p id="Comentario" class="text-[0.8em] sm:text-sm md:text-md">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente asperiores, cupiditate unde possimus odit magni a est sed quisquam iure et, doloribus nemo, labore nesciunt odio. Error esse nulla excepturi!
-              </p>
-            </div>
-            <div class="bg-white flex-1 rounded-xl p-4">
-              <h3 class="text-sm md:text-md xl:text-lg font-semibold">Comentário 02</h3>
-              <p id="Comentario" class="text-[0.8em] sm:text-sm md:text-md">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum laboriosam, unde accusamus tempore nostrum modi veniam temporibus quae in, explicabo nam consectetur consequuntur. Assumenda tenetur, autem incidunt pariatur repellat quas.
-              </p>
-            </div>
-          </div>
-          <div id="segundo" class="flex flex-row gap-4">
-            <div class="bg-white flex-1 rounded-xl p-4">
-              <h3 class="text-sm md:text-md xl:text-lg font-semibold">Comentário 03</h3>
-              <p id="Comentario" class="text-[0.8em] sm:text-sm md:text-md">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente asperiores, cupiditate unde possimus odit magni a est sed quisquam iure et, doloribus nemo, labore nesciunt odio. Error esse nulla excepturi!
-              </p>
-            </div>
-            <div class="bg-white flex-1 rounded-xl p-4">
-              <h3 class="text-sm md:text-md xl:text-lg font-semibold">Comentário 04</h3>
-              <p id="Comentario" class="text-[0.8em] sm:text-sm md:text-md">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum laboriosam, unde accusamus tempore nostrum modi veniam temporibus quae in, explicabo nam consectetur consequuntur. Assumenda tenetur, autem incidunt pariatur repellat quas.
-              </p>
-              </div>
-          </div>
-        </div>
+        <Comments />
       </section>
     </main>
   </div>
 </template>
 
 <script setup lang="ts">
-  import WhatsappIcon from './assets/svg/WhatsApp.svg';
+  import WhatsappIcon from '../assets/svg/WhatsApp.svg';
 </script>
