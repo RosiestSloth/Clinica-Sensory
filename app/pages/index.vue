@@ -2,6 +2,9 @@
   <div class="max-w-screen max-h-screen">
     <AppHeader />
     <main class="">
+
+      <!-- First Section -->
+
       <section class="bg-yellow-500 bg-[url('/img/background-1.png')] bg-cover bg-center h-120 px-5 py-10 md:px-10 md:pt-14 xl:px-20 xl:pt-20 relative mb-30 md:mb-40">
 
         <div class="absolute w-full h-full bg-black/30 z-10 inset-0"></div>
@@ -53,6 +56,8 @@
           </div>
         </div>
       </section>
+
+      <!-- Sobre a Clínica -->
 
       <section class="pt-14 sm:pt-10 p-5 md:p-10">
         <h2 class="">
@@ -122,20 +127,38 @@
         </div>
       </section>
 
-      <section class="bg-linear-to-b from-[#36A8FF] via-[#206599] to-[#36A8FE] text-white pt-10 sm:pt-16 p-5 md:p-10">
-        <h2 class="text-[1.6em] font-semibold">
+      <!-- Avaliações -->
+      <section class="bg-linear-to-b from-[#36A8FF] via-[#206599] to-[#36A8FE] text-white pt-10 sm:pt-16 p-5 md:p-10 relative">
+        <h2 class="text-xl md:text-2xl xl:text-3xl font-semibold">
           Avaliações de alguns de nossos clientes
         </h2>
         <div id="separador" class="h-0.5 
         md:h-1 
         w-50 md:w-100 left-0 content-[''] relative [background:linear-gradient(to_right,_#206FBD_0%_16.666%,_#05528D_16.666%_33.333%,_#597E22_33.333%_50%,_#87BF34_50%_66.666%,_#FF89DD_66.666%_83.333%,_#F266C1_83.333%_100%)] mt-2"></div>
-        <p class="mt-4">
+        <p class="mt-4 text-justify text-sm sm:text-md md:text-lg xl:text-xl">
           Acreditamos que cada conquista deve ser celebrada
         </p>
-        <p>
+        <p class="text-justify text-sm sm:text-md md:text-lg xl:text-xl">
           Veja alguns depoimentos de pais e responsáveis que acompanham de perto o desenvolvimento de suas crianças conosco.
         </p>
         <Comments />
+
+        <div id="separador" class="h-0.5 
+        md:h-1 
+        w-50 md:w-100 right-10 content-[''] absolute [background:linear-gradient(to_right,_#206FBD_0%_16.666%,_#05528D_16.666%_33.333%,_#597E22_33.333%_50%,_#87BF34_50%_66.666%,_#FF89DD_66.666%_83.333%,_#F266C1_83.333%_100%)] mt-8"></div>
+
+        <div class="relative mt-20">
+          <h2 class="text-xl md:text-2xl xl:text-3xl font-semibold">Onde você pode nos encontrar?</h2>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3838.298770883089!2d-48.04702199999999!3d-15.8408869!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935a3370522b5b61%3A0x39273d2aa8214a95!2sCl%C3%ADnica%20Sensory%20multidisciplinar!5e0!3m2!1spt-BR!2sbr!4v1755881223412!5m2!1spt-BR!2sbr" title="Localização Clinica Sensory" class="w-full h-100 mt-6 rounded-md" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+          <p class="mt-5 text-justify text-sm sm:text-md md:text-lg xl:text-xl">
+            Endereço: St. D Sul QSD 05 CL ed.Spazio Duo Sala 501 - Taguatinga, Brasília - DF, 72020-111
+          </p>
+        </div>
+      </section>
+
+      <section>
+
       </section>
     </main>
   </div>

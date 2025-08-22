@@ -1,47 +1,49 @@
 <template>
-  <div>
-    <header class="flex flex-row justify-between items-center p-4 bg-white text-gray-800 shadow-md">
-      <NuxtImg 
-        src="/Logo.png"
-        alt="Logo"
-        class="size-15"
-      />
-      <nav>
-        <ul class="list-none flex flex-row gap-4">
-          <!-- Home -->
-          <li>
-            <NuxtLink 
-              to="/" 
-              class="flex items-center gap-2 px-4 py-2 rounded-lg font-semibold text-white bg-green-500 hover:bg-green-600 shadow-lg hover:shadow-md transition-all duration-300"
-            >
-              <span>🏠</span>
-              Home
-            </NuxtLink>
-          </li>
+    <div>
+        <div class="bg-gray-100">
+            <nav class="container px-3 py-4 mx-auto md:flex md:justify-between md:items-center">
+                <div class="flex items-center justify-between">
+                    <NuxtLink to="/" class="text-xl font-bold text-gray-800 md:text-2xl hover:text-blue-400">
+                        <NuxtImg src="/Logo.png" class="size-15" alt="Clinica Sensory" />
+                    </NuxtLink>
+                    <!-- Mobile menu button -->
+                    <div @click="showMenu = !showMenu" class="flex md:hidden">
+                        <button type="button"
+                            class="text-gray-800 hover:text-gray-400 focus:outline-none focus:text-gray-400">
+                            <svg viewBox="0 0 24 24" class="w-6 h-6 fill-current">
+                                <path fill-rule="evenodd"
+                                    d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z">
+                                </path>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
 
-          <!-- About -->
-          <li>
-            <NuxtLink 
-              to="/about" 
-              class="flex items-center gap-2 px-4 py-2 rounded-lg font-semibold text-white bg-blue-600 hover:bg-blue-700 shadow-lg hover:shadow-md transition-all duration-300"
-            >
-              <span>ℹ️</span>
-              About
-            </NuxtLink>
-          </li>
-
-          <!-- Contact -->
-          <li>
-            <NuxtLink 
-              to="/contact" 
-              class="flex items-center gap-2 px-4 py-2 rounded-lg font-semibold text-white bg-pink-600 hover:bg-pink-700 shadow-lg hover:shadow-md transition-all duration-300"
-            >
-              <span>📞</span>
-              Contact
-            </NuxtLink>
-          </li>
-        </ul>
-      </nav>
-    </header>
-  </div>
+                <!-- Mobile Menu open: "block", Menu closed: "hidden" -->
+                <ul :class="showMenu ? 'flex' : 'hidden'"
+                    class="flex-col mt-8 space-y-4 md:flex md:space-y-0 md:flex-row md:items-center md:space-x-10 md:mt-0">
+                    <li class="text-sm font-bold text-gray-800 hover:text-blue-400">
+                        <NuxtLink to="/">Home</NuxtLink>
+                    </li>
+                    <li class="text-sm font-bold text-gray-800 hover:text-blue-400">
+                        <NuxtLink to="/about">Sobre</NuxtLink>
+                    </li>
+                    <li class="text-sm font-bold text-gray-800 hover:text-blue-400">
+                        <NuxtLink to="/blogs">Contate-nos</NuxtLink>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
 </template>
+<script>
+import { NuxtLink } from '#components';
+
+export default {
+    data() {
+        return {
+            showMenu: false,
+        };
+    },
+};
+</script>
