@@ -29,7 +29,7 @@
                         <NuxtLink to="/about">Sobre</NuxtLink>
                     </li>
                     <li class="text-sm font-bold text-gray-800 hover:text-blue-400">
-                        <NuxtLink to="/blogs">Contate-nos</NuxtLink>
+                        <NuxtLink to="/Contact-us">Contate-nos</NuxtLink>
                     </li>
                 </ul>
             </nav>
