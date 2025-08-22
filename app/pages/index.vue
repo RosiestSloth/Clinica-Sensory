@@ -150,7 +150,7 @@
         <div class="relative mt-14">
           <h2 class="text-xl md:text-2xl xl:text-3xl font-semibold">Onde você pode nos encontrar?</h2>
           <!-- Google Maps -->
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3838.298770883089!2d-48.04702199999999!3d-15.8408869!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935a3370522b5b61%3A0x39273d2aa8214a95!2sCl%C3%ADnica%20Sensory%20multidisciplinar!5e0!3m2!1spt-BR!2sbr!4v1755881223412!5m2!1spt-BR!2sbr" title="Localização Clinica Sensory" class="w-full h-100 mt-6 rounded-md" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3838.298770883089!2d-48.04702199999999!3d-15.8408869!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935a3370522b5b61%3A0x39273d2aa8214a95!2sCl%C3%ADnica%20Sensory%20multidisciplinar!5e0!3m2!1spt-BR!2sbr!4v1755881223412!5m2!1spt-BR!2sbr" title="Localização Clinica Sensory" class="w-full h-100 mt-6 rounded-md bg-gray-100" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
           <p class="mt-5 text-justify text-sm sm:text-md md:text-lg xl:text-xl">
             Endereço: St. D Sul QSD 05 CL ed.Spazio Duo Sala 501 - Taguatinga, Brasília - DF, 72020-111
