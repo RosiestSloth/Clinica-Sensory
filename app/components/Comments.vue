@@ -1,4 +1,5 @@
 <template>
+  <!-- Controle do Carrossel -->
   <div
     class="relative w-full overflow-hidden select-none"
     @mousedown="startDrag"
@@ -9,72 +10,43 @@
     @touchmove="onDrag"
     @touchend="endDrag"
   >
-    <!-- Container de slides -->
     <div
       ref="carousel"
-      class="flex transition-transform duration-500 ease-in-out gap-4 mr-2 cursor-grab active:cursor-grabbing"
+      class="flex gap-4 cursor-grab active:cursor-grabbing"
+      :class="{ 'transition-transform duration-500 ease-in-out': !isDragging }"
       :style="{ transform: `translateX(${translateX}px)` }"
     >
-      <!-- Slide 1 -->
-      <div class="flex-shrink-0 w-full flex flex-col gap-4 mt-8">
-        <div class="flex flex-row gap-4 w-full">
-          <div class="bg-white flex-1 rounded-xl p-4 shadow-md text-black/90">
-            <h3 class="text-sm md:text-md xl:text-lg font-semibold">Comentário 01</h3>
-            <p class="text-[0.8em] sm:text-sm md:text-md">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit...
-            </p>
-          </div>
-          <div class="bg-white flex-1 rounded-xl p-4 shadow-md text-black/90">
-            <h3 class="text-sm md:text-md xl:text-lg font-semibold">Comentário 02</h3>
-            <p class="text-[0.8em] sm:text-sm md:text-md">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit...
-            </p>
-          </div>
-        </div>
-        <div class="flex flex-row gap-4 w-full">
-          <div class="bg-white flex-1 rounded-xl p-4 shadow-md text-black/90">
-            <h3 class="text-sm md:text-md xl:text-lg font-semibold">Comentário 03</h3>
-            <p class="text-[0.8em] sm:text-sm md:text-md">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit...
-            </p>
-          </div>
-          <div class="bg-white flex-1 rounded-xl p-4 shadow-md text-black/90">
-            <h3 class="text-sm md:text-md xl:text-lg font-semibold">Comentário 04</h3>
-            <p class="text-[0.8em] sm:text-sm md:text-md">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit...
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Slide 2 -->
-      <div class="flex-shrink-0 w-full flex flex-col gap-4 mt-8">
-        <div class="flex flex-row gap-4 w-full">
-          <div class="bg-white flex-1 rounded-xl p-4 shadow-md text-black/90">
-            <h3 class="text-sm md:text-md xl:text-lg font-semibold">Comentário 05</h3>
-            <p class="text-[0.8em] sm:text-sm md:text-md">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit...
-            </p>
-          </div>
-          <div class="bg-white flex-1 rounded-xl p-4 shadow-md text-black/90">
-            <h3 class="text-sm md:text-md xl:text-lg font-semibold">Comentário 06</h3>
-            <p class="text-[0.8em] sm:text-sm md:text-md">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit...
-            </p>
-          </div>
-        </div>
-        <div class="flex flex-row gap-4 w-full">
-          <div class="bg-white flex-1 rounded-xl p-4 shadow-md text-black/90">
-            <h3 class="text-sm md:text-md xl:text-lg font-semibold">Comentário 07</h3>
-            <p class="text-[0.8em] sm:text-sm md:text-md">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit...
-            </p>
-          </div>
-          <div class="bg-white flex-1 rounded-xl p-4 shadow-md text-black/90">
-            <h3 class="text-sm md:text-md xl:text-lg font-semibold">Comentário 08</h3>
-            <p class="text-[0.8em] sm:text-sm md:text-md">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit...
-            </p>
+      <div
+        v-for="(slide, index) in slides"
+        :key="index"
+        class="flex-shrink-0 w-full flex flex-col gap-4 mt-8"
+      >
+        <div
+          v-for="(row, rowIndex) in slide.rows"
+          :key="rowIndex"
+          class="flex flex-col sm:flex-row gap-4 w-full"
+        >
+          <div
+            v-for="(card, cardIndex) in row"
+            :key="cardIndex"
+            class="bg-white flex flex-col flex-1 rounded-xl p-4 shadow-md text-black/90"
+          >
+            <div class="relative h-30 lg:h-40">
+              <h3 class="text-sm md:text-md xl:text-lg font-semibold flex items-center gap-2">
+                <GoogleLogo class="size-5" /> 
+                {{ card.title }}
+              </h3>
+              <p class="text-[0.8em] sm:text-sm md:text-md mt-1 overflow-hidden line-clamp-4 md:line-clamp-5 text-justify">{{ card.text }}</p>
+            </div>
+            
+            <div class="flex items-end mt-3 h-full">
+              <span v-for="star in 5" :key="star">
+                <RatingStar 
+                  class="w-5 h-5"
+                  :class="star <= card.rating ? 'text-yellow-400' : 'text-gray-300'"
+                />
+              </span>
+            </div>
           </div>
         </div>
       </div>
@@ -83,52 +55,93 @@
 </template>
 
 <script setup>
-  import { ref, onMounted } from "vue"
+import { ref, onMounted, onUnmounted, nextTick } from "vue";
+import RatingStar from "/assets/svg/Rating_Star.svg";
+import GoogleLogo from "/assets/svg/Google_Logo.svg";
 
-  const carousel = ref(null)
-  const startX = ref(0)
-  const currentX = ref(0)
-  const translateX = ref(0)
-  const currentIndex = ref(0)
-  const slideWidth = ref(0)
-  const totalSlides = 2 // temos 2 blocos no seu template
+// --- STATE ---
+const carousel = ref(null);
+const translateX = ref(0);
+const currentIndex = ref(0);
+const slideWidth = ref(0);
+const gap = ref(0);
+const isDragging = ref(false);
+const startX = ref(0);
+const currentDragX = ref(0);
 
-  // Calcula a largura de cada slide dinamicamente
-  onMounted(() => {
-    if (carousel.value) {
-      slideWidth.value = carousel.value.offsetWidth
+// --- DADOS DO CARROSSEL ---
+const slides = ref([
+  {
+    rows: [
+      [{ title: "Renata Alves", text: "Meu pequeno está realizando terapias de fonoaudióloga com a tia Fabiane e Terapia Ocupacional com a Tia Ingrid, ambas são maravilhosas e graças a ela, já estamos dando os primeiros passos para a evolução do meu filho. Só tenho a agradecer a todos pelo carinho e receptividade com filho. Desde as meninas da recepção e a todos os terapeutas meu muito obrigada, por realizarem o seu trabalho com tanto amor, carinho e profissionalismo 💙", rating: 5 }, 
+      { title: "Irisley Nunes", text: "Meu filho está fazendo a terapia de cabine fechada (TPAC) com Marcelo e tem desenvolvido muito suas habilidades. Excelente profissional. Muito atencioso e cuidadoso. Super recomendo a clínica para as mães que estão em busca de bons profissionais e local acolhedor.", rating: 5 }],
+      [{ title: "Márcia Daniele", text: "Tenho apenas elogios a fazer a essa clínica. Desde os profissionais da recepção até as terapeutas, todos são incríveis. Os profissionais são excelentes e cuidam das crianças com muito carinho. Tenho grande admiração pelos fonoaudiólogos Marcelo e Fabiane, profissionais maravilhosos. E a psicóloga Anne é muito atenciosa, dedicada e carinhosa. Uma excelente profissional.", rating: 5 }, { title: "Laís Lima", text: "Parabéns a equipe da clinica Sensory pelo excelente trabalho, um ambiente acolhedor, profissionais preparados, é nítida a evolução do meu filho ( Não tive experiências boas em outras clinicas). Super indico para todos que precisam.", rating: 5 }],
+    ],
+  },
+  {
+    rows: [
+      [{ title: "Brenda Macedo", text: "Um lugar maravilhoso, meu filho tem evoluído cada vez mais, ótimos profissionais desde a recepção e todos os profissionais que atendem!!! Muito obrigada pelo o cuidado com meu filho.", rating: 5 }, 
+      { title: "Andreia Silva", text: "Só tenho elogios e agradecimentos aos profissionais da Sensory, começando pela recepção que tem um atendimento humanizado incrível, Michelle principalmente, nunca ví alguém tão dedicada, carinhosa que vibra com cada evolução das crianças que fazem terapia,confortando e aquecendo o coração dos pais.Parabéns de verdade 👏🫰🏻 Graças ao atendimento dedicado amoroso dos terapeutas,minha filha está tendo um desenvolvimento escolar excepcional, fazendo essa caminhada tão difícil...", rating: 5 }],
+      [{ title: "Sarah Melo", text: "Meu filho é autista não verbal e tinha nenhum desenvolvimento na fala. Desde que começou seu atendimento com o fonoaudiólogo Marcelo, ele adquiriu todos os pré-requisitos da fala, e depois de 5 meses de acompanhamento ele já está falando várias palavrinhas.O profissional Marcelo foi chave fundamental para essa conquista! Indico a clínica para todos aqueles que, assim como eu, estão cansados do atendimento precário para autistas. Ser atendida por profissionais que visam o paciente e não o financeiro, é raridade. Gratidão a clínica Sensory!", rating: 5 }, { title: "Danielle Monyke", text: "Clínica com excelentes profissionais! Atendimento humanizado e excelência qualidade! Meu filho gosta muito de ir para terapia!", rating: 5 }],
+    ],
+  },
+]);
+
+const totalSlides = slides.value.length;
+
+// --- MÉTODOS ---
+const updateSlideWidth = () => {
+  if (carousel.value) {
+    const style = window.getComputedStyle(carousel.value);
+    gap.value = parseFloat(style.gap) || 0;
+    slideWidth.value = carousel.value.offsetWidth;
+    translateX.value = -currentIndex.value * (slideWidth.value + gap.value);
+  }
+};
+
+const getDragX = (e) => (e.touches ? e.touches[0].clientX : e.clientX);
+
+const startDrag = (e) => {
+  isDragging.value = true;
+  startX.value = getDragX(e);
+  currentDragX.value = translateX.value;
+};
+
+const onDrag = (e) => {
+  if (!isDragging.value) return;
+  e.preventDefault(); // Previne comportamentos padrão do navegador, como selecionar texto
+  const diff = getDragX(e) - startX.value;
+  translateX.value = currentDragX.value + diff;
+};
+
+const endDrag = (e) => {
+  if (!isDragging.value) return;
+  isDragging.value = false;
+  
+  const dragThreshold = slideWidth.value / 4; // Limite de 25% para trocar de slide
+  const diff = (e.changedTouches ? e.changedTouches[0].clientX : e.clientX) - startX.value;
+
+  if (Math.abs(diff) > dragThreshold) {
+    if (diff < 0 && currentIndex.value < totalSlides - 1) {
+      currentIndex.value++;
+    } else if (diff > 0 && currentIndex.value > 0) {
+      currentIndex.value--;
     }
-  })
-
-  // Quando começa a arrastar
-  function startDrag(e) {
-    startX.value = e.touches ? e.touches[0].clientX : e.clientX
-    carousel.value.style.transition = "none"
   }
 
-  // Durante o arrasto
-  function onDrag(e) {
-    if (!startX.value) return
-    currentX.value = e.touches ? e.touches[0].clientX : e.clientX
-    const diff = currentX.value - startX.value
-    translateX.value = -currentIndex.value * slideWidth.value + diff
-  }
+  translateX.value = -currentIndex.value * (slideWidth.value + gap.value);
+  startX.value = 0;
+};
 
-  // Quando solta
-  function endDrag() {
-    if (!startX.value) return
-    const diff = currentX.value - startX.value
+// --- LIFECYCLE HOOKS ---
+onMounted(() => {
+  nextTick(() => {
+    updateSlideWidth();
+  });
+  window.addEventListener("resize", updateSlideWidth);
+});
 
-    if (Math.abs(diff) > 100) {
-      if (diff < 0 && currentIndex.value < totalSlides - 1) {
-        currentIndex.value++
-      } else if (diff > 0 && currentIndex.value > 0) {
-        currentIndex.value--
-      }
-    }
-
-    translateX.value = -currentIndex.value * slideWidth.value
-    carousel.value.style.transition = "transform 0.5s ease"
-    startX.value = 0
-  }
+onUnmounted(() => {
+  window.removeEventListener("resize", updateSlideWidth);
+});
 </script>

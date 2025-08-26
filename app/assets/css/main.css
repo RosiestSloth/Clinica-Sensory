@@ -17,6 +17,7 @@
 body, html {
     max-width: 100vw;
     overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -29,4 +30,12 @@ p:not(.exception), span:not(.exception), li:not(.exception) {
 
 #lista-servicos {
     list-style-image: url('~/assets/svg/dot-circle.svg');
+}
+
+#pictures {
+    background: 
+        url("/img/BG_2.webp") repeat-y left top,
+        url("/img/BG_2.webp") repeat-y right 75px; /* começa um pouco mais embaixo */
+    background-size: 120px;
+    opacity: 0.5;
 }
