@@ -131,7 +131,7 @@
       </section>
 
       <!-- Avaliações -->
-      <section id="avaliacoes" class="bg-linear-to-b from-[#36A8FF] via-[#206599] to-[#36A8FE] text-white pt-10 sm:pt-16 p-5 md:p-10 relative">
+      <section id="avaliacoes" class="bg-linear-to-b from-[#36A8FF] via-[#206599] to-[#36A8FE] text-white p-5 md:p-10 relative">
         <div id="pictures" class="absolute w-full h-full z-10 inset-0"></div>
         <div class=" relative z-20">
           <h2 class="text-xl md:text-2xl xl:text-3xl font-semibold">
@@ -173,29 +173,64 @@
         </div>
       </section>
 
-      <!-- Convênios -->
+      <!-- MÉTODO INTERAÇÃO -->
 
-      <section class="pt-10 sm:pt-16 p-5 md:p-10">
-        <h2 class="text-xl md:text-2xl xl:text-3xl font-semibold">
-          Também aceitamos convênios
-        </h2>
-      </section>
-
-      <Convenios  />
-
-      <section class="pt-10 sm:pt-16 p-5 md:p-10">
-        <h2 class="md:text-lg text-md text-[#47C557]">
+      <section class="p-5 md:p-10">
+        <h2 class="text-[var(--green)] text-sm md:text-md xl:text-lg">
           MÉTODO INTERAÇÃO
         </h2>
         <p class="text-xl md:text-2xl xl:text-3xl font-semibold">
           Valorizamos o jeito único de cada criança se expressar e se desenvolver
         </p>
+
+      <cards
+        v-for="service in services"
+        :key="service.title"
+        :title="service.title"
+        :description="service.description"
+        :imageSrc="service.image"
+        :ContainerColor="service.ContainerColor"
+        :BorderColor="service.BorderColor"
+      />
+
       </section>
     </main>
   </div>
 </template>
 
 <script setup lang="ts">
+  import { ref } from 'vue';
   import WhatsappIcon from '../assets/svg/WhatsApp.svg';
   import GoogleMapsIcon from '../assets/svg/GoogleMaps.svg';
+
+  const services = ref([
+    {
+      title: 'ABA (Análise do Comportamento Aplicada)',
+      description: 'Abordagem baseada em evidências que utiliza princípios do comportamento para ensinar habilidades e reduzir comportamentos desafiadores. Muito usada no acompanhamento de pessoas com TEA, a ABA promove autonomia por meio do reforço positivo e da repetição estruturada.',
+      image: '/img/servicos/ABA.png',
+      ContainerColor: 'bg-[var(--blue)]',
+      BorderColor: 'border-[var(--blue)]',
+    },
+    {
+      title: 'PECS (Picture Exchange Communication System)',
+      description: 'Sistema de comunicação por troca de figuras que permite que pessoas com dificuldades verbais possam expressar seus desejos e necessidades. O PECS incentiva a comunicação funcional desde as fases iniciais do desenvolvimento.',
+      image: '/img/servicos/PECS.png',
+      ContainerColor: 'bg-[var(--green)]',
+      BorderColor: 'border-[var(--green)]',
+    },
+    {
+      title: 'TPAC (Teoria Pedagógica do Conhecimento Tecnológico)',
+      description: 'Modelo que integra o conhecimento pedagógico, tecnológico e do conteúdo, auxiliando professores a planejar e aplicar estratégias de ensino mais eficazes com o uso da tecnologia. É um recurso essencial na educação inclusiva e personalizada.',
+      image: '/img/servicos/TPAC.png',
+      ContainerColor: 'bg-[var(--red)]',
+      BorderColor: 'border-[var(--red)]',
+    },
+    {
+      title: 'Integração Sensorial',
+      description: 'Método que visa melhorar a percepção e o processamento de informações sensoriais. Ao organizar os estímulos que o cérebro recebe, contribui para o equilíbrio emocional, motor e social, especialmente em crianças com dificuldades de regulação sensorial.',
+      image: '/img/servicos/Integracao_Sensorial.png',
+      ContainerColor: 'bg-[var(--pink)]',
+      BorderColor: 'border-[var(--pink)]',
+    }
+  ]);
 </script>
