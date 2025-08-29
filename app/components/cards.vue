@@ -3,7 +3,7 @@
     <NuxtImg 
       :src="imageSrc" 
       alt="" 
-      :class="[BorderColor, ' border-x-2 border-t-2 w-[90%] bg-gray-200 h-60 md:h-70 xl:h-80 object-cover'] "
+      :class="[BorderColor, ' border-x-2 border-t-2 w-[90%] bg-gray-200 h-50 md:h-60 xl:h-70 object-cover'] "
     />
 
     <div :class="[ContainerColor, ' p-4 w-full'] ">
