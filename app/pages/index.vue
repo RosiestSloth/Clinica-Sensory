@@ -68,59 +68,62 @@
             </h3>
           </div>
           <!-- Separador -->
-          <div id="images"
-            class="w-full flex items-center relative before:h-0.5 before:w-60 before:content-[''] before:absolute before:left-0 lg:before:top-full lg:before:mt-5 before:top-0 before:[background:linear-gradient(to_right,_#206FBD_0%_16.666%,_#05528D_16.666%_33.333%,_#597E22_33.333%_50%,_#87BF34_50%_66.666%,_#FF89DD_66.666%_83.333%,_#F266C1_83.333%_100%)] pt-5 mt-1 gap-2 flex-1">
-            <NuxtImg src="/img/img_criancas.png" class="w-1/2 h-full object-cover" alt="Crianças sorrindo e brincando juntas em um ambiente colorido e acolhedor, transmitindo alegria e inclusão. O fundo mostra brinquedos e decoração lúdica, reforçando o clima de diversão e segurança." />
-            <NuxtImg src="/img/criancas_brincando.png" class="rounded-[20px_0px_20px_0px] w-1/2 h-full object-cover" alt="Crianças brincando na Clinica Sensory" />
+          <div class="flex flex-row gap-4">
+            <div id="images"
+              class="flex flex-col items-center relative before:h-0.5 before:w-60 before:content-[''] before:absolute before:left-0 lg:before:top-full lg:before:mt-5 before:top-0 before:[background:linear-gradient(to_right,_#206FBD_0%_16.666%,_#05528D_16.666%_33.333%,_#597E22_33.333%_50%,_#87BF34_50%_66.666%,_#FF89DD_66.666%_83.333%,_#F266C1_83.333%_100%)] pt-5 mt-1 gap-2 flex-1">
+              <NuxtImg src="/img/img_criancas.png" class="w-1/2 md:w-full h-full object-cover" alt="Crianças sorrindo e brincando juntas em um ambiente colorido e0 acolhedor, transmitindo alegria e inclusão. O fundo mostra brinquedos e decoração lúdica, reforçando o clima de diversão e segurança." />
+              <NuxtImg src="/img/criancas_brincando.png" class="rounded-[20px_0px_20px_0px] w-1/2 h-full object-cover md:w-full" alt="Crianças brincando na Clinica Sensory" />
+            </div>
+              <div class="flex flex-col gap-3 flex-1 text-black/90 mt-5 text-justify text-sm sm:text-md md:text-lg xl:text-xl">
+                <p>
+                  A Clínica Sensory nasceu do desejo de oferecer mais que terapia: um acolhimento verdadeiro. Percebemos que muitas famílias buscavam apoio, mas encontravam atendimentos impessoais e pouco sensíveis às suas realidades.
+                </p>
+                <p>
+                  Aqui, cada criança é enxergada em sua individualidade. Trabalhamos com uma equipe multidisciplinar, com supervisão constante, para oferecer um atendimento eficaz, ético e respeitoso. Nossas intervenções são personalizadas e focadas em resultados reais.
+                </p>
+                <p>
+                  Oferecemos atendimentos individuais e em grupo, sempre com foco no desenvolvimento integral, motor, emocional, cognitivo e social. Acreditamos que a família é parte essencial do processo terapêutico, por isso, escutamos, acolhemos e orientamos com empatia.
+                </p>
+                <p>
+                  Nosso espaço é seguro, lúdico e planejado com carinho: salas amplas com visores de vidro, ambiente receptivo e profissionais apaixonados pelo que fazem.
+                </p>
+            </div>
           </div>
-        <div class="flex flex-col gap-3 text-black/90 mt-5 text-justify text-sm sm:text-md md:text-lg xl:text-xl">
-          <p>
-            A Clínica Sensory nasceu do desejo de oferecer mais que terapia: um acolhimento verdadeiro. Percebemos que muitas famílias buscavam apoio, mas encontravam atendimentos impessoais e pouco sensíveis às suas realidades.
-          </p>
-          <p>
-            Aqui, cada criança é enxergada em sua individualidade. Trabalhamos com uma equipe multidisciplinar, com supervisão constante, para oferecer um atendimento eficaz, ético e respeitoso. Nossas intervenções são personalizadas e focadas em resultados reais.
-          </p>
-          <p>
-            Oferecemos atendimentos individuais e em grupo, sempre com foco no desenvolvimento integral, motor, emocional, cognitivo e social. Acreditamos que a família é parte essencial do processo terapêutico, por isso, escutamos, acolhemos e orientamos com empatia.
-          </p>
-          <p>
-            Nosso espaço é seguro, lúdico e planejado com carinho: salas amplas com visores de vidro, ambiente receptivo e profissionais apaixonados pelo que fazem.
-          </p>
-        </div>
-        <div id="images" class="flex flex-1 items-center relative justify-between">
-          <NuxtImg src="/img/Paciente_em_Atendimento.png" class="rounded-[20px_0px_20px_0px] w-1/2 h-full object-cover" alt="Paciente em Atendimento" />
-          <NuxtImg src="/img/laco-TEA.png" class="w-1/4 h-full object-cover" alt="Laço TEA"/>
-        </div>
-
-        <div class="flex relative before:h-0.5 before:w-60  before:right-0 before:content-[''] before:absolute before:[background:linear-gradient(to_right,_#206FBD_0%_16.666%,_#05528D_16.666%_33.333%,_#597E22_33.333%_50%,_#87BF34_50%_66.666%,_#FF89DD_66.666%_83.333%,_#F266C1_83.333%_100%)] pt-5 mt-1 font-semibold text-sm sm:text-md md:text-lg xl:text-xl justify-between">
-          <ul class="mt-5 text-black/90 list-inside flex-1 " id="lista-servicos">
-            <li>
-              Terapia ABA
-            </li>
-            <li>
-              Fonoaudiologia
-            </li>
-            <li>
-              Psicologia
-            </li>
-            <li>
-              Terapia Ocupacional
-            </li>
-          </ul>
-          <ul class="mt-5 text-black/90 list-inside flex-1" id="lista-servicos">
-            <li>
-              Psicopedagogia
-            </li>
-            <li>
-              Psicomotricidade
-            </li>
-            <li>
-              Musicoterapia
-            </li>
-            <li>
-              Integração Sensorial, PECS, TPAC, CCAA
-            </li>
-          </ul>
+        <div class="flex flex-row">
+          <div id="images" class="flex flex-1 items-center relative justify-between">
+            <NuxtImg src="/img/Paciente_em_Atendimento.png" class="rounded-[20px_0px_20px_0px] w-1/2 h-full object-cover" alt="Paciente em Atendimento" />
+            <NuxtImg src="/img/laco-TEA.png" class="w-1/4 h-full object-cover" alt="Laço TEA"/>
+          </div>
+          <div class="flex md:flex-col gap-5 md:gap-0 relative before:h-0.5 before:w-60  before:right-0 before:content-[''] before:absolute before:[background:linear-gradient(to_right,_#206FBD_0%_16.666%,_#05528D_16.666%_33.333%,_#597E22_33.333%_50%,_#87BF34_50%_66.666%,_#FF89DD_66.666%_83.333%,_#F266C1_83.333%_100%)] pt-5 mt-1 font-semibold text-sm sm:text-md md:text-lg xl:text-xl justify-between">
+            <ul class="text-black/90 list-inside flex-1 " id="lista-servicos">
+              <li>
+                Terapia ABA
+              </li>
+              <li>
+                Fonoaudiologia
+              </li>
+              <li>
+                Psicologia
+              </li>
+              <li>
+                Terapia Ocupacional
+              </li>
+            </ul>
+            <ul class="text-black/90 list-inside flex-1" id="lista-servicos">
+              <li>
+                Psicopedagogia
+              </li>
+              <li>
+                Psicomotricidade
+              </li>
+              <li>
+                Musicoterapia
+              </li>
+              <li>
+                Integração Sensorial, PECS, TPAC, CCAA
+              </li>
+            </ul>
+          </div>
         </div>
       </section>
 
@@ -169,7 +172,7 @@
 
       <section class="relative">
         <div id="bg-triangulo" class="bg-[var(--green)] content-[' '] h-40 w-40 absolute z-10 top-30 rotate-45"></div>
-        <div id="bg-triangulo_1" class="bg-[var(--blue)] content-[' '] h-40 w-40 absolute z-10 top-70 rotate-45"></div>
+        <div id="bg-triangulo_1" class="bg-[var(--clear-pink)] content-[' '] h-40 w-40 absolute z-10 top-70 rotate-45"></div>
         <div id="bg-triangulo_2" class="bg-[var(--red)] content-[' '] h-40 w-40 absolute z-10 top-120 rotate-45"></div>
         <div id="bg-triangulo_3" class="bg-[var(--pink)] content-[' '] h-40 w-40 absolute z-10 top-150 right-[-150px] rotate-45"></div>
         <div id="bg-triangulo_4" class="bg-[var(--baby-blue)] content-[' '] h-40 w-40 absolute z-10 top-200 rotate-45"></div>
