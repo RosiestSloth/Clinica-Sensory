@@ -5,7 +5,7 @@
 
       <!-- First Section -->
 
-      <section class="bg-yellow-500 bg-[url('/img/background-1.webp')] bg-cover bg-center h-120 px-5 py-10 md:px-10 md:pt-14 xl:px-20 xl:pt-20 relative mb-30 md:mb-40">
+      <section class="bg-yellow-500 bg-[url('/img/background-1.webp')] bg-cover bg-center h-120 px-5 py-10 md:px-10 md:pt-14 xl:px-20 xl:pt-20 relative mb-20 md:mb-30 xl:mb-20">
 
         <div class="absolute w-full h-full bg-black/30 z-10 inset-0"></div>
 
@@ -67,14 +67,17 @@
               Atendimentos Terapêuticos Multidisciplinares e Humanizados
             </h3>
           </div>
-          <!-- Separador -->
-          <div class="flex flex-row gap-4">
+          
+          <div class="flex flex-col lg:flex-row gap-4 h-full lg:mt-2">
+
+            <!-- Separador -->
+
             <div id="images"
-              class="flex flex-col items-center relative before:h-0.5 before:w-60 before:content-[''] before:absolute before:left-0 lg:before:top-full lg:before:mt-5 before:top-0 before:[background:linear-gradient(to_right,_#206FBD_0%_16.666%,_#05528D_16.666%_33.333%,_#597E22_33.333%_50%,_#87BF34_50%_66.666%,_#FF89DD_66.666%_83.333%,_#F266C1_83.333%_100%)] pt-5 mt-1 gap-2 flex-1">
-              <NuxtImg src="/img/img_criancas.png" class="w-1/2 md:w-full h-full object-cover" alt="Crianças sorrindo e brincando juntas em um ambiente colorido e0 acolhedor, transmitindo alegria e inclusão. O fundo mostra brinquedos e decoração lúdica, reforçando o clima de diversão e segurança." />
+              class="flex h-50 lg:flex-col items-center relative before:h-0.5 before:w-60 before:content-[''] before:absolute before:left-0 lg:before:mt-5 before:top-0 lg:before:top-[-20px] before:[background:linear-gradient(to_right,_#206FBD_0%_16.666%,_#05528D_16.666%_33.333%,_#597E22_33.333%_50%,_#87BF34_50%_66.666%,_#FF89DD_66.666%_83.333%,_#F266C1_83.333%_100%)] pt-5 mt-1 gap-6 flex-1">
+              <NuxtImg src="/img/img_criancas.png" class="w-1/2 md:w-full h-full object-contain" alt="Crianças sorrindo e brincando juntas em um ambiente colorido e0 acolhedor, transmitindo alegria e inclusão. O fundo mostra brinquedos e decoração lúdica, reforçando o clima de diversão e segurança." />
               <NuxtImg src="/img/criancas_brincando.png" class="rounded-[20px_0px_20px_0px] w-1/2 h-full object-cover md:w-full" alt="Crianças brincando na Clinica Sensory" />
             </div>
-              <div class="flex flex-col gap-3 flex-1 text-black/90 mt-5 text-justify text-sm sm:text-md md:text-lg xl:text-xl">
+              <div class="flex flex-col gap-3 flex-2 text-black/90 mt-5 text-justify text-sm sm:text-md md:text-lg xl:text-xl">
                 <p>
                   A Clínica Sensory nasceu do desejo de oferecer mais que terapia: um acolhimento verdadeiro. Percebemos que muitas famílias buscavam apoio, mas encontravam atendimentos impessoais e pouco sensíveis às suas realidades.
                 </p>
@@ -89,13 +92,13 @@
                 </p>
             </div>
           </div>
-        <div class="flex flex-row">
-          <div id="images" class="flex flex-1 items-center relative justify-between">
+        <div class="flex flex-col lg:flex-row lg:mt-10">
+          <div id="images" class="flex flex-row flex-1 h-full items-center relative justify-between">
             <NuxtImg src="/img/Paciente_em_Atendimento.png" class="rounded-[20px_0px_20px_0px] w-1/2 h-full object-cover" alt="Paciente em Atendimento" />
-            <NuxtImg src="/img/laco-TEA.png" class="w-1/4 h-full object-cover" alt="Laço TEA"/>
+            <NuxtImg src="/img/laco-TEA.png" class="w-1/3 h-full object-cover" alt="Laço TEA"/>
           </div>
-          <div class="flex md:flex-col gap-5 md:gap-0 relative before:h-0.5 before:w-60  before:right-0 before:content-[''] before:absolute before:[background:linear-gradient(to_right,_#206FBD_0%_16.666%,_#05528D_16.666%_33.333%,_#597E22_33.333%_50%,_#87BF34_50%_66.666%,_#FF89DD_66.666%_83.333%,_#F266C1_83.333%_100%)] pt-5 mt-1 font-semibold text-sm sm:text-md md:text-lg xl:text-xl justify-between">
-            <ul class="text-black/90 list-inside flex-1 " id="lista-servicos">
+          <div class="flex flex-2 gap-5 md:gap-0 relative before:h-0.5 before:w-60 before:right-0 before:content-[''] before:absolute before:[background:linear-gradient(to_right,_#206FBD_0%_16.666%,_#05528D_16.666%_33.333%,_#597E22_33.333%_50%,_#87BF34_50%_66.666%,_#FF89DD_66.666%_83.333%,_#F266C1_83.333%_100%)] pt-5 mt-1 font-semibold text-sm sm:text-md md:text-lg xl:text-xl justify-between lg:top-[-20px]">
+            <ul class="text-black/90 list-inside flex-1 lg:mt-5" id="lista-servicos">
               <li>
                 Terapia ABA
               </li>
@@ -109,7 +112,7 @@
                 Terapia Ocupacional
               </li>
             </ul>
-            <ul class="text-black/90 list-inside flex-1" id="lista-servicos">
+            <ul class="text-black/90 list-inside flex-1 lg:mt-5" id="lista-servicos">
               <li>
                 Psicopedagogia
               </li>
