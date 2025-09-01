@@ -1,17 +1,17 @@
 <template>
-  <div class="flex flex-col items-center p-4 w-full">
+  <div class="flex flex-col items-center p-4 h-full w-full">
     <NuxtImg 
       :src="imageSrc" 
       alt="" 
       :class="[BorderColor, ' border-x-2 border-t-2 w-[90%] bg-gray-200 h-50 md:h-60 xl:h-70 object-cover'] "
     />
 
-    <div :class="[ContainerColor, ' p-4 w-full'] ">
+    <div :class="[ContainerColor, ' p-4 w-full flex-1'] ">
       <h3 class="text-lg md:text-xl xl:text-2xl font-bold text-white">
         {{ title }}
       </h3>
-      
-      <p class="mt-2 text-white text-sm sm:text-md md:text-lg xl:text-xl">
+
+      <p class="mt-2 text-white text-sm sm:text-sm md:text-md lg:text-lg xl:text-xl">
         {{ description }}
       </p>
     </div>

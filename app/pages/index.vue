@@ -173,17 +173,17 @@
 
       <!-- MÉTODO INTERAÇÃO -->
 
-      <section class="relative">
-        <div id="bg-triangulo" class="bg-[var(--green)] content-[' '] h-40 w-40 absolute z-10 top-30 rotate-45"></div>
-        <div id="bg-triangulo_1" class="bg-[var(--clear-pink)] content-[' '] h-40 w-40 absolute z-10 top-70 rotate-45"></div>
-        <div id="bg-triangulo_2" class="bg-[var(--red)] content-[' '] h-40 w-40 absolute z-10 top-120 rotate-45"></div>
-        <div id="bg-triangulo_3" class="bg-[var(--pink)] content-[' '] h-40 w-40 absolute z-10 top-150 right-[-150px] rotate-45"></div>
-        <div id="bg-triangulo_4" class="bg-[var(--baby-blue)] content-[' '] h-40 w-40 absolute z-10 top-200 rotate-45"></div>
-        <div id="bg-triangulo_5" class="bg-[var(--clear-pink)] content-[' '] h-40 w-40 absolute z-10 top-300 rotate-45"></div>
-        <div id="bg-triangulo_6" class="bg-[var(--green)] content-[' '] h-40 w-40 absolute z-10 top-350 left-[-120px] rotate-45"></div>
-        <div id="bg-triangulo_7" class="bg-[var(--red)] content-[' '] h-40 w-40 absolute z-10 top-400 right-[-100px] rotate-45"></div>
+      <section class="flex relative ">
+        <div id="bg-triangulo" class="lg:top-10 bg-[var(--green)] content-[' '] h-40 w-40 absolute z-10 top-30 rotate-45"></div>
+        <div id="bg-triangulo_1" class="lg:top-50 bg-[var(--clear-pink)] content-[' '] h-40 w-40 absolute z-10 top-70 rotate-45"></div>
+        <div id="bg-triangulo_2" class="lg:top-100 bg-[var(--red)] content-[' '] h-40 w-40 absolute z-10 top-120 rotate-45"></div>
+        <div id="bg-triangulo_3" class="lg:top-130 bg-[var(--pink)] content-[' '] h-40 w-40 absolute z-10 top-150 right-[-150px] rotate-45"></div>
+        <div id="bg-triangulo_4" class="lg:top-180 bg-[var(--baby-blue)] content-[' '] h-40 w-40 absolute z-10 top-200 rotate-45"></div>
+        <div id="bg-triangulo_5" class="lg:top-280 bg-[var(--clear-pink)] content-[' '] h-40 w-40 absolute z-10 top-300 rotate-45"></div>
+        <div id="bg-triangulo_6" class="lg:top-320 bg-[var(--green)] content-[' '] h-40 w-40 absolute z-10 top-350 left-[-120px] rotate-45"></div>
+        <div id="bg-triangulo_7" class="lg:top-380 bg-[var(--red)] content-[' '] h-40 w-40 absolute z-10 top-400 right-[-100px] rotate-45"></div>
 
-        <div class="z-20 absolute p-5 md:p-10">
+        <div class="flex flex-col p-5 md:p-10 z-20">
           <h2 class="text-[var(--green)] text-sm md:text-md xl:text-lg">
             MÉTODO INTERAÇÃO
           </h2>
@@ -191,15 +191,17 @@
             Valorizamos o jeito único de cada criança se expressar e se desenvolver
           </p>
           
-          <cards
-          v-for="service in services"
-          :key="service.title"
-          :title="service.title"
-          :description="service.description"
-          :imageSrc="service.image"
-          :ContainerColor="service.ContainerColor"
-          :BorderColor="service.BorderColor"
-            />
+          <div class="container w-full grid grid-cols-1 lg:grid-cols-2 absolute left-1/2 right-1/2 translate-x-[-50%] mt-20">
+            <cards
+            v-for="service in services"
+            :key="service.title"
+            :title="service.title"
+            :description="service.description"
+            :imageSrc="service.image"
+            :ContainerColor="service.ContainerColor"
+            :BorderColor="service.BorderColor"
+              />
+          </div>
         </div>
 
       </section>
