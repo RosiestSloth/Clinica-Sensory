@@ -5,7 +5,7 @@
 
       <!-- First Section -->
 
-      <section class="bg-yellow-500 bg-[url('/img/BG_Clinica_Sensory.webp')] bg-cover bg-center h-120 px-5 py-10 md:px-10 md:pt-14 xl:px-20 xl:pt-20 relative mb-30 xl:mb-20">
+      <section class="bg-yellow-500 bg-[url('/img/background-1.webp')] bg-cover bg-center h-120 px-5 py-10 md:px-10 md:pt-14 xl:px-20 xl:pt-20 relative mb-30 xl:mb-20">
 
         <div class="absolute w-full h-full bg-black/30 z-10 inset-0"></div>
 
