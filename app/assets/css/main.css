@@ -13,6 +13,12 @@
     --red: #E74335;
     --clear-pink: #FF89D6;
     --baby-blue: #0087ED;
+
+    /* Animações */
+    --animation-left-mobile: move_left_mobile 3s linear infinite;
+    --animation-right-mobile: move_right_mobile 3s linear infinite;
+    --animation-left-desktop: move_left_desktop 3s linear infinite;
+    --animation-right-desktop: move_right_desktop 3s linear infinite;
 }
 
 body, html {
@@ -41,34 +47,26 @@ p:not(.exception), span:not(.exception), li:not(.exception) {
     opacity: 0.5;
 }
 
-#bg-triangulo {
-    animation: move_left 3s linear infinite;
-}
-
-#bg-triangulo_1 {
-    animation: move_right 4s linear infinite;
-}
-
-#bg-triangulo_2 {
-    animation: move_left 4s linear infinite;
-}
-
-#bg-triangulo_4 {
-    animation: move_left 3s linear infinite;
-}
-
-#bg-triangulo_5 {
-    animation: move_right 5s linear infinite;
-}
-
-@keyframes move_left {
+@keyframes move_left_mobile {
     0% { left: -130px; }
     50% { left: -110px; }
     100% { left: -130px; }
 }
 
-@keyframes move_right {
+@keyframes move_right_mobile {
     0% { right: -150px; }
     50% { right: -130px; }
     100% { right: -150px; }
+}
+
+@keyframes move_right_desktop {
+    0% { right: -200px; }
+    50% { right: -180px; }
+    100% { right: -200px; }
+}
+
+@keyframes move_left_desktop {
+    0% { left: -200px; }
+    50% { left: -180px; }
+    100% { left: -200px; }
 }

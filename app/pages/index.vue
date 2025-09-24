@@ -21,7 +21,7 @@
             WhatsApp
           </NuxtLink> 
         </div>
-        <div class="flex flex-col xl:flex-row gap-2 relative mt-14 z-20 text-white">
+        <div class="flex flex-col xl:flex-row gap-2 relative mt-10 md:mt-14 z-20 text-white">
           <div id="Primeiro" class="bg-[var(--clear-pink)] flex-1 md:p-4 p-2 flex gap-4">
             <NuxtImg src="/img/coracao-TEA.png" class="h-20 mx-3 xl:m-0" alt="Foto coração com o símbolo TEA" />
             <div>
@@ -153,7 +153,7 @@
             <p class="mt-5 text-justify text-sm sm:text-md md:text-lg xl:text-xl">
               Endereço: St. D Sul QSD 05 CL ed.Spazio Duo Sala 501 - Taguatinga, Brasília - DF, 72020-111
             </p>
-            <div class="flex justify-between">
+            <div class="flex justify-between lg:justify-center lg:gap-10">
               <NuxtLink
               class="bg-[#47C557] text-white flex w-36 md:w-42 text-sm md:text-md justify-center items-center flex-row gap-4 md:px-6 md:py-2 px-4 py-2 mt-4 font-bold rounded-md border-white border-1 hover:bg-[#2A7633] transition"
               target="_blank"
@@ -162,7 +162,7 @@
                 <WhatsappIcon class="size-6" :fontControlled="false" />
                 WhatsApp
               </NuxtLink>
-              <NuxtLink to="https://www.google.com/maps?ll=-15.840887,-48.047022&z=16&t=m&hl=pt-BR&gl=BR&mapclient=embed&cid=4118327637672282773" target="_blank" class="bg-[#4285F4] text-white flex w-36 md:w-42 text-sm md:text-md justify-center items-center flex-row gap-4 md:px-4 md:py-2 px-1 py-1 mt-4 font-bold rounded-md border-white border-1 hover:bg-[#16548F] transition">
+              <NuxtLink to="https://www.google.com/maps?ll=-15.840887,-48.047022&z=16&t=m&hl=pt-BR&gl=BR&mapclient=embed&cid=4118327637672282773" target="_blank" class="bg-[#4285F4] text-white flex w-38 md:w-50 text-sm md:text-md justify-center items-center flex-row gap-4 md:px-4 md:py-2 px-1 py-1 mt-4 font-bold rounded-md border-white border-1 hover:bg-[#16548F] transition">
                 <GoogleMapsIcon class="size-8" :fontControlled="false" />
                 Google Maps
               </NuxtLink>
@@ -173,17 +173,17 @@
 
       <!-- MÉTODO INTERAÇÃO -->
 
-      <section class="flex relative ">
-        <div id="bg-triangulo" class="lg:top-10 bg-[var(--green)] content-[' '] h-40 w-40 absolute z-10 top-30 rotate-45"></div>
-        <div id="bg-triangulo_1" class="lg:top-50 bg-[var(--clear-pink)] content-[' '] h-40 w-40 absolute z-10 top-70 rotate-45"></div>
-        <div id="bg-triangulo_2" class="lg:top-100 bg-[var(--red)] content-[' '] h-40 w-40 absolute z-10 top-120 rotate-45"></div>
-        <div id="bg-triangulo_3" class="lg:top-130 bg-[var(--pink)] content-[' '] h-40 w-40 absolute z-10 top-150 right-[-150px] rotate-45"></div>
-        <div id="bg-triangulo_4" class="lg:top-180 bg-[var(--baby-blue)] content-[' '] h-40 w-40 absolute z-10 top-200 rotate-45"></div>
-        <div id="bg-triangulo_5" class="lg:top-280 bg-[var(--clear-pink)] content-[' '] h-40 w-40 absolute z-10 top-300 rotate-45"></div>
-        <div id="bg-triangulo_6" class="lg:top-320 bg-[var(--green)] content-[' '] h-40 w-40 absolute z-10 top-350 left-[-120px] rotate-45"></div>
-        <div id="bg-triangulo_7" class="lg:top-380 bg-[var(--red)] content-[' '] h-40 w-40 absolute z-10 top-400 right-[-100px] rotate-45"></div>
+      <section class="flex relative">
+        <div class="lg:top-10 bg-[var(--green)] size-40 lg:size-50 absolute z-10 top-30 lg:top-15 rotate-45 animate-[var(--animation-left-mobile)]"></div>
+        <div class="lg:top-50 bg-[var(--clear-pink)] size-40 lg:size-50 absolute z-10 top-70 lg:top-45 rotate-45 animate-[var(--animation-right-mobile)] lg:animate-[var(--animation-right-desktop)]"></div>
+        <div class="lg:top-100 bg-[var(--red)] size-40 lg:size-50 absolute z-10 top-120 lg:top-60 rotate-45 animate-[var(--animation-left-mobile)]"></div>
+        <div class="lg:top-130 bg-[var(--pink)] size-40 lg:size-50 absolute z-10 top-150 lg:top-75 right-[-150px] rotate-45 animate-[var(--animation-right-mobile)] lg:animate-[var(--animation-right-desktop)]"></div>
+        <div class="lg:top-180 bg-[var(--baby-blue)] size-40 lg:size-50 absolute z-10 top-200 lg:top-100 rotate-45 animate-[var(--animation-left-mobile)]"></div>
+        <div class="lg:top-280 bg-[var(--clear-pink)] size-40 lg:size-50 absolute z-10 top-300 rotate-45 animate-[var(--animation-right-mobile)] lg:animate-[var(--animation-right-desktop)]"></div>
+        <div class="lg:top-320 bg-[var(--green)] size-40 lg:size-50 absolute z-10 top-350 left-[-120px] rotate-45 animate-[var(--animation-left-mobile)]"></div>
+        <div class="lg:top-200 bg-[var(--red)] size-40 lg:size-50 absolute z-10 top-400 right-[-100px] rotate-45 animate-[var(--animation-right-mobile)] lg:animate-[var(--animation-right-desktop)]"></div>
 
-        <div class="flex flex-col p-5 md:p-10 z-20">
+        <div class="md:p-10 z-20">
           <h2 class="text-[var(--green)] text-sm md:text-md xl:text-lg">
             MÉTODO INTERAÇÃO
           </h2>
@@ -191,7 +191,7 @@
             Valorizamos o jeito único de cada criança se expressar e se desenvolver
           </p>
           
-          <div class="container w-full grid grid-cols-1 lg:grid-cols-2 absolute left-1/2 right-1/2 translate-x-[-50%] mt-20">
+          <div class="mx-auto grid grid-cols-1 lg:grid-cols-2">
             <cards
             v-for="service in services"
             :key="service.title"
@@ -203,7 +203,16 @@
               />
           </div>
         </div>
+      </section>
 
+      <!-- Seção de Convênios -->
+      <section>
+        <h2>
+          Convênios Aceitos pela Clínica Sensory
+        </h2>
+        <div class="border-x-black">
+
+        </div>
       </section>
     </main>
   </div>

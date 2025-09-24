@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col items-center p-4 h-full w-full">
+  <div class="flex flex-col items-center p-4">
     <NuxtImg 
       :src="imageSrc" 
       alt="" 
