@@ -92,13 +92,14 @@
                 </p>
             </div>
           </div>
-        <div class="flex flex-col lg:flex-row lg:mt-10">
+        <div class="flex flex-col lg:flex-row lg:mt-20">
           <div id="images" class="flex flex-row flex-1 h-full items-center relative justify-between">
             <NuxtImg src="/img/Paciente_em_Atendimento.png" class="rounded-[20px_0px_20px_0px] w-1/2 h-full object-cover" alt="Paciente em Atendimento" />
-            <NuxtImg src="/img/laco-TEA.png" class="w-1/3 h-full object-cover" alt="Laço TEA"/>
+            <NuxtImg src="/img/laco-TEA.png" class="h-full w-1/4 object-cover" alt="Laço TEA"/>
           </div>
-          <div class="flex flex-2 gap-5 md:gap-0 relative before:h-0.5 before:w-60 before:right-0 before:content-[''] before:absolute before:[background:linear-gradient(to_right,_#206FBD_0%_16.666%,_#05528D_16.666%_33.333%,_#597E22_33.333%_50%,_#87BF34_50%_66.666%,_#FF89DD_66.666%_83.333%,_#F266C1_83.333%_100%)] pt-5 mt-1 font-semibold text-sm sm:text-md md:text-lg xl:text-xl justify-between lg:top-[-20px]">
-            <ul class="text-black/90 list-inside flex-1 lg:mt-5" id="lista-servicos">
+          <div class="flex flex-2 gap-5 md:gap-0 relative pt-5 mt-1 font-semibold text-sm sm:text-md md:text-lg xl:text-xl justify-between lg:top-[-20px]">
+            <div id="separador" class="h-0.5 w-60 right-0 content-[''] absolute [background:linear-gradient(to_right,_#206FBD_0%_16.666%,_#05528D_16.666%_33.333%,_#597E22_33.333%_50%,_#87BF34_50%_66.666%,_#FF89DD_66.666%_83.333%,_#F266C1_83.333%_100%)]"></div>
+            <ul class="text-black/90 list-inside flex-1 mt-5" id="lista-servicos">
               <li>
                 Terapia ABA
               </li>
@@ -112,7 +113,7 @@
                 Terapia Ocupacional
               </li>
             </ul>
-            <ul class="text-black/90 list-inside flex-1 lg:mt-5" id="lista-servicos">
+            <ul class="text-black/90 list-inside flex-1 mt-5" id="lista-servicos">
               <li>
                 Psicopedagogia
               </li>
@@ -174,16 +175,16 @@
       <!-- MÉTODO INTERAÇÃO -->
 
       <section class="flex relative">
-        <div class="lg:top-10 bg-[var(--green)] size-40 lg:size-50 absolute z-10 top-30 lg:top-15 rotate-45 animate-[var(--animation-left-mobile)]"></div>
-        <div class="lg:top-50 bg-[var(--clear-pink)] size-40 lg:size-50 absolute z-10 top-70 lg:top-45 rotate-45 animate-[var(--animation-right-mobile)] lg:animate-[var(--animation-right-desktop)]"></div>
-        <div class="lg:top-100 bg-[var(--red)] size-40 lg:size-50 absolute z-10 top-120 lg:top-60 rotate-45 animate-[var(--animation-left-mobile)]"></div>
-        <div class="lg:top-130 bg-[var(--pink)] size-40 lg:size-50 absolute z-10 top-150 lg:top-75 right-[-150px] rotate-45 animate-[var(--animation-right-mobile)] lg:animate-[var(--animation-right-desktop)]"></div>
-        <div class="lg:top-180 bg-[var(--baby-blue)] size-40 lg:size-50 absolute z-10 top-200 lg:top-100 rotate-45 animate-[var(--animation-left-mobile)]"></div>
-        <div class="lg:top-280 bg-[var(--clear-pink)] size-40 lg:size-50 absolute z-10 top-300 rotate-45 animate-[var(--animation-right-mobile)] lg:animate-[var(--animation-right-desktop)]"></div>
-        <div class="lg:top-320 bg-[var(--green)] size-40 lg:size-50 absolute z-10 top-350 left-[-120px] rotate-45 animate-[var(--animation-left-mobile)]"></div>
-        <div class="lg:top-200 bg-[var(--red)] size-40 lg:size-50 absolute z-10 top-400 right-[-100px] rotate-45 animate-[var(--animation-right-mobile)] lg:animate-[var(--animation-right-desktop)]"></div>
+        <div class="bg-[var(--green)] size-40 lg:size-50 absolute z-10 top-30 lg:top-15 rotate-45 animate-[var(--animation-left-mobile)]"></div>
+        <div class="bg-[var(--clear-pink)] size-40 lg:size-50 absolute z-10 top-70 lg:top-45 rotate-45 animate-[var(--animation-right-mobile)] lg:animate-[var(--animation-right-desktop)]"></div>
+        <div class="bg-[var(--red)] size-40 lg:size-50 absolute z-10 top-120 lg:top-60 rotate-45 animate-[var(--animation-left-mobile)]"></div>
+        <div class="bg-[var(--pink)] size-40 lg:size-50 absolute z-10 top-150 lg:top-75 rotate-45 animate-[var(--animation-right-mobile)] lg:animate-[var(--animation-right-desktop)]"></div>
+        <div class="bg-[var(--baby-blue)] size-40 lg:size-50 absolute z-10 top-200 lg:top-100 rotate-45 animate-[var(--animation-left-mobile)]"></div>
+        <div class="bg-[var(--clear-pink)] size-40 lg:size-50 absolute z-10 top-300 rotate-45 animate-[var(--animation-right-mobile)] lg:animate-[var(--animation-right-desktop)]"></div>
+        <div class="bg-[var(--green)] size-40 lg:size-50 absolute z-10 top-350 rotate-45 animate-[var(--animation-left-mobile)]"></div>
+        <div class="bg-[var(--red)] size-40 lg:size-50 absolute z-10 top-400 rotate-45 animate-[var(--animation-right-mobile)] lg:hidden"></div>
 
-        <div class="md:p-10 z-20">
+        <div class="p-5 md:p-10 z-20">
           <h2 class="text-[var(--green)] text-sm md:text-md xl:text-lg">
             MÉTODO INTERAÇÃO
           </h2>
