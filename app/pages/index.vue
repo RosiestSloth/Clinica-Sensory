@@ -175,13 +175,13 @@
       <!-- MÉTODO INTERAÇÃO -->
 
       <section class="flex relative">
-        <div class="bg-[var(--green)] size-40 lg:size-50 absolute z-10 top-30 lg:top-15 rotate-45 animate-[var(--animation-left-mobile)]"></div>
-        <div class="bg-[var(--clear-pink)] size-40 lg:size-50 absolute z-10 top-70 lg:top-45 rotate-45 animate-[var(--animation-right-mobile)] lg:animate-[var(--animation-right-desktop)]"></div>
-        <div class="bg-[var(--red)] size-40 lg:size-50 absolute z-10 top-120 lg:top-60 rotate-45 animate-[var(--animation-left-mobile)]"></div>
+        <div class="bg-[var(--green)] size-40 lg:size-50 absolute z-10 top-30 rotate-45 animate-[var(--animation-left-mobile)]"></div>
+        <div class="bg-[var(--clear-pink)] size-40 lg:size-50 absolute z-10 top-70 rotate-45 animate-[var(--animation-right-mobile)] lg:animate-[var(--animation-right-desktop)]"></div>
+        <div class="bg-[var(--red)] size-40 lg:size-50 absolute z-10 top-120 rotate-45 animate-[var(--animation-left-mobile)]"></div>
         <div class="bg-[var(--pink)] size-40 lg:size-50 absolute z-10 top-150 lg:top-75 rotate-45 animate-[var(--animation-right-mobile)] lg:animate-[var(--animation-right-desktop)]"></div>
         <div class="bg-[var(--baby-blue)] size-40 lg:size-50 absolute z-10 top-200 lg:top-100 rotate-45 animate-[var(--animation-left-mobile)]"></div>
-        <div class="bg-[var(--clear-pink)] size-40 lg:size-50 absolute z-10 top-300 rotate-45 animate-[var(--animation-right-mobile)] lg:animate-[var(--animation-right-desktop)]"></div>
-        <div class="bg-[var(--green)] size-40 lg:size-50 absolute z-10 top-350 rotate-45 animate-[var(--animation-left-mobile)]"></div>
+        <div class="bg-[var(--clear-pink)] size-40 lg:size-50 absolute z-10 top-300 rotate-45 animate-[var(--animation-right-mobile)] lg:animate-[var(--animation-right-desktop)] lg:hidden"></div>
+        <div class="bg-[var(--green)] size-40 lg:size-50 absolute z-10 top-350 rotate-45 animate-[var(--animation-left-mobile)] lg:hidden"></div>
         <div class="bg-[var(--red)] size-40 lg:size-50 absolute z-10 top-400 rotate-45 animate-[var(--animation-right-mobile)] lg:hidden"></div>
 
         <div class="p-5 md:p-10 z-20">
@@ -207,12 +207,12 @@
       </section>
 
       <!-- Seção de Convênios -->
-      <section>
-        <h2>
+      <section class="px-5 md:px-10 relative">
+        <h2 class="text-xl md:text-2xl xl:text-3xl font-semibold mb-6">
           Convênios Aceitos pela Clínica Sensory
         </h2>
-        <div class="border-x-black">
-
+        <div class="border-y-black w-full">
+          <Convenios />
         </div>
       </section>
     </main>
