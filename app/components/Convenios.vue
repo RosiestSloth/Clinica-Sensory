@@ -89,8 +89,9 @@
         }
     ]);
 
+    // Função de rolagem do carrossel
     function scroll(direction = 'next') {
-
+        // Obtém as listas referenciadas
         const lists = [list1Ref.value, list2Ref.value].filter(Boolean);
 
         lists.forEach(list=>{
