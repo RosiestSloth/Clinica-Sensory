@@ -1,7 +1,7 @@
 <template>
-    <div class="border-y-2 border-[#206FBD] flex flex-col gap-4 h-30 overflow-x-hidden">
+    <div class="border-y-2 border-[#206FBD] flex flex-col  gap-4 h-30 relative">
         <!-- Conteúdos dos slides 1 e 2 -->
-        <div ref="list1Ref" class="flex flex-row gap-10 h-full overflow-x-hidden">
+        <div ref="list1Ref" class="flex flex-row gap-10 overflow-x-hidden no-scrollbar ">
             <div id="Lista_1" v-for="(slide, index) in slides[0].slide1" :key="'list1-' + index">
                 <NuxtImg
                 class="h-full min-w-40 object-contain"
@@ -11,7 +11,7 @@
             </div>
         </div>
 
-        <div ref="list2Ref" class="flex flex-row gap-10 h-full overflow-x-hidden">
+        <div ref="list2Ref" class="flex flex-row gap-10 overflow-x-hidden no-scrollbar">
             <div id="Lista_2" v-for="(slide, index) in slides[1].slide2" :key="'list2-' + index">
                 <NuxtImg
                 class="h-full min-w-40 object-contain"
@@ -21,23 +21,23 @@
             </div>
         </div>
         <!-- Controles de navegação -->
-        <div class="absolute  bottom-2 z-10 flex gap-2">
+        <div class="absolute top-1/2 w-full flex justify-between transform -translate-y-1/2 z-10 flex gap-2 px-4">
             <button
             aria-label="Anterior"
             @click="scroll('prev')"
-            class="bg-white "
+            class="bg-white cursor-pointer size-10 md:size-14 p-4 rounded-full shadow-md border-1 border-gray-200 hover:bg-gray-100 transition-colors hover:shadow-sm active:scale-95 flex items-center justify-center"
             >
             <span>
-                Anterior
+                <LeftArrow class="size-6 md:size-8" />
             </span>
             </button>
             <button
             aria-label="Próximo"
             @click="scroll('next')"
-            class="bg-white"
+            class="bg-white cursor-pointer size-10 md:size-14 p-4 rounded-full shadow-md border-1 border-gray-200 hover:bg-gray-100 transition-colors hover:shadow-sm active:scale-95 flex items-center justify-center"
             >
                 <span>
-                    Próximo
+                    <RightArrow class="size-6 md:size-8" />
                 </span>
             </button>
         </div>
@@ -46,6 +46,8 @@
 
 <script setup>
     import { ref } from 'vue';
+    import LeftArrow from '~/assets/svg/Arrow-left.svg';
+    import RightArrow from '~/assets/svg/Arrow-right.svg';
 
     const list1Ref = ref(null);
     const list2Ref = ref(null);
