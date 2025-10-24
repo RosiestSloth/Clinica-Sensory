@@ -22,11 +22,11 @@
 defineProps({
   BorderColor: {
     type: String,
-    default: 'border-gray-300', // Diz que o padrão é cinza
+    default: 'border-gray-200', // Cor padrão
   },
   ContainerColor: {
     type: String,
-    default: 'bg-white', // Diz que o padrão é braco
+    default: 'bg-white', // Cor padrão
   },
   imageSrc: {
     type: String,
