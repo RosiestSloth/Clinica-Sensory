@@ -225,6 +225,12 @@
         <div id="separador" class="h-0.5 w-60 left-10 absolute [background:linear-gradient(to_right,_#206FBD_0%_16.666%,_#05528D_16.666%_33.333%,_#597E22_33.333%_50%,_#87BF34_50%_66.666%,_#FF89DD_66.666%_83.333%,_#F266C1_83.333%_100%)]"></div>
 
         <AbaCards class="my-6" />
+
+        <NuxtLink 
+        to="#"
+        class="bg-[var(--blue)] text-white flex w-50 h-14 mx-auto md:w-60 text-sm md:text-md justify-center items-center flex-row gap-4 md:px-6 md:py-2 px-4 py-2 mt-4 font-bold rounded-md border-white border-1 hover:bg-[var(--dark-blue)] transition"
+
+        >Saiba mais >></NuxtLink>
       </section>
     </main>
   </div>
