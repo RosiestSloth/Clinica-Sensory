@@ -1,5 +1,5 @@
 <template>
-  <div class="grid gap-4 lg:gap-10  lg:grid-cols-2 lg:p-10">
+  <div class="grid gap-4  lg:grid-cols-2">
     <div v-for="(card) in cards" :key="card.title" :class="` gap-10 text-white ${card.bgColor} p-6`">
       <div>
         <ul>
@@ -38,13 +38,13 @@ const cards = ref([
     image: QuebraCabecas
   },
   {
-    bgColor: 'bg-[var(--red)]',
+    bgColor: 'bg-[var(--blue)]',
     title: '3. Promoção da autonomia e independência',
     description: 'A ABA ensina habilidades adaptativas do dia a dia, como se vestir, escovar os dentes, organizar objetos ou seguir rotinas, o que aumenta a independência da criança em diferentes contextos.',
     image: Balao
   },
   {
-    bgColor: 'bg-[var(--pink)]',
+    bgColor: 'bg-[var(--green)]',
     title: '4. Melhora do desempenho acadêmico',
     description: 'Através de estratégias individualizadas, a ABA pode ajudar a criança a desenvolver habilidades acadêmicas, como leitura, escrita e matemática, facilitando seu progresso escolar.',
     image: Foguete

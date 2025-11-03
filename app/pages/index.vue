@@ -1,5 +1,5 @@
 <template>
-  <div class="max-w-screen">
+  <div>
     <AppHeader />
     <main class="">
 
@@ -215,22 +215,27 @@
           <Convenios />
         </div>
       </section>
-      <section class="px-5 md:px-10 relative my-10">
-        <p class="text-[var(--blue)]">
-          Mais do que tratar, buscamos compreender e acompanhar cada etapa do desenvolvimento de seu filho.
-        </p>
-        <h2 class="text-xl md:text-2xl xl:text-3xl font-semibold">
-          Benefícios da Terapia ABA
-        </h2>
-        <div id="separador" class="h-0.5 w-60 left-10 absolute [background:linear-gradient(to_right,_#206FBD_0%_16.666%,_#05528D_16.666%_33.333%,_#597E22_33.333%_50%,_#87BF34_50%_66.666%,_#FF89DD_66.666%_83.333%,_#F266C1_83.333%_100%)]"></div>
+      <section class="relative">
+        <div class="bg-[var(--clear-blue)] absolute rotate-5 h-40 top-4 w-[calc(100%+theme(spacing.5))] left-[-10px] z-[1]"></div>
 
-        <AbaCards class="my-6" />
+        <div class="bg-[var(--baby-blue)] absolute rotate-175 h-90 top-50 w-[150%] left-[-20px] z-[2]"></div>
 
-        <NuxtLink 
-        to="#"
-        class="bg-[var(--blue)] text-white flex w-50 h-14 mx-auto md:w-60 text-sm md:text-md justify-center items-center flex-row gap-4 md:px-6 md:py-2 px-4 py-2 mt-4 font-bold rounded-md border-white border-1 hover:bg-[var(--dark-blue)] transition"
+        <div class="bg-[var(--pink)] absolute top-150 rotate-5 h-40 mt-4 w-[calc(100%+theme(spacing.5))] left-[-10px] z-[3]"></div>
 
-        >Saiba mais >></NuxtLink>
+        <div class="px-5 md:px-10 relative my-10 z-[4]">
+          <p class="text-[var(--blue)]">
+            Mais do que tratar, buscamos compreender e acompanhar cada etapa do desenvolvimento de seu filho.
+          </p>
+          <h2 class="text-xl md:text-2xl xl:text-3xl font-semibold">
+            Benefícios da Terapia ABA
+          </h2>
+          <div id="separador" class="h-0.5 w-60 left-10 absolute [background:linear-gradient(to_right,_#206FBD_0%_16.666%,_#05528D_16.666%_33.333%,_#597E22_33.333%_50%,_#87BF34_50%_66.666%,_#FF89DD_66.666%_83.333%,_#F266C1_83.333%_100%)]"></div>
+          <AbaCards class="my-6" />
+          <NuxtLink
+          to="#"
+          class="bg-[var(--blue)] text-white flex w-50 h-14 mx-auto md:w-60 text-sm md:text-md justify-center items-center flex-row gap-4 md:px-6 md:py-2 px-4 py-2 mt-4 font-bold rounded-md border-white border-1 hover:bg-[var(--dark-blue)] transition"
+          >Saiba mais >></NuxtLink>
+        </div>
       </section>
     </main>
   </div>
