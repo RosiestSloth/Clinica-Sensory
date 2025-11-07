@@ -20,9 +20,9 @@
 
 <script setup>
 import { ref } from 'vue';
-import Foguete from '../assets/svg/Foguete.svg?url';
-import QuebraCabecas from '../assets/svg/Quebra_cabecas.svg?url';
-import Balao from '../assets/svg/Balao.svg?url';
+import Foguete from '../assets/svg/Foguete.svg';
+import QuebraCabecas from '../assets/svg/Quebra_cabecas.svg';
+import Balao from '../assets/svg/Balao.svg';
 
 const cards = ref([
   {
