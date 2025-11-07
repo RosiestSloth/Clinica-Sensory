@@ -20,34 +20,31 @@
 
 <script setup>
 import { ref } from 'vue';
-import Foguete from '../assets/svg/Foguete.svg';
-import QuebraCabecas from '../assets/svg/Quebra_cabecas.svg';
-import Balao from '../assets/svg/Balao.svg';
 
 const cards = ref([
   {
     bgColor: 'bg-[var(--blue)]',
     title: '1. Desenvolvimento de habilidades sociais e de comunicação',
     description: 'A ABA ajuda a ensinar formas eficazes de se comunicar, seja por meio da fala, gestos ou outras formas alternativas, promovendo maior interação com o meio e com outras pessoas.',
-    image: Foguete
+    image: '/svg/Foguete.svg'
   },
   {
     bgColor: 'bg-[var(--dark-green)]',
     title: '2. Redução de comportamentos desafiadores',
     description: 'Com técnicas baseadas em reforço positivo, a terapia ABA busca reduzir comportamentos que atrapalham o aprendizado ou a convivência social, como agressividade, crises ou estereotipias.',
-    image: QuebraCabecas
+    image: '/svg/Quebra_cabecas.svg'
   },
   {
     bgColor: 'bg-[var(--blue)]',
     title: '3. Promoção da autonomia e independência',
     description: 'A ABA ensina habilidades adaptativas do dia a dia, como se vestir, escovar os dentes, organizar objetos ou seguir rotinas, o que aumenta a independência da criança em diferentes contextos.',
-    image: Balao
+    image: '/svg/Balao.svg'
   },
   {
     bgColor: 'bg-[var(--green)]',
     title: '4. Melhora do desempenho acadêmico',
     description: 'Através de estratégias individualizadas, a ABA pode ajudar a criança a desenvolver habilidades acadêmicas, como leitura, escrita e matemática, facilitando seu progresso escolar.',
-    image: Foguete
+    image: '/svg/Foguete.svg'
   }
 ]);
 </script>
