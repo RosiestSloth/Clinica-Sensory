@@ -1,7 +1,7 @@
 <template>
   <div>
     <AppHeader />
-    <main class="">
+    <main>
 
       <!-- First Section -->
 
