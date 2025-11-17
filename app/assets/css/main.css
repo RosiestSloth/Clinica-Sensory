@@ -13,6 +13,7 @@
     --red: #E74335;
     --clear-pink: #FF89D6;
     --dark-green: #597E22;
+    --secondary-blue-dark: #072D5D;
     --dark-blue: #145A8B;
     --clear-blue: #CFEAFF;
     --purple: #7804e4;
@@ -23,6 +24,7 @@
     --animation-right-mobile: move_right_mobile 3s linear infinite;
     --animation-left-desktop: move_left_desktop 3s linear infinite;
     --animation-right-desktop: move_right_desktop 3s linear infinite;
+    --animation-scroll-left: scroll-left 20s linear infinite;
 }
 
 body, html {
@@ -73,4 +75,9 @@ p:not(.exception), span:not(.exception), li:not(.exception) {
     0% { left: -200px; }
     50% { left: -180px; }
     100% { left: -200px; }
+}
+
+@keyframes scroll-left {
+    0% { transform: translateX(0);}
+    100% { transform: translateX(-50%);}
 }

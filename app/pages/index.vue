@@ -1,5 +1,5 @@
 <template>
-  <div class="overflow-y-hidden">
+  <div class="overflow-hidden">
     <AppHeader />
     <main>
 
@@ -222,7 +222,7 @@
 
         <div class="bg-[var(--pink)] absolute top-150 rotate-5 h-40 mt-4 w-[calc(100%+theme(spacing.5))] left-[-10px] z-[3]"></div>
 
-        <div class="px-5 md:px-10 relative my-10 z-[4]">
+        <div class="px-5 md:px-10 relative my-20 z-[4]">
           <p class="text-[var(--blue)]">
             Mais do que tratar, buscamos compreender e acompanhar cada etapa do desenvolvimento de seu filho.
           </p>
@@ -236,6 +236,30 @@
           class="bg-[var(--blue)] text-white flex w-50 h-14 mx-auto md:w-60 text-sm md:text-md justify-center items-center flex-row gap-4 md:px-6 md:py-2 px-4 py-2 mt-4 font-bold rounded-md border-white border-1 hover:bg-[var(--dark-blue)] transition"
           >Saiba mais >></NuxtLink>
         </div>
+      </section>
+      <section class="relative">
+
+        <ImageCarroussel class="mx-5 md:mx-10" />
+
+        <div class="relative flex flex-row mt-10 overflow-hidden h-60">
+          <NuxtImg
+          class="absolute top-0 left-0 w-full h-full object-cover z-0"
+          src="/backgrounds/BG_TEA.png"/>
+          <h2 class="z-10 h-40 md:h-24 content-center p-2 text-xl md:text-2xl w-1/2 bg-black/40 font-bold text-white ">
+            Criando caminhos para um desenvolvimento excepcional.
+          </h2>
+          <div class="z-10 text-white w-1/2 bg-[var(--secondary-blue-dark)] p-4 md:p-8">
+            <ul class="list-image-[url(~/assets/svg/Check.svg)] list-inside h-full text-sm md:text-xl">
+              <li class="bg-[var(--dark-blue)] h-1/4 content-center font-bold"> Cuidado Integral e Humanizado</li>
+              <li class="bg-[var(--blue)] h-1/4 content-center font-bold"> Desenvolvimento Contínuo</li>
+              <li class="bg-[var(--dark-blue)] h-1/4 content-center font-bold">Foco na Felicidade e Autonomia</li>
+              <li class="bg-[var(--blue)] h-1/4 content-center font-bold">Apoio que Abraça a Família</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus odio aliquid rem quidem mollitia officiis, nisi adipisci? In, sint autem molestiae maiores dolor, accusamus modi animi quibusdam nulla ipsam dolorem.</p>
       </section>
     </main>
   </div>
