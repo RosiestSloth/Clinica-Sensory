@@ -3,25 +3,28 @@
     <AppHeader />
     <main>
 
-      <!-- First Section -->
+      <!-- Header Section -->
 
-      <section class="bg-yellow-500 bg-[url('/img/background-1.webp')] bg-cover bg-center h-120 px-5 py-10 md:px-10 md:pt-14 xl:px-20 xl:pt-20 relative mb-30 xl:mb-20">
-
-        <div class="absolute w-full h-full bg-black/30 z-10 inset-0"></div>
-
-        <div class="relative z-20">
-          <h1 class="md:text-xl text-sm text-white">CENTRO DE TERAPIAS INFANTIL MULTIDISCIPLINAR</h1>
-          <p class="exception text-3xl md:text-4xl xl:text-6xl text-white z-20 font-[var(--titulos)] font-bold">Acolhimento, respeito e resultados reais para o desenvolvimento do seu filho</p>
-          <NuxtLink
-          class="bg-[#47C557] text-white flex w-36 md:w-42 text-[0.8em] md:text-[1em] justify-center items-center flex-row gap-4 md:px-6 md:py-2 px-2 py-2 mt-4 font-bold rounded-md border-white border-1 hover:bg-[#2A7633] transition"
-          target="_blank"
-          to="https://wa.me/6185401978"
-          >
-            <WhatsappIcon class="size-6" :fontControlled="false" />
-            WhatsApp
-          </NuxtLink> 
+      <section class="relative mb-60">
+        <div class="absolute size-full">
+          <NuxtImg
+          class="absolute top-0 left-0 w-full h-full object-cover z-0 blur-[4px]"
+          src="/img/backgrounds/BG - Clinica Sensory.png"/>
         </div>
-        <div class="flex flex-col xl:flex-row gap-2 relative mt-10 md:mt-14 z-20 text-white">
+        <div class="absolute w-full h-full z-20">
+          <div class="absolute flex flex-col items-center justify-center w-full">
+            <NuxtImg 
+              alt="Sensys"
+              src="img/backgrounds/Sensys.png"
+              class="w-full md:w-1/2 max-w-150 h-auto object-contain mb-4"
+            />
+            <h1 id="clinica_sensory" class="bg-[var(--baby-green)] text-[var(--baby-blue)] py-2 px-8 inline-block text-center font-bold text-3xl rounded-3xl">
+              <span class="text-black text-xl block leading-6">Clínica</span>
+              Sensory
+            </h1>
+          </div>
+        </div>
+        <div class="flex flex-col xl:flex-row gap-2 relative mt-10 md:mt-14 text-white p-4 top-70">
           <div id="Primeiro" class="bg-[var(--clear-pink)] flex-1 md:p-4 p-2 flex gap-4">
             <NuxtImg src="/img/coracao-TEA.png" class="h-20 mx-3 xl:m-0" alt="Foto coração com o símbolo TEA" />
             <div>
@@ -60,7 +63,7 @@
       <!-- Sobre a Clínica -->
       <section class="px-5 py-10 md:px-10 md:pt-14 xl:px-20 xl:pt-20 relative">
           <div class="flex-2">
-            <h2>
+            <h2 id="clinica_sensory" class="bg-[var(--baby-green)] font-bold text-2xl text-[var(--baby-blue)] md:text-3xl xl:text-4xl p-4 w-full">
               Clínica Sensory Multidisciplinar
             </h2>
             <h3 class="text-xl md:text-2xl xl:text-3xl font-semibold">
@@ -92,14 +95,14 @@
                 </p>
             </div>
           </div>
-        <div class="flex flex-col lg:flex-row lg:mt-20">
-          <div id="images" class="flex flex-row flex-1 h-full items-center relative justify-between">
-            <NuxtImg src="/img/Paciente_em_Atendimento.png" class="rounded-[20px_0px_20px_0px] w-1/2 h-full object-cover" alt="Paciente em Atendimento" />
+        <div class="flex flex-col lg:flex-row lg:mt-30">
+          <div id="images" class="flex flex-row flex-1 h-full items-center relative justify-between md:gap-10">
+            <NuxtImg src="/img/Paciente_em_Atendimento.png" class="rounded-[20px_0px_20px_0px] w-1/2 lg:w-full h-full object-cover" alt="Paciente em Atendimento" />
             <NuxtImg src="/img/laco-TEA.png" class="h-full w-1/4 object-cover" alt="Laço TEA"/>
           </div>
           <div class="flex flex-2 gap-5 md:gap-0 relative pt-5 mt-1 font-semibold text-sm sm:text-md md:text-lg xl:text-xl justify-between lg:top-[-20px]">
             <div id="separador" class="h-0.5 w-60 right-0 content-[''] absolute [background:linear-gradient(to_right,_#206FBD_0%_16.666%,_#05528D_16.666%_33.333%,_#597E22_33.333%_50%,_#87BF34_50%_66.666%,_#FF89DD_66.666%_83.333%,_#F266C1_83.333%_100%)]"></div>
-            <ul class="text-black/90 list-inside flex-1 mt-5" id="lista-servicos">
+            <ul class="text-black/90 list-inside flex-1 mt-5" id="lista-servicos"> 
               <li>
                 Terapia ABA
               </li>
@@ -208,7 +211,7 @@
 
       <!-- Seção de Convênios -->
       <section class="px-5 md:px-10 relative">
-        <h2 class="text-xl md:text-2xl xl:text-3xl font-semibold mb-6">
+        <h2 class="text-xl md:text-2xl xl:text-3xl font-semibold mb-6 text-center">
           Convênios Aceitos pela Clínica Sensory
         </h2>
         <div class="border-y-black w-full">
@@ -216,25 +219,28 @@
         </div>
       </section>
       <section class="relative">
-        <div class="bg-[var(--clear-blue)] absolute rotate-5 h-40 top-4 w-[calc(100%+theme(spacing.5))] left-[-10px] z-[1]"></div>
+        <div class="bg-[var(--clear-blue)] absolute rotate-5 md:rotate-5 h-40 md:h-30 top-0 md:top-0 w-[calc(100%+theme(spacing.5))] left-[-10px] z-[1]"></div>
 
-        <div class="bg-[var(--baby-blue)] absolute rotate-175 h-90 top-50 w-[150%] left-[-20px] z-[2]"></div>
+        <div class="bg-[var(--baby-blue)] absolute rotate-175 h-90 md:h-70 top-50 md:top-20 w-[150%] left-[-20px] z-[2]"></div>
 
-        <div class="bg-[var(--pink)] absolute top-150 rotate-5 h-40 mt-4 w-[calc(100%+theme(spacing.5))] left-[-10px] z-[3]"></div>
+        <div class="bg-[var(--pink)] absolute top-150 md:top-90 rotate-5 md:rotate-2 h-40 md:h-30 mt-4 w-[calc(100%+theme(spacing.5))] left-[-10px] z-[3]"></div>
 
         <div class="px-5 md:px-10 relative my-20 z-[4]">
           <p class="text-[var(--blue)]">
             Mais do que tratar, buscamos compreender e acompanhar cada etapa do desenvolvimento de seu filho.
           </p>
+
           <h2 class="text-xl md:text-2xl xl:text-3xl font-semibold">
             Benefícios da Terapia ABA
           </h2>
+
           <div id="separador" class="h-0.5 w-60 left-10 absolute [background:linear-gradient(to_right,_#206FBD_0%_16.666%,_#05528D_16.666%_33.333%,_#597E22_33.333%_50%,_#87BF34_50%_66.666%,_#FF89DD_66.666%_83.333%,_#F266C1_83.333%_100%)]"></div>
+
           <AbaCards class="my-6" />
           <NuxtLink
           to="#"
-          class="bg-[var(--blue)] text-white flex w-50 h-14 mx-auto md:w-60 text-sm md:text-md justify-center items-center flex-row gap-4 md:px-6 md:py-2 px-4 py-2 mt-4 font-bold rounded-md border-white border-1 hover:bg-[var(--dark-blue)] transition"
-          >Saiba mais >></NuxtLink>
+          class="bg-[var(--blue)] text-white flex w-50 h-14 mx-auto md:w-60 text-md md:text-lg justify-center items-center flex-row gap-4 md:px-6 md:py-2 px-4 py-2 mt-4 font-bold rounded-md border-white border-1 hover:bg-[var(--dark-blue)] transition"
+          >Saiba mais <RightArrowIcon class="size-8" /></NuxtLink>
         </div>
       </section>
       <section class="relative">
@@ -243,8 +249,8 @@
 
         <div class="relative flex flex-row mt-10 overflow-hidden h-60">
           <NuxtImg
-          class="absolute top-0 left-0 w-full h-full object-cover z-0"
-          src="/backgrounds/BG_TEA.png"/>
+          class="absolute top-0 left-0 w-full lg:w-1/2 h-full object-cover z-0"
+          src="/img/backgrounds/BG_TEA.png"/>
           <h2 class="z-10 h-40 md:h-24 content-center p-2 text-xl md:text-2xl w-1/2 bg-black/40 font-bold text-white ">
             Criando caminhos para um desenvolvimento excepcional.
           </h2>
@@ -258,10 +264,25 @@
           </div>
         </div>
       </section>
-      <section>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus odio aliquid rem quidem mollitia officiis, nisi adipisci? In, sint autem molestiae maiores dolor, accusamus modi animi quibusdam nulla ipsam dolorem.</p>
-      </section>
+      <section class="bg-yellow-500 bg-[url('/img/backgrounds/background-1.webp')] bg-cover bg-center h-120 px-5 py-10 md:px-10 md:pt-14 xl:px-20 xl:pt-20 relative mb-30 xl:mb-20">
+
+        <div class="absolute w-full h-full bg-black/30 z-10 inset-0"></div>
+
+        <div class="relative z-20">
+          <h1 class="md:text-xl text-sm text-white">CENTRO DE TERAPIAS INFANTIL MULTIDISCIPLINAR</h1>
+          <p class="exception text-3xl md:text-4xl xl:text-6xl text-white z-20 font-['Montserrat'] font-bold">Acolhimento, respeito e resultados reais para o desenvolvimento do seu filho</p>
+          <NuxtLink
+          class="bg-[#47C557] text-white flex w-36 md:w-42 text-[0.8em] md:text-[1em] justify-center items-center flex-row gap-4 md:px-6 md:py-2 px-2 py-2 mt-4 font-bold rounded-md border-white border-1 hover:bg-[#2A7633] transition"
+          target="_blank"
+          to="https://wa.me/6185401978"
+          >
+            <WhatsappIcon class="size-6" :fontControlled="false" />
+            WhatsApp
+          </NuxtLink> 
+        </div>
+        </section>
     </main>
+    <Footer />
   </div>
 </template>
 
@@ -269,6 +290,7 @@
   import { ref } from 'vue';
   import WhatsappIcon from '../assets/svg/WhatsApp.svg';
   import GoogleMapsIcon from '../assets/svg/GoogleMaps.svg';
+  import RightArrowIcon from '../assets/svg/Arrow-up-Right.svg';
 
   const services = ref([
     {

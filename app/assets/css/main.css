@@ -1,14 +1,20 @@
 @import "tailwindcss";
 
+@font-face {
+    font-family: 'Cooper Black';
+    src: url('../Fonts/cooper-black.ttf') format('truetype');
+}
+
 :root {
     /* Fonts */
-    --titulos: 'Montserrat', sans-serif;
+    --titulos: 'Montserrat', sans-serif, bold;
     --paragrafos: 'Inter', sans-serif;
     --corpo: 'Work Sans', sans-serif;
 
     /* Colors */
     --blue: #206FBD;
     --green: #87BF34;
+    --baby-green: #C0F69B;
     --pink: #F266C1;
     --red: #E74335;
     --clear-pink: #FF89D6;
@@ -17,7 +23,7 @@
     --dark-blue: #145A8B;
     --clear-blue: #CFEAFF;
     --purple: #7804e4;
-    --baby-blue: #0087ED;
+    --baby-blue: #448EFF;
 
     /* Animações */
     --animation-left-mobile: move_left_mobile 3s linear infinite;
@@ -41,14 +47,18 @@ p:not(.exception), span:not(.exception), li:not(.exception) {
     font-family: var(--corpo);
 }
 
+#clinica_sensory {
+    font-family: 'Cooper Black', sans-serif;
+}
+
 #lista-servicos {
     list-style-image: url('~/assets/svg/dot-circle.svg');
 }
 
 #pictures {
     background: 
-        url("/img/BG_2.webp") repeat-y left top,
-        url("/img/BG_2.webp") repeat-y right 75px; /* começa um pouco mais embaixo */
+        url("/img/backgrounds/BG_2.webp") repeat-y left top,
+        url("/img/backgrounds/BG_2.webp") repeat-y right 75px; /* começa um pouco mais embaixo */
     background-size: 120px;
     opacity: 0.5;
 }
