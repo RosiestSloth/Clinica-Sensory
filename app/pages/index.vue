@@ -264,24 +264,34 @@
           </div>
         </div>
       </section>
-      <section class="bg-yellow-500 bg-[url('/img/backgrounds/background-1.webp')] bg-cover bg-center h-120 px-5 py-10 md:px-10 md:pt-14 xl:px-20 xl:pt-20 relative mb-30 xl:mb-20">
+      <section class="bg-yellow-500 bg-[url('/img/backgrounds/background-1.webp')] bg-cover bg-center h-120 md:h-130 lg:h-150 px-5 py-10 md:px-10 md:pt-14 xl:px-20 xl:pt-20 relative">
 
-        <div class="absolute w-full h-full bg-black/30 z-10 inset-0"></div>
+        <div class="absolute w-full h-full bg-black/50 z-10 inset-0"></div>
 
-        <div class="relative z-20">
-          <h1 class="md:text-xl text-sm text-white">CENTRO DE TERAPIAS INFANTIL MULTIDISCIPLINAR</h1>
-          <p class="exception text-3xl md:text-4xl xl:text-6xl text-white z-20 font-['Montserrat'] font-bold">Acolhimento, respeito e resultados reais para o desenvolvimento do seu filho</p>
+        <div class="relative z-20 flex flex-col justify-center h-full">
+          <h1 class="md:text-xl text-sm text-[var(--baby-green)] font-bold tracking-widest uppercase mb-4">
+            CLÍNICA SENSORY
+          </h1>
+          
+          <p class="exception text-3xl md:text-5xl xl:text-6xl text-white z-20 font-['Montserrat'] font-bold leading-tight drop-shadow-lg">
+            Transforme desafios em conquistas: o desenvolvimento do seu filho começa aqui.
+          </p>
+          
+          <p class="text-gray-200 text-lg md:text-xl mt-4 max-w-2xl font-medium">
+            Agende uma avaliação e descubra o poder de uma equipe multidisciplinar apaixonada pelo que faz.
+          </p>
+
           <NuxtLink
-          class="bg-[#47C557] text-white flex w-36 md:w-42 text-[0.8em] md:text-[1em] justify-center items-center flex-row gap-4 md:px-6 md:py-2 px-2 py-2 mt-4 font-bold rounded-md border-white border-1 hover:bg-[#2A7633] transition"
-          target="_blank"
-          to="https://wa.me/6185401978"
+            class="bg-[#47C557] text-white flex w-auto sm:w-fit text-sm md:text-lg justify-center items-center flex-row gap-3 px-8 py-3 mt-8 font-bold rounded-full border-white border-2 hover:bg-[#2A7633] hover:scale-105 shadow-[0_0_15px_rgba(71,197,87,0.5)] transition-all duration-300"
+            target="_blank"
+            to="https://wa.me/6185401978"
           >
-            <WhatsappIcon class="size-6" :fontControlled="false" />
-            WhatsApp
+            <WhatsappIcon class="size-6 md:size-7" :fontControlled="false" />
+            Quero Agendar Agora
           </NuxtLink> 
         </div>
         </section>
-    </main>
+      </main>
     <Footer />
   </div>
 </template>
