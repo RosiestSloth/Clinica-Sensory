@@ -5,56 +5,57 @@
 
       <!-- Header Section -->
 
-      <section class="relative mb-60">
-        <div class="absolute size-full">
-          <NuxtImg
-          class="absolute top-0 left-0 w-full h-full object-cover z-0 blur-[4px]"
-          src="/img/backgrounds/BG - Clinica Sensory.png"/>
-        </div>
-        <div class="absolute w-full h-full z-20">
-          <div class="absolute flex flex-col items-center justify-center w-full">
-            <NuxtImg 
+      <section class="relative h-full pb-20 lg:pb-0">
+        <NuxtImg
+          class="absolute top-0 left-0 w-full h-full xl:min-h-140 object-cover z-0 blur-[4px]"
+          src="/img/backgrounds/BG - Clinica Sensory.png"
+        />
+        
+        <div class="relative z-20 flex flex-col lg:flex-row items-center lg:items-start w-full h-full pt-10">
+          <div class="w-1/2 flex flex-col items-center justify-center p-4">
+            <NuxtImg
               alt="Sensys"
               src="img/backgrounds/Sensys.png"
-              class="w-full md:w-1/2 max-w-150 h-auto object-contain mb-4"
+              class="w-full max-w-150 h-auto object-contain mb-4"
             />
             <h1 id="clinica_sensory" class="bg-[var(--baby-green)] text-[var(--baby-blue)] py-2 px-8 inline-block text-center font-bold text-3xl rounded-3xl">
               <span class="text-black text-xl block leading-6">Clínica</span>
               Sensory
             </h1>
           </div>
-        </div>
-        <div class="flex flex-col xl:flex-row gap-2 relative mt-10 md:mt-14 text-white p-4 top-70">
-          <div id="Primeiro" class="bg-[var(--clear-pink)] flex-1 md:p-4 p-2 flex gap-4">
-            <NuxtImg src="/img/coracao-TEA.png" class="h-20 mx-3 xl:m-0" alt="Foto coração com o símbolo TEA" />
-            <div>
-              <h3 class="text-[1.1em] md:text-xl font-bold">Atendimento Personalizado</h3>
-              <ul class="list-disc list-inside text-[0.7em] sm:text-sm xl:text-xl">
-                <li>Abordagem individualizada para cada criança.</li>
-                <li>Planos terapêuticos adaptados às necessidades específicas.</li>
-              </ul>
-            </div>
-            
-          </div>
 
-          <div id="Segundo" class="bg-[var(--blue)] flex-1 flex md:p-4 p-2 gap-4">
-            <NuxtImg src="/img/quebracabecas-TEA.png" alt="Foto quebra cabeça TEA" class="h-20" />
-            <div>
-              <h3 class="text-[1.1em] md:text-2xl font-bold">Apoio à Família</h3>
-              <ul class="list-disc list-inside text-[0.7em] sm:text-[0.9em] xl:text-xl">
-                <li>Treinamentos e orientações semanais para pais e responsáveis.</li>
-                <li>Construção conjunta da autonomia da criança.</li>
-              </ul>
+          <div class="w-full lg:w-1/2 flex flex-col gap-4 p-4 lg:mt-10">
+            <div id="Primeiro" class="bg-[var(--clear-pink)] text-white p-4 flex gap-4 rounded-lg">
+              <NuxtImg src="/img/coracao-TEA.png" class="h-20" alt="Foto coração com o símbolo TEA" />
+              <div>
+                <h3 class="text-[1.1em] md:text-xl font-bold">Atendimento Personalizado</h3>
+                <ul class="list-disc list-inside text-[0.7em] sm:text-sm xl:text-lg">
+                  <li>Abordagem individualizada para cada criança.</li>
+                  <li>Planos terapêuticos adaptados às necessidades específicas.</li>
+                </ul>
+              </div>
             </div>
-          </div>
-          <div id="Terceiro" class="bg-[var(--pink)] md:p-4 p-2 gap-4 flex flex-1">
-            <NuxtImg src="/img/laco-TEA.png" class="h-20 mx-3 xl:m-0" alt="" />
-            <div>
-              <h3 class="text-[1.1em] md:text-2xl font-bold">Desenvolvimento Integral</h3>
-              <ul class="list-disc list-inside text-[0.7em] sm:text-[0.9em] xl:text-xl">
-                <li>Trabalho em múltiplas áreas: comunicação, cognição, socialização e habilidades motoras.</li>
-                <li>Resultados comprovados com equipe transdisciplinar.</li>
-              </ul>
+
+            <div id="Segundo" class="bg-[var(--blue)] text-white p-4 flex gap-4 rounded-lg">
+              <NuxtImg src="/img/quebracabecas-TEA.png" alt="Foto quebra cabeça TEA" class="h-20" />
+              <div>
+                <h3 class="text-[1.1em] md:text-xl font-bold">Apoio à Família</h3>
+                <ul class="list-disc list-inside text-[0.7em] sm:text-sm xl:text-lg">
+                  <li>Treinamentos e orientações semanais para pais e responsáveis.</li>
+                  <li>Construção conjunta da autonomia da criança.</li>
+                </ul>
+              </div>
+            </div>
+
+            <div id="Terceiro" class="bg-[var(--pink)] text-white p-4 gap-4 flex rounded-lg">
+              <NuxtImg src="/img/laco-TEA.png" class="h-20" alt="" />
+              <div>
+                <h3 class="text-[1.1em] md:text-xl font-bold">Desenvolvimento Integral</h3>
+                <ul class="list-disc list-inside text-[0.7em] sm:text-sm xl:text-lg">
+                  <li>Trabalho em múltiplas áreas: comunicação e socialização.</li>
+                  <li>Resultados comprovados com equipe transdisciplinar.</li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
@@ -63,7 +64,7 @@
       <!-- Sobre a Clínica -->
       <section class="px-5 py-10 md:px-10 md:pt-14 xl:px-20 xl:pt-20 relative">
           <div class="flex-2">
-            <h2 id="clinica_sensory" class="bg-[var(--baby-green)] font-bold text-2xl text-[var(--baby-blue)] md:text-3xl xl:text-4xl p-4 w-full">
+            <h2 id="clinica_sensory" class="bg-[var(--baby-green)] font-bold text-xl text-[var(--baby-blue)] md:text-3xl xl:text-4xl p-4 w-full">
               Clínica Sensory Multidisciplinar
             </h2>
             <h3 class="text-xl md:text-2xl xl:text-3xl font-semibold">
@@ -77,8 +78,8 @@
 
             <div id="images"
               class="flex h-50 lg:flex-col items-center relative before:h-0.5 before:w-60 before:content-[''] before:absolute before:left-0 lg:before:mt-5 before:top-0 lg:before:top-[-20px] before:[background:linear-gradient(to_right,_#206FBD_0%_16.666%,_#05528D_16.666%_33.333%,_#597E22_33.333%_50%,_#87BF34_50%_66.666%,_#FF89DD_66.666%_83.333%,_#F266C1_83.333%_100%)] pt-5 mt-1 gap-6 flex-1">
-              <NuxtImg src="/img/img_criancas.png" class="w-1/2 md:w-full h-full object-contain" alt="Crianças sorrindo e brincando juntas em um ambiente colorido e0 acolhedor, transmitindo alegria e inclusão. O fundo mostra brinquedos e decoração lúdica, reforçando o clima de diversão e segurança." />
-              <NuxtImg src="/img/criancas_brincando.png" class="rounded-[20px_0px_20px_0px] w-1/2 h-full object-cover md:w-full" alt="Crianças brincando na Clinica Sensory" />
+                <NuxtImg src="/img/img_criancas.png" class="w-1/2 md:w-full h-full object-contain" alt="Crianças sorrindo e brincando juntas em um ambiente colorido e0 acolhedor, transmitindo alegria e inclusão. O fundo mostra brinquedos e decoração lúdica, reforçando o clima de diversão e segurança." />
+                <NuxtImg src="/img/criancas_brincando.png" class="rounded-[20px_0px_20px_0px] w-1/2 h-full object-cover md:w-full" alt="Crianças brincando na Clinica Sensory" />
             </div>
               <div class="flex flex-col gap-3 flex-2 text-black/90 mt-5 text-justify text-sm sm:text-md md:text-lg xl:text-xl">
                 <p>

@@ -36,16 +36,14 @@
                 <GoogleLogo class="size-5" /> 
                 {{ card.title }}
               </h3>
-              <p class="text-[0.8em] sm:text-sm md:text-md mt-1 overflow-hidden line-clamp-4 md:line-clamp-5 text-justify">{{ card.text }}</p>
-            </div>
-            
-            <div class="flex items-end mt-3 h-full">
-              <span v-for="star in 5" :key="star">
-                <RatingStar 
-                  class="w-5 h-5"
-                  :class="star <= card.rating ? 'text-yellow-400' : 'text-gray-300'"
+              <div class="absolute top-0 right-0 flex items-center gap-1">
+                <RatingStar
+                  v-for="n in card.rating"
+                  :key="n"
+                  class="size-4 fill-yellow-400"
                 />
-              </span>
+              </div>
+              <p class="text-[0.8em] sm:text-sm md:text-md mt-1 overflow-hidden line-clamp-4 md:line-clamp-5 text-justify">{{ card.text }}</p>
             </div>
           </div>
         </div>
