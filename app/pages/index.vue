@@ -5,18 +5,20 @@
 
       <!-- Header Section -->
 
-      <section class="relative h-full pb-20 lg:pb-0">
+      <section class="relative h-full pb-20">
         <NuxtImg
-          class="absolute top-0 left-0 w-full h-full xl:min-h-140 object-cover z-0 blur-[4px]"
+          class="absolute top-0 left-0 w-full h-full object-cover z-0"
           src="/img/backgrounds/BG - Clinica Sensory.png"
         />
+
+        <div class="h-full w-full bg-black/20 absolute"></div>
         
-        <div class="relative z-20 flex flex-col lg:flex-row items-center lg:items-start w-full h-full pt-10">
+        <div class="relative z-20 flex flex-col lg:flex-row items-center w-full h-full pt-10">
           <div class="w-1/2 flex flex-col items-center justify-center p-4">
             <NuxtImg
               alt="Sensys"
               src="img/backgrounds/Sensys.png"
-              class="w-full max-w-150 h-auto object-contain mb-4"
+              class="w-100 lg:w-full max-w-150 h-auto object-contain mb-4"
             />
             <h1 id="clinica_sensory" class="bg-[var(--baby-green)] text-[var(--baby-blue)] py-2 px-8 inline-block text-center font-bold text-3xl rounded-3xl">
               <span class="text-black text-xl block leading-6">Clínica</span>
@@ -62,7 +64,7 @@
       </section>
 
       <!-- Sobre a Clínica -->
-      <section class="px-5 py-10 md:px-10 md:pt-14 xl:px-20 xl:pt-20 relative">
+      <section class="px-5 py-10 md:px-10 md:pt-14 xl:px-20 xl:pt-20 relative max-w-400 mx-auto">
           <div class="flex-2">
             <h2 id="clinica_sensory" class="bg-[var(--baby-green)] font-bold text-xl text-[var(--baby-blue)] md:text-3xl xl:text-4xl p-4 w-full">
               Clínica Sensory Multidisciplinar
