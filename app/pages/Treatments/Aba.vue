@@ -5,7 +5,7 @@
     <main class="pb-10">
         <SinglePagesSection Title="O Que é a Terapia ABA?" BackgroundColor="[var(--blue)]" MainImage="/img/services/ABA.png" AltImage="Imagem de uma criança feliz" />
 
-        <article class="px-6">
+        <article class="px-6 md:px-10 lg:px-15 xl:px-20 text-justify">
             <p class="text-black/80 text-md">
                 A Análise do Comportamento Aplicada (ABA) é uma ciência dedicada a compreender e melhorar o comportamento humano. Através de uma abordagem sistemática e baseada em evidências, a ABA busca resolver problemas práticos e socialmente relevantes.
             </p>
