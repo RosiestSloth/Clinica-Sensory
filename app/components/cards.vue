@@ -7,11 +7,11 @@
     />
 
     <div :class="[ContainerColor, ' p-4 w-full flex-1'] ">
-      <h3 class="text-lg md:text-xl xl:text-2xl font-bold text-white">
+      <h3 class="font-bold text-xl text-white">
         {{ title }}
       </h3>
 
-      <p class="mt-2 text-white text-sm sm:text-sm md:text-md lg:text-lg xl:text-xl">
+      <p class="text-[0.8em] sm:text-sm md:text-md lg:text-lg mt-1 overflow-hidden line-clamp-4 md:line-clamp-5 text-justify text-white">
         {{ description }}
       </p>
     </div>

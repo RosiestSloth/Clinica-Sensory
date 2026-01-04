@@ -32,7 +32,7 @@ const cards = ref([
     bgColor: 'bg-[var(--dark-green)]',
     title: '2. Redução de comportamentos desafiadores',
     description: 'Com técnicas baseadas em reforço positivo, a terapia ABA busca reduzir comportamentos que atrapalham o aprendizado ou a convivência social, como agressividade, crises ou estereotipias.',
-    image: '/svg/Quebra_cabecas.svg'
+    image: '/svg/Quebra_Cabecas.svg'
   },
   {
     bgColor: 'bg-[var(--blue)]',
