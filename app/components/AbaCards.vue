@@ -1,5 +1,5 @@
 <template>
-  <div class="grid gap-4  lg:grid-cols-2">
+  <div class="max-w-7xl mx-auto grid gap-4 lg:grid-cols-2">
     <div v-for="(card) in cards" :key="card.title" :class="` gap-10 text-white ${card.bgColor} p-6`">
       <div>
         <ul>

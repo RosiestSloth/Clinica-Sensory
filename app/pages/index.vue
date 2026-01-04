@@ -5,9 +5,9 @@
 
       <!-- Header Section -->
 
-      <section class="relative h-full pb-20">
+      <section class="relative h-full pb-20 overflow-hidden">
         <NuxtImg
-          class="absolute top-0 left-0 w-full h-full object-cover z-0"
+          class="absolute top-0 left-0 w-full h-full object-cover z-0 blur-[4px]"
           src="/img/backgrounds/BG - Clinica Sensory.png"
         />
 
@@ -64,7 +64,7 @@
       </section>
 
       <!-- Sobre a Clínica -->
-      <section class="px-5 py-10 md:px-10 md:pt-14 xl:px-20 xl:pt-20 relative max-w-400 mx-auto">
+      <section class="px-5 py-10 md:px-10 xl:px-20 relative max-w-400 mx-auto">
           <div class="flex-2">
             <h2 id="clinica_sensory" class="bg-[var(--baby-green)] font-bold text-xl text-[var(--baby-blue)] md:text-3xl xl:text-4xl p-4 w-full">
               Clínica Sensory Multidisciplinar
@@ -77,7 +77,7 @@
           <div class="flex flex-col lg:flex-row gap-4 h-full lg:mt-2">
 
             <!-- Separador -->
-            <Separador class="" />
+            <Separador />
             <div id="images"
               class="flex h-50 lg:flex-col items-center pt-5 mt-5 gap-6 flex-1 ">
                 <NuxtImg src="/img/img_criancas.png" class="w-1/2 md:w-full h-full object-contain" alt="Crianças sorrindo e brincando juntas em um ambiente colorido e0 acolhedor, transmitindo alegria e inclusão. O fundo mostra brinquedos e decoração lúdica, reforçando o clima de diversão e segurança." />
@@ -100,13 +100,13 @@
         </div>
         <Separador class="relative my-10 ml-auto" />
         <div class="flex flex-col lg:flex-row">
-          <div id="images" class="flex flex-row flex-1 h-full items-center relative justify-between md:gap-10">
-            <NuxtImg src="/img/Paciente_em_Atendimento.png" class="rounded-[20px_0px_20px_0px] w-1/2 lg:w-full h-full object-cover" alt="Paciente em Atendimento" />
-            <NuxtImg src="/img/laco-TEA.png" class="h-full w-1/4 object-cover" alt="Laço TEA"/>
+          <div id="images" class="flex flex-row flex-1 h-full items-center relative justify-between lg:justify-start md:gap-10">
+            <NuxtImg src="/img/Paciente_em_Atendimento.png" class="rounded-[20px_0px_20px_0px] w-1/2 h-full object-cover" alt="Paciente em Atendimento" />
+            <NuxtImg src="/img/laco-TEA.png" class="h-full w-1/4 lg:w-1/5 object-cover" alt="Laço TEA"/>
           </div>
-          <div class="flex flex-2 gap-5 md:gap-0 relative pt-5 mt-1 font-semibold text-sm sm:text-md md:text-lg xl:text-xl justify-between lg:top-[-20px]">
+          <div class="flex flex-2 gap-5 md:gap-0 relative pt-5 mt-1 font-semibold text-sm sm:text-md md:text-lg xl:text-xl ml-auto lg:max-w-1/2 justify-end lg:top-[-20px]">
           
-            <ul class="text-black/90 list-inside flex-1 mt-5" id="lista-servicos"> 
+            <ul class="text-black/90 list-inside flex-1 mt-5 max-w-1/2" id="lista-servicos"> 
               <li>
                 Terapia ABA
               </li>
@@ -120,7 +120,7 @@
                 Terapia Ocupacional
               </li>
             </ul>
-            <ul class="text-black/90 list-inside flex-1 mt-5" id="lista-servicos">
+            <ul class="text-black/90 list-inside flex-1 mt-5 w-1/2" id="lista-servicos">
               <li>
                 Psicopedagogia
               </li>
@@ -140,12 +140,12 @@
 
       <!-- Avaliações -->
       <section id="avaliacoes" class="bg-linear-to-b from-[#36A8FF] via-[#206599] to-[#36A8FE] text-white p-5 md:p-10 relative">
-        <div id="pictures" class="absolute w-full h-full z-10 inset-0"></div>
+        <div id="picturesy" class="absolute w-full h-full z-10 inset-0"></div>
         <div class=" relative z-20">
           <h2 class="text-xl md:text-2xl xl:text-3xl font-semibold">
             Avaliações de alguns de nossos clientes
           </h2>
-          <Separador />
+          <Separador class="relative my-5" />
           <p class="mt-4 text-justify text-sm sm:text-md md:text-lg xl:text-xl">
             Acreditamos que cada conquista deve ser celebrada
           </p>
@@ -153,7 +153,7 @@
             Veja alguns depoimentos de pais e responsáveis que acompanham de perto o desenvolvimento de suas crianças conosco.
           </p>
           <Comments />
-          <div id="separador" class="h-0.5 w-50 right-10 content-[''] absolute [background:linear-gradient(to_right,_#206FBD_0%_16.666%,_#05528D_16.666%_33.333%,_#597E22_33.333%_50%,_#87BF34_50%_66.666%,_#FF89DD_66.666%_83.333%,_#F266C1_83.333%_100%)] mt-8"></div>
+          <Separador class="mt-6 right-0" />
           <div class="relative mt-14">
             <h2 class="text-xl md:text-2xl xl:text-3xl font-semibold">Onde você pode nos encontrar?</h2>
             <!-- Google Maps -->
@@ -167,11 +167,11 @@
               target="_blank"
               to="https://wa.me/6185401978"
               >
-                <WhatsappIcon class="size-6" :fontControlled="false" />
+                <img :src="whatsappIcon" alt="WhatsApp" class="size-6" />
                 WhatsApp
               </NuxtLink>
               <NuxtLink to="https://www.google.com/maps?ll=-15.840887,-48.047022&z=16&t=m&hl=pt-BR&gl=BR&mapclient=embed&cid=4118327637672282773" target="_blank" class="bg-[#4285F4] text-white flex w-38 md:w-50 text-sm md:text-md justify-center items-center flex-row gap-4 md:px-4 md:py-2 px-1 py-1 mt-4 font-bold rounded-md border-white border-1 hover:bg-[#16548F] transition">
-                <GoogleMapsIcon class="size-8" :fontControlled="false" />
+                <img :src="googleMapsIcon" alt="Google Maps" class="size-8" />
                 Google Maps
               </NuxtLink>
             </div>
@@ -229,7 +229,7 @@
 
         <div class="bg-[var(--pink)] absolute top-150 md:top-90 rotate-5 md:rotate-2 h-40 md:h-30 mt-4 w-[calc(100%+theme(spacing.5))] left-[-10px] z-[3]"></div>
 
-        <div class="px-5 md:px-10 relative my-20 z-[4]">
+        <div class="px-5 md:px-10 relative my-20 z-[4] max-w-400 mx-auto">
           <p class="text-[var(--blue)]">
             Mais do que tratar, buscamos compreender e acompanhar cada etapa do desenvolvimento de seu filho.
           </p>
@@ -238,13 +238,13 @@
             Benefícios da Terapia ABA
           </h2>
 
-          <div id="separador" class="h-0.5 w-60 left-10 absolute [background:linear-gradient(to_right,_#206FBD_0%_16.666%,_#05528D_16.666%_33.333%,_#597E22_33.333%_50%,_#87BF34_50%_66.666%,_#FF89DD_66.666%_83.333%,_#F266C1_83.333%_100%)]"></div>
+          <Separador class="relative my-5" />
 
           <AbaCards class="my-6" />
           <NuxtLink
-          to="#"
+          to="/treatments/aba"
           class="bg-[var(--blue)] text-white flex w-50 h-14 mx-auto md:w-60 text-md md:text-lg justify-center items-center flex-row gap-4 md:px-6 md:py-2 px-2 py-2 mt-4 font-bold rounded-md border-white border-1 hover:bg-[var(--dark-blue)] transition"
-          >Saiba mais <RightArrowIcon class="size-8" /></NuxtLink>
+          >Saiba mais <img :src="rightArrowIcon" alt="Saiba mais" class="size-8" /></NuxtLink>
         </div>
       </section>
       <section class="relative">
@@ -257,9 +257,9 @@
           src="/img/backgrounds/BG_TEA.png"/>
           <h2 class="z-10 h-40 md:h-24 content-center p-2 text-xl md:text-2xl w-1/2 bg-black/40 font-bold text-white ">
             Criando caminhos para um desenvolvimento excepcional.
-          </h2>
+          </h2>Check
           <div class="z-10 text-white w-1/2 bg-[var(--secondary-blue-dark)] p-4 md:p-8">
-            <ul class="list-image-[url(~/assets/svg/Check.svg)] list-inside h-full text-sm md:text-xl">
+            <ul class="list-image-[url(/svg/Check.svg)] list-inside h-full text-sm md:text-xl">
               <li class="bg-[var(--dark-blue)] h-1/4 content-center font-bold"> Cuidado Integral e Humanizado</li>
               <li class="bg-[var(--blue)] h-1/4 content-center font-bold"> Desenvolvimento Contínuo</li>
               <li class="bg-[var(--dark-blue)] h-1/4 content-center font-bold">Foco na Felicidade e Autonomia</li>
@@ -280,7 +280,7 @@
           <p class="exception text-3xl md:text-5xl xl:text-6xl text-white z-20 font-['Montserrat'] font-bold leading-tight drop-shadow-lg">
             Transforme desafios em conquistas: o desenvolvimento do seu filho começa aqui.
           </p>
-          
+          <Separador class="relative mt-2" />
           <p class="text-gray-200 text-lg md:text-xl mt-4 max-w-2xl font-medium">
             Agende uma avaliação e descubra o poder de uma equipe multidisciplinar apaixonada pelo que faz.
           </p>
@@ -290,48 +290,50 @@
             target="_blank"
             to="https://wa.me/6185401978"
           >
-            <WhatsappIcon class="size-6 md:size-7" :fontControlled="false" />
+            <img :src="whatsappIcon" alt="WhatsApp" class="size-6 md:size-7" />
             Quero Agendar Agora
           </NuxtLink> 
         </div>
         </section>
       </main>
-    <Footer />
+    <AppFooter />
   </div>
 </template>
 
 <script setup lang="ts">
   import { ref } from 'vue';
-  import WhatsappIcon from '../assets/svg/WhatsApp.svg';
-  import GoogleMapsIcon from '../assets/svg/GoogleMaps.svg';
-  import RightArrowIcon from '../assets/svg/Arrow-up-Right.svg';
+
+  // Ícones movidos para /public/svg
+  const whatsappIcon = '/svg/WhatsApp.svg';
+  const googleMapsIcon = '/svg/GoogleMaps.svg';
+  const rightArrowIcon = '/svg/Arrow-up-Right.svg';
 
   const services = ref([
     {
       title: 'ABA (Análise do Comportamento Aplicada)',
       description: 'Abordagem baseada em evidências que utiliza princípios do comportamento para ensinar habilidades e reduzir comportamentos desafiadores. Muito usada no acompanhamento de pessoas com TEA, a ABA promove autonomia por meio do reforço positivo e da repetição estruturada.',
-      image: '/img/servicos/ABA.png',
+      image: '/img/services/ABA.png',
       ContainerColor: 'bg-[var(--blue)]',
       BorderColor: 'border-[var(--blue)]',
     },
     {
       title: 'PECS (Picture Exchange Communication System)',
       description: 'Sistema de comunicação por troca de figuras que permite que pessoas com dificuldades verbais possam expressar seus desejos e necessidades. O PECS incentiva a comunicação funcional desde as fases iniciais do desenvolvimento.',
-      image: '/img/servicos/PECS.png',
+      image: '/img/services/PECS.png',
       ContainerColor: 'bg-[var(--green)]',
       BorderColor: 'border-[var(--green)]',
     },
     {
       title: 'TPAC (Teoria Pedagógica do Conhecimento Tecnológico)',
-      description: 'Modelo que integra o conhecimento pedagógico, tecnológico e do conteúdo, auxiliando professores a planejar e aplicar estratégias de ensino mais eficazes com o uso da tecnologia. É um recurso essencial na educação inclusiva e personalizada.',
-      image: '/img/servicos/TPAC.png',
+      description: 'O diagnóstico é essencial para contribuindo para o desenvolvimento da linguagem, da aprendizagem e da comunicação, especialmente em crianças com dificuldades escolares e de compreensão oral.',
+      image: '/img/services/TPAC.png',
       ContainerColor: 'bg-[var(--red)]',
       BorderColor: 'border-[var(--red)]',
     },
     {
       title: 'Integração Sensorial',
       description: 'Método que visa melhorar a percepção e o processamento de informações sensoriais. Ao organizar os estímulos que o cérebro recebe, contribui para o equilíbrio emocional, motor e social, especialmente em crianças com dificuldades de regulação sensorial.',
-      image: '/img/servicos/Integracao_Sensorial.png',
+      image: '/img/services/Integracao_Sensorial.png',
       ContainerColor: 'bg-[var(--pink)]',
       BorderColor: 'border-[var(--pink)]',
     }

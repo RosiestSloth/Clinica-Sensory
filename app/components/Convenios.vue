@@ -21,14 +21,14 @@
             </div>
         </div>
         <!-- Controles de navegação -->
-        <div class="absolute top-1/2 w-full flex justify-between transform -translate-y-1/2 z-10 flex gap-2 px-4">
+        <div class="absolute top-1/2 w-full justify-between transform -translate-y-1/2 z-10 flex gap-2 px-4">
             <button
             aria-label="Anterior"
             @click="scroll('prev')"
             class="bg-white cursor-pointer size-10 md:size-14 p-4 rounded-full shadow-md border-1 border-gray-200 hover:bg-gray-100 transition-colors hover:shadow-sm active:scale-95 flex items-center justify-center"
             >
             <span>
-                <LeftArrow class="size-6 md:size-8" />
+                <img :src="leftArrow" alt="Anterior" class="size-6 md:size-8" />
             </span>
             </button>
             <button
@@ -37,7 +37,7 @@
             class="bg-white cursor-pointer size-10 md:size-14 p-4 rounded-full shadow-md border-1 border-gray-200 hover:bg-gray-100 transition-colors hover:shadow-sm active:scale-95 flex items-center justify-center"
             >
                 <span>
-                    <RightArrow class="size-6 md:size-8" />
+                    <img :src="rightArrow" alt="Próximo" class="size-6 md:size-8" />
                 </span>
             </button>
         </div>
@@ -46,8 +46,10 @@
 
 <script setup>
     import { ref } from 'vue';
-    import LeftArrow from '~/assets/svg/Arrow-left.svg';
-    import RightArrow from '~/assets/svg/Arrow-right.svg';
+
+    // SVGs agora servidos pelo /public
+    const leftArrow = '/svg/Arrow-left.svg';
+    const rightArrow = '/svg/Arrow-right.svg';
 
     const list1Ref = ref(null);
     const list2Ref = ref(null);

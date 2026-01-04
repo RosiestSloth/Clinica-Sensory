@@ -33,14 +33,16 @@
           >
             <div class="relative h-30 lg:h-40">
               <h3 class="text-sm md:text-md xl:text-lg font-semibold flex items-center gap-2">
-                <GoogleLogo class="size-5" /> 
+                <img :src="googleLogo" alt="Google" class="size-5" /> 
                 {{ card.title }}
               </h3>
               <div class="absolute top-0 right-0 flex items-center gap-1">
-                <RatingStar
+                <img
                   v-for="n in card.rating"
                   :key="n"
-                  class="size-4 fill-yellow-400"
+                  :src="ratingStar"
+                  alt="Estrela de avaliação"
+                  class="size-4"
                 />
               </div>
               <p class="text-[0.8em] sm:text-sm md:text-md mt-1 overflow-hidden line-clamp-4 md:line-clamp-5 text-justify">{{ card.text }}</p>
@@ -54,8 +56,10 @@
 
 <script setup>
   import { ref, onMounted, onUnmounted, nextTick } from "vue";
-  import RatingStar from "/assets/svg/Rating_Star.svg";
-  import GoogleLogo from "/assets/svg/Google_Logo.svg";
+
+  // SVGs agora ficam em /public
+  const ratingStar = '/svg/Rating_Star.svg';
+  const googleLogo = '/svg/Google_Logo.svg';
 
   // --- STATE ---
   const carousel = ref(null);

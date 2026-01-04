@@ -52,15 +52,24 @@ p:not(.exception), span:not(.exception), li:not(.exception) {
 }
 
 #lista-servicos {
-    list-style-image: url('~/assets/svg/dot-circle.svg');
+    list-style-image: url('/svg/dot-circle.svg');
 }
 
-#pictures {
+#picturesy {
     background: 
         url("/img/backgrounds/BG_2.webp") repeat-y left top,
         url("/img/backgrounds/BG_2.webp") repeat-y right 75px; /* começa um pouco mais embaixo */
     background-size: 120px;
     opacity: 0.5;
+}
+
+#picturesx {
+    background:
+        url("/img/backgrounds/BG_3.webp") repeat-x left -10px,
+        url("/img/backgrounds/BG_3.webp") repeat-x right 100px;
+    background-size: 320px;
+    opacity: 0.5;
+    z-index: 0;
 }
 
 @keyframes move_left_mobile {
