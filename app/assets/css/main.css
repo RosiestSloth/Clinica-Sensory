@@ -58,19 +58,30 @@ p:not(.exception), span:not(.exception), li:not(.exception) {
 #picturesy {
     background: 
         url("/img/backgrounds/BG_2.webp") repeat-y left top,
-        url("/img/backgrounds/BG_2.webp") repeat-y right 75px; /* começa um pouco mais embaixo */
+        url("/img/backgrounds/BG_2.webp") repeat-y right 75px;
     background-size: 120px;
     opacity: 0.5;
 }
 
 #picturesx {
     background:
-        url("/img/backgrounds/BG_3.webp") repeat-x left -10px,
-        url("/img/backgrounds/BG_3.webp") repeat-x right 100px;
-    background-size: 320px;
+        url("/img/backgrounds/BG_3.webp") repeat-x left top,
+        url("/img/backgrounds/BG_3.webp") repeat-x right bottom;
+    background-size: auto 90px;
     opacity: 0.5;
     z-index: 0;
 }
+
+@media (min-width: 1024px) {
+    #picturesx {
+        background:
+            url("/img/backgrounds/BG_3.webp") repeat-x left -50px,
+            url("/img/backgrounds/BG_3.webp") repeat-x right bottom;
+        background-size: auto 200px;
+    }
+}
+
+
 
 @keyframes move_left_mobile {
     0% { left: -130px; }
