@@ -104,9 +104,9 @@
             <NuxtImg src="/img/Paciente_em_Atendimento.png" class="rounded-[20px_0px_20px_0px] w-1/2 h-full object-cover" alt="Paciente em Atendimento" />
             <NuxtImg src="/img/laco-TEA.png" class="h-full w-1/4 lg:w-1/5 object-cover" alt="Laço TEA"/>
           </div>
-          <div class="flex flex-2 gap-5 md:gap-0 relative pt-5 mt-1 font-semibold text-sm sm:text-md md:text-lg xl:text-xl ml-auto lg:max-w-1/2 justify-end lg:top-[-20px]">
+          <div class="flex flex-2 gap-5 md:gap-0 relative pt-5 mt-1 font-semibold text-sm sm:text-md md:text-lg xl:text-xl lg:ml-auto lg:max-w-1/2 items-center justify-center lg:justify-end lg:top-[-20px]">
           
-            <ul class="text-black/90 list-inside flex-1 mt-5 max-w-1/2" id="lista-servicos"> 
+            <ul class="text-black/90 list-inside flex-1 mt-5" id="lista-servicos"> 
               <li>
                 Terapia ABA
               </li>
@@ -120,7 +120,7 @@
                 Terapia Ocupacional
               </li>
             </ul>
-            <ul class="text-black/90 list-inside flex-1 mt-5 w-1/2" id="lista-servicos">
+            <ul class="text-black/90 list-inside flex-1 mt-5" id="lista-servicos">
               <li>
                 Psicopedagogia
               </li>
@@ -257,7 +257,7 @@
           src="/img/backgrounds/BG_TEA.png"/>
           <h2 class="z-10 h-40 md:h-24 content-center p-2 text-xl md:text-2xl w-1/2 bg-black/40 font-bold text-white ">
             Criando caminhos para um desenvolvimento excepcional.
-          </h2>Check
+          </h2>
           <div class="z-10 text-white w-1/2 bg-[var(--secondary-blue-dark)] p-4 md:p-8">
             <ul class="list-image-[url(/svg/Check.svg)] list-inside h-full text-sm md:text-xl">
               <li class="bg-[var(--dark-blue)] h-1/4 content-center font-bold"> Cuidado Integral e Humanizado</li>

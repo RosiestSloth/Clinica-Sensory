@@ -69,6 +69,7 @@
   const gap = ref(0);
   const isDragging = ref(false);
   const startX = ref(0);
+  const startY = ref(0);
   const currentDragX = ref(0);
 
   // --- DADOS DO CARROSSEL ---
@@ -114,14 +115,22 @@
   const startDrag = (e) => {
     isDragging.value = true;
     startX.value = getDragX(e);
+    startY.value = e.touches ? e.touches[0].clientY : e.clientY;
     currentDragX.value = translateX.value;
   };
 
   const onDrag = (e) => {
     if (!isDragging.value) return;
-    e.preventDefault(); // Previne comportamentos padrão do navegador, como selecionar texto
-    const diff = getDragX(e) - startX.value;
-    translateX.value = currentDragX.value + diff;
+    
+    const currentY = e.touches ? e.touches[0].clientY : e.clientY;
+    const diffX = getDragX(e) - startX.value;
+    const diffY = currentY - startY.value;
+    
+    // Só previne comportamento padrão se for movimento horizontal (swipe)
+    if (Math.abs(diffX) > Math.abs(diffY)) {
+      e.preventDefault();
+      translateX.value = currentDragX.value + diffX;
+    }
   };
 
   const endDrag = (e) => {
