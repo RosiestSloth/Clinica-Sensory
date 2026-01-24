@@ -200,15 +200,7 @@
           </p>
           
           <div class="mx-auto grid grid-cols-1 lg:grid-cols-2">
-            <cards
-            v-for="service in services"
-            :key="service.title"
-            :title="service.title"
-            :description="service.description"
-            :imageSrc="service.image"
-            :ContainerColor="service.ContainerColor"
-            :BorderColor="service.BorderColor"
-              />
+            <cards />
           </div>
         </div>
       </section>
@@ -242,7 +234,7 @@
 
           <AbaCards class="my-6" />
           <NuxtLink
-          to="/treatments/aba"
+          to="/treatments/ABAv"
           class="bg-[var(--blue)] text-white flex w-50 h-14 mx-auto md:w-60 text-md md:text-lg justify-center items-center flex-row gap-4 md:px-6 md:py-2 px-2 py-2 mt-4 font-bold rounded-md border-white border-1 hover:bg-[var(--dark-blue)] transition"
           >Saiba mais <img :src="rightArrowIcon" alt="Saiba mais" class="size-8" /></NuxtLink>
         </div>
@@ -301,41 +293,11 @@
 </template>
 
 <script setup lang="ts">
-  import { ref } from 'vue';
 
   // Ícones movidos para /public/svg
   const whatsappIcon = '/svg/WhatsApp.svg';
   const googleMapsIcon = '/svg/GoogleMaps.svg';
   const rightArrowIcon = '/svg/Arrow-up-Right.svg';
 
-  const services = ref([
-    {
-      title: 'ABA (Análise do Comportamento Aplicada)',
-      description: 'Abordagem baseada em evidências que utiliza princípios do comportamento para ensinar habilidades e reduzir comportamentos desafiadores. Muito usada no acompanhamento de pessoas com TEA, a ABA promove autonomia por meio do reforço positivo e da repetição estruturada.',
-      image: '/img/services/ABA.png',
-      ContainerColor: 'bg-[var(--blue)]',
-      BorderColor: 'border-[var(--blue)]',
-    },
-    {
-      title: 'PECS (Picture Exchange Communication System)',
-      description: 'Sistema de comunicação por troca de figuras que permite que pessoas com dificuldades verbais possam expressar seus desejos e necessidades. O PECS incentiva a comunicação funcional desde as fases iniciais do desenvolvimento.',
-      image: '/img/services/PECS.png',
-      ContainerColor: 'bg-[var(--green)]',
-      BorderColor: 'border-[var(--green)]',
-    },
-    {
-      title: 'TPAC (Teoria Pedagógica do Conhecimento Tecnológico)',
-      description: 'O diagnóstico é essencial para contribuindo para o desenvolvimento da linguagem, da aprendizagem e da comunicação, especialmente em crianças com dificuldades escolares e de compreensão oral.',
-      image: '/img/services/TPAC.png',
-      ContainerColor: 'bg-[var(--red)]',
-      BorderColor: 'border-[var(--red)]',
-    },
-    {
-      title: 'Integração Sensorial',
-      description: 'Método que visa melhorar a percepção e o processamento de informações sensoriais. Ao organizar os estímulos que o cérebro recebe, contribui para o equilíbrio emocional, motor e social, especialmente em crianças com dificuldades de regulação sensorial.',
-      image: '/img/services/Integracao_Sensorial.png',
-      ContainerColor: 'bg-[var(--pink)]',
-      BorderColor: 'border-[var(--pink)]',
-    }
-  ]);
+
 </script>
