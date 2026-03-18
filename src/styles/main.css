@@ -1,0 +1,150 @@
+@import "tailwindcss";
+
+@font-face {
+    font-family: "Cooper Black";
+    src: url("/fonts/cooper-black.ttf") format("truetype");
+}
+
+:root {
+    --titulos: "Montserrat", sans-serif, bold;
+    --paragrafos: "Inter", sans-serif;
+    --corpo: "Work Sans", sans-serif;
+
+    --blue: #206fbd;
+    --green: #87bf34;
+    --baby-green: #c0f69b;
+    --pink: #f266c1;
+    --red: #e74335;
+    --clear-pink: #ff89d6;
+    --dark-green: #597e22;
+    --secondary-blue-dark: #072d5d;
+    --dark-blue: #145a8b;
+    --clear-blue: #cfeaff;
+    --purple: #7804e4;
+    --baby-blue: #448eff;
+
+    --animation-left-mobile: move_left_mobile 3s linear infinite;
+    --animation-right-mobile: move_right_mobile 3s linear infinite;
+    --animation-left-desktop: move_left_desktop 3s linear infinite;
+    --animation-right-desktop: move_right_desktop 3s linear infinite;
+    --animation-scroll-left: scroll-left 20s linear infinite;
+}
+
+body,
+html {
+    max-width: 100vw;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--titulos);
+}
+
+p:not(.exception),
+span:not(.exception),
+li:not(.exception) {
+    font-family: var(--corpo);
+}
+
+.brand-title {
+    font-family: "Cooper Black", sans-serif;
+}
+
+#lista-servicos {
+    list-style-image: url("/svg/dot-circle.svg");
+}
+
+.pictures-y {
+    background: url("/img/backgrounds/BG_2.webp") repeat-y left top,
+        url("/img/backgrounds/BG_2.webp") repeat-y right 75px;
+    background-size: 120px;
+    opacity: 0.5;
+}
+
+.pictures-x {
+    background: url("/img/backgrounds/BG_3.webp") repeat-x left top,
+        url("/img/backgrounds/BG_3.webp") repeat-x right bottom;
+    background-size: auto 90px;
+    opacity: 0.5;
+    z-index: 0;
+}
+
+@media (min-width: 1024px) {
+    .pictures-x {
+        background: url("/img/backgrounds/BG_3.webp") repeat-x left -50px,
+            url("/img/backgrounds/BG_3.webp") repeat-x right bottom;
+        background-size: auto 200px;
+    }
+}
+
+@keyframes move_left_mobile {
+    0% {
+        left: -130px;
+    }
+
+    50% {
+        left: -110px;
+    }
+
+    100% {
+        left: -130px;
+    }
+}
+
+@keyframes move_right_mobile {
+    0% {
+        right: -150px;
+    }
+
+    50% {
+        right: -130px;
+    }
+
+    100% {
+        right: -150px;
+    }
+}
+
+@keyframes move_right_desktop {
+    0% {
+        right: -200px;
+    }
+
+    50% {
+        right: -180px;
+    }
+
+    100% {
+        right: -200px;
+    }
+}
+
+@keyframes move_left_desktop {
+    0% {
+        left: -200px;
+    }
+
+    50% {
+        left: -180px;
+    }
+
+    100% {
+        left: -200px;
+    }
+}
+
+@keyframes scroll-left {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
