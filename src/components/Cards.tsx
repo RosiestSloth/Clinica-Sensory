@@ -1,4 +1,6 @@
+import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
+import { fadeUp, staggerContainer, viewportReveal } from "../animations/variants";
 import { ROUTES } from "../constants/site";
 
 const services = [
@@ -42,9 +44,9 @@ const services = [
 
 export function Cards() {
     return (
-        <>
+        <motion.div variants={staggerContainer(0.1)} initial="hidden" whileInView="show" viewport={viewportReveal} className="grid grid-cols-1 lg:grid-cols-2">
             {services.map((service) => (
-                <div className="flex flex-col items-center p-4" key={service.title}>
+                <motion.div variants={fadeUp} className="flex flex-col items-center p-4" key={service.title}>
                     <Link to={service.pageLink} aria-label="Link para pagina de mais detalhes" className="flex w-full justify-center">
                         <div
                             className={`${service.borderColor} relative h-50 w-[90%] overflow-hidden border-2 bg-gray-200 transition-all hover:mb-1 hover:scale-103 md:h-60 xl:h-70 before:absolute before:bottom-0 before:left-0 before:h-0 before:w-full before:bg-gray-100/80 before:opacity-20 before:transition-all before:duration-500 before:z-10 hover:before:h-full`}
@@ -62,8 +64,8 @@ export function Cards() {
                             {service.description}
                         </p>
                     </div>
-                </div>
+                </motion.div>
             ))}
-        </>
+        </motion.div>
     );
 }

@@ -5,8 +5,9 @@ import { NAV_LINKS } from "../constants/site";
 export function AppHeader() {
     const [showMenu, setShowMenu] = useState(false);
 
+
     return (
-        <header className="z-20">
+        <header className="z-200 w-full bg-gray-100 shadow-md transition-all top-0 duration-300 fixed">
             <div className="bg-gray-100">
                 <nav className="container mx-auto px-3 py-4 md:flex md:items-center md:justify-between">
                     <div className="flex items-center justify-between">

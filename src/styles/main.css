@@ -56,10 +56,6 @@ li:not(.exception) {
     font-family: "Cooper Black", sans-serif;
 }
 
-#lista-servicos {
-    list-style-image: url("/svg/dot-circle.svg");
-}
-
 .pictures-y {
     background: url("/img/backgrounds/BG_2.webp") repeat-y left top,
         url("/img/backgrounds/BG_2.webp") repeat-y right 75px;

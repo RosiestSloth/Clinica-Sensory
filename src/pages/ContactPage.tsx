@@ -1,3 +1,5 @@
+import { motion } from "framer-motion";
+import { fadeUp, staggerContainer, viewportReveal } from "../animations/variants";
 import { AppFooter } from "../components/AppFooter";
 import { AppHeader } from "../components/AppHeader";
 import { ExternalLinkButton } from "../components/ExternalLinkButton";
@@ -7,13 +9,21 @@ export function ContactPage() {
     return (
         <div className="bg-gray-50">
             <AppHeader />
-            <main className="mx-auto max-w-5xl px-6 py-10 md:px-10">
-                <h1 className="text-3xl font-bold text-[var(--dark-blue)] md:text-4xl">Contato</h1>
-                <p className="mt-4 text-black/80 md:text-lg">
+            <motion.main
+                className="mx-auto max-w-6xl py-10 mt-20"
+                variants={staggerContainer(0.12)}
+                initial="hidden"
+                whileInView="show"
+                viewport={viewportReveal}
+            >
+                <motion.h1 variants={fadeUp} className="text-3xl font-bold text-[var(--dark-blue)] md:text-4xl">
+                    Contato
+                </motion.h1>
+                <motion.p variants={fadeUp} className="mt-4 text-black/80 md:text-lg">
                     Entre em contato para agendar uma avaliacao, tirar duvidas sobre terapias e conhecer nossa estrutura.
-                </p>
+                </motion.p>
 
-                <div className="mt-8 grid gap-4 rounded-2xl bg-white p-6 shadow-sm md:grid-cols-2">
+                <motion.div variants={fadeUp} className="mt-8 grid gap-4 rounded-2xl bg-white p-6 shadow-sm md:grid-cols-2">
                     <div>
                         <h2 className="text-xl font-semibold text-[var(--blue)]">WhatsApp</h2>
                         <ExternalLinkButton href={CONTACT.whatsappUrl} className="mt-2 block hover:underline">
@@ -32,16 +42,17 @@ export function ContactPage() {
                         <h2 className="text-xl font-semibold text-[var(--blue)]">Endereco</h2>
                         <p className="mt-2 text-black/80">{CONTACT.address}</p>
                     </div>
-                </div>
+                </motion.div>
 
-                <iframe
+                <motion.iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3838.298770883089!2d-48.04702199999999!3d-15.8408869!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935a3370522b5b61%3A0x39273d2aa8214a95!2sCl%C3%ADnica%20Sensory%20multidisciplinar!5e0!3m2!1spt-BR!2sbr!4v1755881223412!5m2!1spt-BR!2sbr"
                     title="Localizacao Clinica Sensory"
                     className="mt-8 h-96 w-full rounded-md bg-gray-100"
                     loading="lazy"
                     referrerPolicy="no-referrer-when-downgrade"
+                    variants={fadeUp}
                 />
-            </main>
+            </motion.main>
             <AppFooter />
         </div>
     );

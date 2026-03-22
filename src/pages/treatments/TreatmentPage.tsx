@@ -1,3 +1,5 @@
+import { motion } from "framer-motion";
+import { fadeUp, staggerContainer, viewportReveal } from "../../animations/variants";
 import { AppFooter } from "../../components/AppFooter";
 import { AppHeader } from "../../components/AppHeader";
 import { SinglePagesSection } from "../../components/SinglePagesSection";
@@ -25,7 +27,13 @@ export function TreatmentPage({
         <div>
             <AppHeader />
 
-            <main className="pb-10">
+            <motion.main
+                className="pb-10"
+                variants={staggerContainer(0.1)}
+                initial="hidden"
+                whileInView="show"
+                viewport={viewportReveal}
+            >
                 <SinglePagesSection
                     title={title}
                     backgroundClass="bg-[var(--blue)]"
@@ -34,19 +42,23 @@ export function TreatmentPage({
                     altImage={altImage}
                 />
 
-                <article className="flex flex-col px-6 md:px-10 xl:flex-row lg:text-justify">
-                    <div className="w-full">
-                        <p className="text-md text-black/80">{intro}</p>
-                        <h3 className="my-4 text-lg font-bold text-black/80">{pillarsTitle}</h3>
+                <motion.article variants={fadeUp} className="flex flex-col px-6 md:px-10 xl:flex-row lg:text-justify">
+                    <motion.div variants={fadeUp} className="w-full">
+                        <motion.p variants={fadeUp} className="text-md text-black/80">
+                            {intro}
+                        </motion.p>
+                        <motion.h3 variants={fadeUp} className="my-4 text-lg font-bold text-black/80">
+                            {pillarsTitle}
+                        </motion.h3>
                         <ul className="list-inside list-disc text-md text-black/80">
                             {pillars.map((item) => (
-                                <li key={item.title}>
+                                <motion.li key={item.title} variants={fadeUp}>
                                     <span className="font-bold">{item.title}: </span>
                                     {item.description}
-                                </li>
+                                </motion.li>
                             ))}
                         </ul>
-                    </div>
+                    </motion.div>
 
                     <div className="relative my-2 flex flex-row items-center justify-center gap-4 xl:my-0 xl:h-auto xl:w-30 xl:flex-col xl:gap-10">
                         <div className="h-1 w-full flex-2 content-[''] [background:linear-gradient(to_right,_#206FBD_0%_16.666%,_#05528D_16.666%_33.333%,_#597E22_33.333%_50%,_#87BF34_50%_66.666%,_#FF89DD_66.666%_83.333%,_#F266C1_83.333%_100%)] lg:w-1 xl:h-full xl:[background:linear-gradient(to_bottom,_#206FBD_0%_16.666%,_#05528D_16.666%_33.333%,_#597E22_33.333%_50%,_#87BF34_50%_66.666%,_#FF89DD_66.666%_83.333%,_#F266C1_83.333%_100%)]" />
@@ -62,16 +74,16 @@ export function TreatmentPage({
                         <div className="h-1 w-full flex-2 content-[''] [background:linear-gradient(to_right,_#206FBD_0%_16.666%,_#05528D_16.666%_33.333%,_#597E22_33.333%_50%,_#87BF34_50%_66.666%,_#FF89DD_66.666%_83.333%,_#F266C1_83.333%_100%)] lg:w-1 xl:h-full xl:[background:linear-gradient(to_bottom,_#206FBD_0%_16.666%,_#05528D_16.666%_33.333%,_#597E22_33.333%_50%,_#87BF34_50%_66.666%,_#FF89DD_66.666%_83.333%,_#F266C1_83.333%_100%)]" />
                     </div>
 
-                    <div className="w-full">
+                    <motion.div variants={fadeUp} className="w-full">
                         {sections.map((section) => (
-                            <div key={section.heading}>
+                            <motion.div key={section.heading} variants={fadeUp}>
                                 <h3 className="my-4 text-lg font-bold text-black/80 xl:my-0">{section.heading}</h3>
                                 <p className="text-md text-black/80">{section.description}</p>
-                            </div>
+                            </motion.div>
                         ))}
-                    </div>
-                </article>
-            </main>
+                    </motion.div>
+                </motion.article>
+            </motion.main>
 
             <AppFooter />
         </div>

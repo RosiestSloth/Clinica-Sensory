@@ -1,4 +1,6 @@
+import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
+import { fadeUp, softScaleIn, viewportReveal } from "../animations/variants";
 
 type SinglePagesSectionProps = {
     altImage: string;
@@ -10,27 +12,39 @@ type SinglePagesSectionProps = {
 
 export function SinglePagesSection({ altImage, title, backgroundClass, borderClass, mainImage }: SinglePagesSectionProps) {
     return (
-        <div id="SinglepagesHeader" className={`relative mb-28 h-45 p-4 md:h-80 ${backgroundClass}`}>
+        <motion.div
+            id="SinglepagesHeader"
+            className={`relative mb-28 h-45 p-4 md:h-80 ${backgroundClass}`}
+            variants={fadeUp}
+            initial="hidden"
+            whileInView="show"
+            viewport={viewportReveal}
+        >
             <div className="pictures-x absolute inset-0 w-full" />
 
             <div className="relative z-2 mx-auto max-w-7xl">
-                <h2 className="w-full pr-40 pt-10 text-xl font-bold text-white md:pr-0 md:text-4xl">{title}</h2>
+                <motion.h2 variants={fadeUp} className="w-full pr-40 pt-10 text-xl font-bold text-white md:pr-0 md:text-4xl">
+                    {title}
+                </motion.h2>
 
-                <img
+                <motion.img
                     src={mainImage}
                     alt={altImage}
                     className={`absolute right-6 top-6 z-10 mt-10 h-50 w-60 border-4 object-cover shadow-lg md:right-30 md:h-80 md:w-90 ${borderClass}`}
+                    variants={softScaleIn}
                 />
 
-                <img
+                <motion.img
                     src="/img/backgrounds/Sensy_Pink.png"
                     alt="Quebra cabecas rosa da Clinica Sensory"
                     className="absolute right-0 top-0 size-15 rotate-20 opacity-80 md:size-28"
+                    variants={softScaleIn}
                 />
-                <img
+                <motion.img
                     src="/img/backgrounds/Sensy_Green.png"
                     alt="Quebra cabecas verde da Clinica Sensory"
                     className="absolute left-0 top-20 size-17 rotate-25 opacity-80 md:size-32"
+                    variants={softScaleIn}
                 />
             </div>
 
@@ -47,6 +61,6 @@ export function SinglePagesSection({ altImage, title, backgroundClass, borderCla
                     />
                 </svg>
             </Link>
-        </div>
+        </motion.div>
     );
 }

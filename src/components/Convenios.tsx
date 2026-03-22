@@ -91,20 +91,20 @@ export function Convenios() {
                 <button
                     aria-label="Anterior"
                     onClick={() => scroll("prev")}
-                    className="flex size-10 cursor-pointer items-center justify-center rounded-full border border-gray-200 bg-white p-4 shadow-md transition-colors hover:bg-gray-100 hover:shadow-sm active:scale-95 md:size-14"
+                    className="flex size-10 cursor-pointer items-center justify-center rounded-full border border-gray-200 bg-white shadow-md transition-colors hover:bg-gray-100 hover:shadow-sm active:scale-95 md:size-14"
                 >
                     <span>
-                        <img src="/svg/Arrow-left.svg" alt="Anterior" className="size-6 md:size-8" />
+                        <img src="/svg/Arrow-left.svg" alt="Anterior" className="size-8" />
                     </span>
                 </button>
 
                 <button
                     aria-label="Proximo"
                     onClick={() => scroll("next")}
-                    className="flex size-10 cursor-pointer items-center justify-center rounded-full border border-gray-200 bg-white p-4 shadow-md transition-colors hover:bg-gray-100 hover:shadow-sm active:scale-95 md:size-14"
+                    className="flex size-10 cursor-pointer items-center justify-center rounded-full border border-gray-200 bg-white shadow-md transition-colors hover:bg-gray-100 hover:shadow-sm active:scale-95 md:size-14"
                 >
                     <span>
-                        <img src="/svg/Arrow-right.svg" alt="Proximo" className="size-6 md:size-8" />
+                        <img src="/svg/Arrow-right.svg" alt="Proximo" className="size-8" />
                     </span>
                 </button>
             </div>
