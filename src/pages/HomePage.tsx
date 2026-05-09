@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { fadeUp, softScaleIn, staggerContainer, viewportReveal } from "../animations/variants";
+import { fadeUp, softScaleIn, staggerContainer, viewportReveal, viewportRevealOnce } from "../animations/variants";
 import { AbaCards } from "../components/AbaCards";
 import { AppFooter } from "../components/AppFooter";
 import { AppHeader } from "../components/AppHeader";
@@ -78,41 +78,102 @@ export function HomePage() {
         <div className="overflow-hidden bg-gray-50">
             <AppHeader />
             <main className="mt-20">
-                <motion.section className="relative h-full overflow-hidden pb-20 px-5 py-10 md:py-20 md:px-10 xl:px-20" {...sectionMotionProps}>
-                    <img className="absolute left-0 top-0 z-0 h-full w-full object-cover blur-[4px]" src="/img/backgrounds/BG - Clinica Sensory.png" />
-                    <div className="absolute inset-0 bg-black/20" />
+                <motion.section
+                    className="relative min-h-[90vh] overflow-hidden px-5 py-16 md:px-10 md:py-24 xl:px-20"
+                    {...sectionMotionProps}
+                >
+                    {/* Background */}
+                    <img
+                        className="absolute inset-0 z-0 h-full w-full object-cover blur-sm brightness-75"
+                        src="/img/backgrounds/BG - Clinica Sensory.png"
+                        alt=""
+                    />
+                    <div className="absolute inset-0 z-[1] bg-gradient-to-br from-black/50 via-black/20 to-transparent" />
 
-                    <div className="relative z-20 flex h-full w-full flex-col items-center justify-between pt-10 lg:flex-row">
+                    {/* Detalhe decorativo — padrão da seção clinicInfo */}
+                    <div
+                        aria-hidden
+                        className="pointer-events-none absolute -top-40 -right-40 z-[1] size-96 rounded-full opacity-20 blur-2xl"
+                        style={{ background: "var(--baby-green)" }}
+                    />
 
-                        <motion.div variants={softScaleIn} className="flex size-1/2 max-w-130 rounded-xl shadow-xl bg-gray-50 flex-col items-center justify-center p-8 border-2 border-[var(--dark-blue)]">
-                            <motion.img variants={softScaleIn} alt="Sensys" src="/img/backgrounds/Sensys.png" className="mb-4  object-contain h-full rounded-full" />
-                            <motion.h1 variants={fadeUp} className="brand-title w-full md:w-auto inline-block rounded-3xl bg-[var(--baby-green)] px-8 py-2 text-center text-3xl font-bold text-[var(--baby-blue)]">
-                                <span className="block text-xl leading-6 text-black">Clínica</span>
+                    <div className="relative z-10 mx-auto flex h-full max-w-7xl flex-col items-center gap-12 pt-4 lg:flex-row lg:items-center lg:gap-16">
+
+                        {/* Logo card */}
+                        <motion.div
+                            variants={softScaleIn}
+                            className="flex w-full max-w-[260px] shrink-0 flex-col items-center justify-center gap-4 rounded-2xl border-2 border-[var(--baby-green)] bg-white/90 p-8 shadow-2xl backdrop-blur-sm sm:max-w-[300px] lg:max-w-[340px]"
+                        >
+                            <motion.img
+                                variants={softScaleIn}
+                                alt="Logo Clínica Sensory"
+                                src="/img/backgrounds/Sensys.png"
+                                className="w-full rounded-xl object-contain"
+                            />
+                            <motion.h1
+                                variants={fadeUp}
+                                className="brand-title inline-block w-full rounded-2xl bg-[var(--baby-green)] px-6 py-2 text-center text-3xl font-bold text-[var(--baby-blue)]"
+                            >
+                                <span className="block text-lg leading-5 text-black/70">Clínica</span>
                                 Sensory
                             </motion.h1>
                         </motion.div>
 
-                        <motion.div
-                            className="mt-10 flex w-full flex-col gap-4 p-4 lg:mt-10 lg:w-200"
-                            variants={staggerContainer(0.1, 0.1)}
-                            initial="hidden"
-                            whileInView="show"
-                            viewport={viewportReveal}
-                        >
-                            {heroBenefits.map((benefit) => (
-                                <motion.div variants={fadeUp} key={benefit.id} className={`flex gap-4 rounded-lg p-4 text-white ${benefit.containerClass}`} id={benefit.id}>
-                                    <img src={benefit.image} className="h-20" alt={benefit.imageAlt} />
-                                    <div>
-                                        <h3 className="text-[1.1em] font-bold md:text-xl">{benefit.title}</h3>
-                                        <ul className="list-inside list-disc text-[0.7em] sm:text-sm xl:text-lg">
-                                            {benefit.items.map((item) => (
-                                                <li key={item}>{item}</li>
-                                            ))}
-                                        </ul>
-                                    </div>
-                                </motion.div>
-                            ))}
-                        </motion.div>
+                        {/* Lado direito: tagline + cards */}
+                        <div className="flex w-full flex-col gap-6 lg:gap-8">
+                            {/* Tagline — padrão editorial da seção "Quem somos" */}
+                            <motion.div variants={fadeUp}>
+                                <p className="mb-2 text-xs font-semibold uppercase tracking-[0.25em] text-white/60">
+                                    Clínica Multidisciplinar
+                                </p>
+                                <h2 className="text-2xl font-bold leading-tight text-white md:text-3xl xl:text-4xl">
+                                    Cuidado que transforma.
+                                </h2>
+                            </motion.div>
+
+                            {/* Benefit cards */}
+                            <motion.div
+                                className="flex flex-col gap-3"
+                                variants={staggerContainer(0.1, 0.1)}
+                                initial="hidden"
+                                whileInView="show"
+                                viewport={viewportRevealOnce}
+                            >
+                                {heroBenefits.map((benefit) => (
+                                    <motion.div
+                                        variants={fadeUp}
+                                        key={benefit.id}
+                                        className={`flex items-center gap-4 rounded-xl p-4 shadow-lg backdrop-blur-sm ${benefit.containerClass}`}
+                                    >
+                                        <img
+                                            src={benefit.image}
+                                            className="h-14 w-14 shrink-0 object-contain drop-shadow sm:h-16 sm:w-16"
+                                            alt={benefit.imageAlt}
+                                        />
+                                        <div>
+                                            <h3 className="text-base font-bold text-white md:text-lg">{benefit.title}</h3>
+                                            <ul className="mt-1 list-inside list-disc text-xs leading-relaxed text-white/85 sm:text-sm">
+                                                {benefit.items.map((item) => (
+                                                    <li key={item}>{item}</li>
+                                                ))}
+                                            </ul>
+                                        </div>
+                                    </motion.div>
+                                ))}
+                            </motion.div>
+
+                            <motion.div className="flex justify-center md:justify-start" variants={softScaleIn}>
+                                <ExternalLinkButton
+                                    href={CONTACT.whatsappUrl}
+                                    className="inline-flex w-full md:w-fit items-center justify-center gap-3 rounded-full border-2 border-white bg-[#47C557] px-6 py-3 text-sm font-bold text-white shadow-[0_0_15px_rgba(71,197,87,0.4)] transition-all duration-300 hover:scale-105 hover:bg-[#2A7633] md:text-base"
+                                    iconSrc="/svg/WhatsApp.svg"
+                                    iconAlt="WhatsApp"
+                                    iconClassName="size-5 md:size-6"
+                                >
+                                    Agendar avaliação
+                                </ExternalLinkButton>
+                            </motion.div>
+                        </div>
                     </div>
                 </motion.section>
 
@@ -462,23 +523,43 @@ export function HomePage() {
                     </div>
                 </motion.section>
 
-                <motion.section className="relative" {...sectionMotionProps}>
-                    <div className="absolute left-[-10px] top-0 z-[1] h-40 w-[calc(100%+theme(spacing.5))] rotate-5 bg-[var(--clear-blue)] md:top-0 md:h-30 md:rotate-5" />
-                    <div className="absolute left-[-20px] top-50 z-[2] h-90 w-[150%] rotate-175 bg-[var(--baby-blue)] md:top-20 md:h-70" />
-                    <div className="absolute left-[-10px] top-150 z-[3] mt-4 h-40 w-[calc(100%+theme(spacing.5))] rotate-5 bg-[var(--pink)] md:top-90 md:h-30 md:rotate-2" />
+                <motion.section className="relative overflow-hidden" {...sectionMotionProps}>
+                    {/* Fita de fundo - Azul */}
+                    <div className="absolute inset-x-[-8%] top-[-4%] z-[1] h-[30%] w-[116%] rotate-[-3deg] bg-[var(--blue)] opacity-80" />
 
-                    <div className="relative z-[4] mx-auto my-20 max-w-400 px-5 md:px-10">
-                        <p className="text-[var(--blue)]">Mais do que tratar, buscamos compreender e acompanhar cada etapa do desenvolvimento do seu filho.</p>
-                        <h2 className="text-xl font-semibold md:text-2xl xl:text-3xl">Benefícios da Terapia ABA</h2>
+                    {/* Fita central - destaque baby-blue */}
+                    <div className="absolute inset-x-[-8%] top-[26%] z-[2] h-[30%] w-[116%] rotate-[2deg] bg-[var(--baby-blue)] opacity-90" />
+
+                    {/* Fita inferior - pink */}
+                    <div className="absolute inset-x-[-8%] top-[50%] z-[3] h-[30%] w-[116%] rotate-[-2deg] bg-[var(--pink)] opacity-80" />
+
+                    {/* Conteúdo */}
+                    <div className="relative z-[10] mx-auto px-5 py-16 md:px-10 md:py-24 xl:py-32">
+                        {/* Label superior */}
+                        <p className="mb-3 text-xs font-semibold uppercase tracking-[0.25em] text-white/70">
+                            Nosso método
+                        </p>
+
+                        <h2 className="text-xl font-semibold text-white md:text-2xl xl:text-3xl">
+                            Benefícios da Terapia ABA
+                        </h2>
+
                         <Separador className="relative my-5" />
+
+                        <p className="mb-8 max-w-xl text-sm leading-relaxed text-white/80 sm:text-base md:text-lg">
+                            Mais do que tratar, buscamos compreender e acompanhar cada etapa do
+                            desenvolvimento do seu filho.
+                        </p>
+
                         <AbaCards />
 
-                        <motion.div variants={softScaleIn}>
+                        <motion.div variants={softScaleIn} className="mt-8 mx-auto w-fit">
                             <Link
                                 to={ROUTES.treatments.aba}
-                                className="mx-auto mt-4 flex h-14 w-50 flex-row items-center justify-center gap-4 rounded-md border border-white bg-[var(--blue)] px-2 py-2 text-md font-bold text-white transition hover:bg-[var(--dark-blue)] md:w-60 md:px-6 md:py-2 md:text-lg"
+                                className="inline-flex h-12 w-full max-w-[200px] flex-row items-center justify-center gap-3 rounded-md border border-white bg-[var(--blue)] px-4 text-sm font-bold text-white transition hover:bg-[var(--dark-blue)] sm:max-w-[220px] md:h-14 md:text-base"
                             >
-                                Saiba mais <img src="/svg/Arrow-up-Right.svg" alt="Saiba mais" className="size-8" />
+                                Saiba mais
+                                <img src="/svg/Arrow-up-Right.svg" alt="" className="size-7" />
                             </Link>
                         </motion.div>
                     </div>
@@ -487,17 +568,17 @@ export function HomePage() {
                 <motion.section className="relative" {...sectionMotionProps}>
                     <ImageCarousel className="mx-5 md:mx-10" />
 
-                    <div className="relative mt-10 flex h-60 flex-col md:flex-row overflow-hidden">
-                        <img className="absolute left-0 top-0 z-0 h-full w-full object-cover lg:w-1/2" src="/img/backgrounds/BG_TEA.png" />
-                        <h2 className="z-10 h-40 w-full md:w-1/2 content-center px-5 md:px-10 bg-black/40 text-xl font-bold text-white md:h-24 md:text-2xl">
+                    <div className="relative mt-10 flex h-auto flex-col md:flex-row overflow-hidden">
+                        <img className="absolute left-0 top-0 z-0 h-full w-full md:w-fit object-cover lg:w-1/2" src="/img/backgrounds/BG_TEA.png" />
+                        <h2 className="z-10 w-full md:w-1/2 content-center px-5 md:px-10 bg-black/40 text-xl font-bold text-white py-6 md:text-2xl">
                             Criando caminhos para um desenvolvimento excepcional.
                         </h2>
                         <div className="z-10 w-full md:w-1/2 bg-[var(--secondary-blue-dark)] p-4 text-white md:p-8">
-                            <ul className="h-full list-inside list-image-[url(/svg/Check.svg)] text-sm md:text-xl">
-                                <li className="h-1/2 md:h-1/4 px-4 content-center bg-[var(--dark-blue)] font-bold">Cuidado Integral e Humanizado</li>
-                                <li className="h-1/2 md:h-1/4 px-4 content-center bg-[var(--blue)] font-bold">Desenvolvimento Contínuo</li>
-                                <li className="h-1/2 md:h-1/4 px-4 content-center bg-[var(--dark-blue)] font-bold">Foco na Felicidade e Autonomia</li>
-                                <li className="h-1/2 md:h-1/4 px-4 content-center bg-[var(--blue)] font-bold">Apoio que Abraça a Família</li>
+                            <ul className="list-inside list-image-[url(/svg/Check.svg)] text-sm md:text-xl flex flex-col">
+                                <li className="px-4 py-4 content-center bg-[var(--dark-blue)] font-bold">Cuidado Integral e Humanizado</li>
+                                <li className="px-4 py-4 content-center bg-[var(--blue)] font-bold">Desenvolvimento Contínuo</li>
+                                <li className="px-4 py-4 content-center bg-[var(--dark-blue)] font-bold">Foco na Felicidade e Autonomia</li>
+                                <li className="px-4 py-4 content-center bg-[var(--blue)] font-bold">Apoio que Abraça a Família</li>
                             </ul>
                         </div>
                     </div>

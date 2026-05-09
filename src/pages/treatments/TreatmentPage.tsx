@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { fadeUp, staggerContainer, viewportReveal } from "../../animations/variants";
+import { fadeUp, staggerContainer, viewportRevealOnce } from "../../animations/variants";
 import { AppFooter } from "../../components/AppFooter";
 import { AppHeader } from "../../components/AppHeader";
 import { SinglePagesSection } from "../../components/SinglePagesSection";
@@ -32,7 +32,7 @@ export function TreatmentPage({
                 variants={staggerContainer(0.1)}
                 initial="hidden"
                 whileInView="show"
-                viewport={viewportReveal}
+                viewport={viewportRevealOnce}
             >
                 <SinglePagesSection
                     title={title}
@@ -42,7 +42,7 @@ export function TreatmentPage({
                     altImage={altImage}
                 />
 
-                <motion.article variants={fadeUp} className="flex flex-col px-6 md:px-10 xl:flex-row lg:text-justify">
+                <motion.article viewport={{ once: true }} variants={fadeUp} className="flex flex-col px-6 md:px-10 xl:flex-row lg:text-justify">
                     <motion.div variants={fadeUp} className="w-full">
                         <motion.p variants={fadeUp} className="text-md text-black/80">
                             {intro}

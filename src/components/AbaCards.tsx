@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { fadeUp, staggerContainer, viewportReveal } from "../animations/variants";
+import { fadeUp, staggerContainer, viewportRevealOnce } from "../animations/variants";
 
 const cards = [
     {
@@ -35,11 +35,12 @@ const cards = [
 export function AbaCards() {
     return (
         <motion.div
-            className="mx-auto grid max-w-7xl gap-4 lg:grid-cols-2"
+            className="mx-auto grid gap-4 lg:grid-cols-2"
             variants={staggerContainer(0.12)}
             initial="hidden"
             whileInView="show"
-            viewport={viewportReveal}
+
+            viewport={viewportRevealOnce}
         >
             {cards.map((card) => (
                 <motion.div key={card.title} variants={fadeUp} className={`gap-10 p-6 text-white ${card.bgColor}`}>

@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { fadeUp, softScaleIn, viewportReveal } from "../animations/variants";
+import { fadeUp, softScaleIn, viewportRevealOnce } from "../animations/variants";
 
 type SinglePagesSectionProps = {
     altImage: string;
@@ -14,11 +14,12 @@ export function SinglePagesSection({ altImage, title, backgroundClass, borderCla
     return (
         <motion.div
             id="SinglepagesHeader"
-            className={`relative mb-28 h-45 p-4 md:h-80 ${backgroundClass}`}
+            className={`relative my-22 h-45 p-4 md:h-80 ${backgroundClass}`}
             variants={fadeUp}
             initial="hidden"
             whileInView="show"
-            viewport={viewportReveal}
+
+            viewport={viewportRevealOnce}
         >
             <div className="pictures-x absolute inset-0 w-full" />
 
