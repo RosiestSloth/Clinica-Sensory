@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { fadeUp, softScaleIn, staggerContainer, viewportReveal } from "../animations/variants";
+import { fadeUp, softScaleIn, staggerContainer, viewportReveal, viewportRevealOnce } from "../animations/variants";
 import { AppFooter } from "../components/AppFooter";
 import { AppHeader } from "../components/AppHeader";
 import { ExternalLinkButton } from "../components/ExternalLinkButton";
@@ -144,7 +144,7 @@ export function ContactPage() {
                         variants={staggerContainer(0.1, 0.05)}
                         initial="hidden"
                         whileInView="show"
-                        viewport={viewportReveal}
+                        viewport={viewportRevealOnce}
                     >
                         {contactCards.map((card) => (
                             <motion.div
